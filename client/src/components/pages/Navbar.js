@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className="">
             <nav className="navbar navbar-expand-lg navbar-light nav-line">
                 <div className="container">
-                    <Link className="navbar-brand" href="./index.html">
+                    <Link className="navbar-brand" to="./index.html">
                         <img src="images/logo2-template.png" className="img-responsive" alt="" />
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

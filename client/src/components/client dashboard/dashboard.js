@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from 'react-router-dom'
 import { connect } from "react-redux";
 import { logoutUser } from "../../store/actions/authActions";
 
@@ -23,7 +24,7 @@ class Dashboard extends Component {
           <div className="bk-dark-purple-dashboard">
             <div className="row pad-dashboard">
               <div className="col-md-2 dash-board-image ul-dash-board-image">
-                <img src="./images/dashboard-image.jpg" />
+                <img src="./images/dashboard-image.jpg" alt="" />
               </div>
               <div className="col-md-6 profile-details">
                 <h4>
@@ -33,7 +34,7 @@ class Dashboard extends Component {
               </div>
               <div className="col-md-4 dash-board-image">
                 <ul className="ul-profile-list">
-                  <li><i className="fa fa-phone"></i>&nbsp;  Phone: 0706-857-6214</li>
+                  <li><i className="fa fa-phone"></i> Phone: 0706-857-6214</li>
                   <li><i className="fa fa-envelope"></i> Email: emmanueliyanu2012@gmail.com</li>
                   <li><i className="fa fa-map-marker"></i>&nbsp;  Location: Lagos Nigeria</li>
                 </ul>
@@ -61,15 +62,15 @@ class Dashboard extends Component {
                       <strong>My Profile</strong>
                     </div>
                     <div class="list-group list-group-flush">
-                      <a href="#" class="list-group-item list-group-item-action small">
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         Name: Oladejo Emmanuel Segun
-                                        </a>
-                      <a href="#" class="list-group-item list-group-item-action small">
+                                        </Link>
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         ID Number: 238301469
-                                        </a>
-                      <a href="#" class="list-group-item list-group-item-action small">
+                                        </Link>
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         Address: No 36, Fetuga Str, Lady-Lak, Lagos
-                                        </a>
+                                        </Link>
                     </div>
                   </div>
                 </div>
@@ -84,15 +85,15 @@ class Dashboard extends Component {
                       <strong>Available Jobs</strong>
                     </div>
                     <div class="list-group list-group-flush">
-                      <a href="" class="list-group-item list-group-item-action small">
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         Andela Senior Front End Developer Apply
-                                        </a>
-                      <a href="#" class="list-group-item list-group-item-action small">
+                                        </Link>
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         Andela Senior Front End Developer Apply
-                                        </a>
-                      <a href="#" class="list-group-item list-group-item-action small">
+                                        </Link>
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         Andela Senior Front End Developer Apply
-                                        </a>
+                                        </Link>
                     </div>
                   </div>
                 </div>
@@ -107,15 +108,15 @@ class Dashboard extends Component {
                       <strong>Cover Letter</strong>
                     </div>
                     <div class="list-group list-group-flush">
-                      <a href="#" class="list-group-item list-group-item-action small">
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         Name: Oladejo Emmanuel Segun
-                                        </a>
-                      <a href="#" class="list-group-item list-group-item-action small">
+                                        </Link>
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         ID Number: 238301469
-                                        </a>
-                      <a href="#" class="list-group-item list-group-item-action small">
+                                        </Link>
+                      <Link href="#" class="list-group-item list-group-item-action small">
                         Address: No 36, Fetuga Str, Lady-Lak, Lagos
-                                        </a>
+                                        </Link>
                     </div>
                   </div>
                 </div>
@@ -130,15 +131,15 @@ class Dashboard extends Component {
                       <strong>Curriculum Vitae</strong>
                     </div>
                     <div class="list-group list-group-flush">
-                      <a href="#" class="list-group-item list-group-item-action small">
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         Name: Oladejo Emmanuel Segun
-                                        </a>
-                      <a href="#" class="list-group-item list-group-item-action small">
+                                        </Link>
+                      <Link href="#" class="list-group-item list-group-item-action small">
                         ID Number: 238301469
-                                        </a>
-                      <a href="#" class="list-group-item list-group-item-action small">
+                                        </Link>
+                      <Link to="#" class="list-group-item list-group-item-action small">
                         Address: No 36, Fetuga Str, Lady-Lak, Lagos
-                                        </a>
+                                        </Link>
                     </div>
                   </div>
                 </div>

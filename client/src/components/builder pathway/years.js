@@ -6,41 +6,48 @@ export class Years extends Component {
 
     state = {
         bgColor: '#fff',
-        color: '#788088'
+        color: '#788088',
+        selectedOption: "option1"
     }
 
-    handleClick = (e) => {
-        e.preventDefault();
-        console.log('this link was clicked')
+    handleOptionChange = (e) => {
         this.setState({
-            bgColor: '#FBA51A',
-            color: '#fff'
-        })
+            selectedOption: e.target.value
+        });
     }
+
+    handleFormSubmit = formSubmitEvent => {
+        formSubmitEvent.preventDefault();
+
+        console.log("You have submitted:", this.state.selectedOption);
+    };
+
     render() {
         return (
             <div className="">
                 {/* <!-- body part here --> */}
-                <section class="bk-icon">
-                    <div class="container ">
-                        <div class="row year-x1">
-                            <div class="white-bk col-md-12">
-                                <div class="three-text">
+                <section className="bk-icon">
+                    <div className="container ">
+                        <div className="row year-x1">
+                            <div className="white-bk col-md-12">
+                                <div className="three-text">
                                     <h2>How long have you been working?</h2>
                                     <p>We'll find the best templates for your experience level.</p>
                                 </div>
-                                <ul class="ul-number ul-num1">
-                                    <Link><li onClick={this.handleClick} style={{ backgroundColor: this.state.bgColor, color: this.state.color }} class="yr-x1">0</li></Link>
-                                    <Link><li onClick={this.handleClick} style={{ backgroundColor: this.state.bgColor, color: this.state.color }} class="yr-x2">3</li></Link>
-                                    <Link><li onClick={this.handleClick} class="yr-x3">5</li></Link>
-                                    <Link><li onClick={this.handleClick} class="yr-x4">10</li></Link>
-                                    <Link><li onClick={this.handleClick} class="yr-x5">10+</li></Link>
-                                </ul>
+                                <form onSubmit={this.handleFormSubmit}>
+                                    <ul className="ul-number ul-num1">
+                                        <Link><li name="year" value="option1" checked={this.state.selectedOption === "option1"} onChange={this.handleOptionChange} className="yr-x1">0</li></Link>
+                                        <Link><li name="year" value="option2" checked={this.state.selectedOption === "option2"} onChange={this.handleOptionChange} style={{ backgroundColor: this.state.bgColor, color: this.state.color }} className="yr-x2">3</li></Link>
+                                        <Link><li name="year" value="option3" checked={this.state.selectedOption === "option3"} onChange={this.handleOptionChange} className="yr-x3">5</li></Link>
+                                        <Link><li name="year" value="option4" checked={this.state.selectedOption === "option4"} onChange={this.handleOptionChange} className="yr-x4">10</li></Link>
+                                        <Link><li name="year" value="option5" checked={this.state.selectedOption === "option5"} onChange={this.handleOptionChange} className="yr-x5">10+</li></Link>
+                                    </ul>
 
-                                <div class="create pt-5">
-                                    <Link to="/launch" class="btn-create mr-4"><i class="fa fa-backward"></i></Link>
-                                    <Link to="/template" class="btn-create"><i class="fa fa-forward"></i></Link>
-                                </div>
+                                    <div className="create pt-5">
+                                        <Link to="/launch" className="btn-create mr-4"><i className="fa fa-backward"></i></Link>
+                                        <Link type="submit" to="/template" className="btn-create"><i className="fa fa-forward"></i></Link>
+                                    </div>
+                                </form>
                                 <br /><br />
                             </div>
                         </div>

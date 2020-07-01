@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Adminsidenav from './admin-side-nav'
 import Footer from './Adminfooter'
 import { Link } from 'react-router-dom'
-import PostIndex from './posts/index'
+// import PostIndex from './posts/index'
 import CreatePost from './posts/create'
 
 class Admindashboard extends Component {
@@ -10,7 +10,7 @@ class Admindashboard extends Component {
         return (
             <div className="row">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-                    <Link className="navbar-brand" to="/">Home Page</Link>
+                    <Link className="navbar-brand" to="#">Home Page</Link>
                     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -18,7 +18,7 @@ class Admindashboard extends Component {
                         <Adminsidenav />
                         <ul className="navbar-nav sidenav-toggler">
                             <li className="nav-item">
-                                <Link className="nav-link text-center" id="sidenavToggler">
+                                <Link to="#" className="nav-link text-center" id="sidenavToggler">
                                     <i className="fa fa-fw fa-angle-left"></i>
                                 </Link>
                             </li>
@@ -59,7 +59,7 @@ class Admindashboard extends Component {
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" to="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <Link to="/" className="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i className="fa fa-fw fa-bell"></i>
                                     <span className="d-lg-none">Alerts
               <span class="badge badge-pill badge-warning">6 New</span>
@@ -132,9 +132,6 @@ class Admindashboard extends Component {
                         </ol>
                         <div className="row body-content">
                             <div className="col-md-12">
-                                {/* <h1>{{ title }}</h1> */}
-                                {/* {{{body}}} */}
-                                {/* <PostIndex /> */}
                                 <CreatePost />
                             </div>
                         </div>

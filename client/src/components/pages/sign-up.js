@@ -60,7 +60,7 @@ export class Register extends Component {
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12 login-form">
-                                    <form noValidate onSubmit={this.handleSubmit}>
+                                    <form noValidate onSubmit={this.handleSubmit} action="PO">
                                         <div class="main-text">
                                             <h2><i class="fa fa-user"></i> Sign Up</h2>
                                         </div>
