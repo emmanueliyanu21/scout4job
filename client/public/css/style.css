@@ -1830,11 +1830,17 @@
 }
 
 .ul-number li {
-    display: inline;
-    border: 1px solid #FBA51A;
-    border-radius: 100%;
+    display: inline!important;
+    padding-right: 60px;
+    font-size: 20px!important;
+    font-family: Nunito, sans-serif;
+    /* border-radius: 100%;
     padding: 8px;
-    color: #788088;
+    color: #788088; */
+}
+
+.ul-number li:hover {
+    cursor: pointer;
 }
 
 .ul-num1 li {
@@ -1850,13 +1856,12 @@
 }
 
 .ul-number {
-    /* padding-left: 0px!important; */
+    text-align: center;
     margin-top: 60px;
+    /* 
     margin-bottom: 30px;
     padding-bottom: 10px;
-    /* margin: auto;
-    max-width: 90%; */
-    text-align: center;
+    text-align: center; */
 }
 
 .ul-number .yr-x1 {
