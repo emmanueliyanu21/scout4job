@@ -16,8 +16,8 @@ export class Years extends Component {
         });
     }
 
-    handleFormSubmit = formSubmitEvent => {
-        formSubmitEvent.preventDefault();
+    handleFormSubmit = e => {
+        e.preventDefault();
 
         console.log("You have submitted:", this.state.selectedOption);
     };
@@ -63,7 +63,7 @@ export class Years extends Component {
                                                 /> 10 </label>
                                         </li>
                                     </ul>
-                                    <div className="create pt-5">
+                                    <div className="create pt-5 form-group">
                                         <Link to="/launch" className="btn-create mr-4"><i className="fa fa-backward"></i></Link>
                                         <Link type="submit" to="/template" className="btn-create"><i className="fa fa-forward"></i></Link>
                                     </div>

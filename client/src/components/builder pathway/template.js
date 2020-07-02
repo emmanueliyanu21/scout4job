@@ -16,16 +16,16 @@ const Template = () => {
                             </div>
                             <div className="row temp-x1">
                                 <div className="col-md-3">
-                                    <Link to="/"><img src="../images/cv.jpg" className="img-responsive" alt="" /></Link>
+                                    <Link to="/"><img src="../images/template-0.jpg" className="img-responsive" alt="" /></Link>
                                 </div>
                                 <div className="col-md-3">
-                                    <Link to="/"><img src="../images/cv.jpg" className="img-responsive" alt="" /></Link>
+                                    <Link to="/"><img src="../images/template-1.jpg" className="img-responsive" alt="" /></Link>
                                 </div>
                                 <div className="col-md-3">
-                                    <Link to="/"><img src="../images/cv.jpg" className="img-responsive" alt="" /></Link>
+                                    <Link to="/"><img src="../images/template-2.jpg" className="img-responsive" alt="" /></Link>
                                 </div>
                                 <div className="col-md-3">
-                                    <Link to="/"><img src="../images/cv.jpg" className="img-responsive" alt="" /></Link>
+                                    <Link to="/"><img src="../images/template-3.jpg" className="img-responsive" alt="" /></Link>
                                 </div>
                             </div>
 
