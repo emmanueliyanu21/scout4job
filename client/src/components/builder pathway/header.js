@@ -11,15 +11,50 @@ class Header extends Component {
         address: '',
         state: '',
         email: '',
-        phoneNumber: ''
+        phoneNumber: '',
+        errors: {},
+        fields: {}
     }
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
-        })
+        });
     }
+
+    handleValidation() {
+        let fields = this.state.fields;
+        let errors = {};
+        let formIsValid = true;
+
+        //Name
+        if (!fields["firstName"]) {
+            formIsValid = false;
+            errors["firstName"] = "Cannot be empty";
+        }
+
+        if (typeof fields["firstName"] !== "undefined") {
+            if (!fields["firstName"].match(/^[a-zA-Z]+$/)) {
+                formIsValid = false;
+                errors["firstName"] = "Only letters";
+            }
+        }
+
+        //middleName
+        if (!fields["middleName"]) {
+            formIsValid = false;
+            errors["middleName"] = "Cannot be empty";
+        }
+    }
+
     handleSubmit = (e) => {
         e.preventDefault()
+
+        if (this.handleValidation()) {
+            alert("Form submitted");
+        } else {
+            alert("Form has errors.")
+        }
+
         console.log(this.state)
     }
     render() {
@@ -69,6 +104,7 @@ class Header extends Component {
                                             <label htmlFor="exampleInputEmail1">First Name</label>
                                             <input type="text" className="form-control" id="firstName"
                                                 placeholder="First Name" onChange={this.handleChange} />
+                                            <span style={{ color: "red" }}>{this.state.errors["firstName"]}</span>
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Middle Name</label>
