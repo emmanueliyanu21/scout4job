@@ -2,19 +2,27 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../pages/footer'
 
+const initialState = {
+    firstName: '',
+    middleName: '',
+    lastName: '',
+    age: '',
+    address: '',
+    state: '',
+    email: '',
+    phoneNumber: '',
+    firstNameError: "",
+    middleNameError: "",
+    lastNameError: "",
+    ageError: "",
+    addressError: "",
+    stateError: "",
+    emailError: "",
+};
+
 class Header extends Component {
-    state = {
-        firstName: '',
-        middleName: '',
-        lastName: '',
-        age: '',
-        address: '',
-        state: '',
-        email: '',
-        phoneNumber: '',
-        errors: {},
-        fields: {}
-    }
+    state = initialState;
+
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
@@ -22,40 +30,66 @@ class Header extends Component {
     }
 
     handleValidation() {
-        let fields = this.state.fields;
-        let errors = {};
-        let formIsValid = true;
+        let firstNameError = "";
+        let lastNameError = "";
+        let emailError = "";
+        let middleNameError = "";
+        let ageError = "";
+        let addressError = "";
+        let stateError = "";
+        let phoneNumberError = "";
+        // let passwordError = "";
 
-        //Name
-        if (!fields["firstName"]) {
-            formIsValid = false;
-            errors["firstName"] = "Cannot be empty";
+        if (!this.state.firstName) {
+            firstNameError = "First name cannot be blank";
         }
 
-        if (typeof fields["firstName"] !== "undefined") {
-            if (!fields["firstName"].match(/^[a-zA-Z]+$/)) {
-                formIsValid = false;
-                errors["firstName"] = "Only letters";
-            }
+        if (!this.state.lastName) {
+            lastNameError = "Last name cannot be blank";
         }
 
-        //middleName
-        if (!fields["middleName"]) {
-            formIsValid = false;
-            errors["middleName"] = "Cannot be empty";
+        if (!this.state.middleName) {
+            middleNameError = "Middle name cannot be blank";
         }
+
+        if (!this.state.address) {
+            addressError = "Address cannot be blank";
+        }
+
+        if (!this.state.age) {
+            ageError = "Age has to be inputed";
+        }
+
+        if (!this.state.state) {
+            stateError = "Age has to be inputed";
+        }
+
+        if (!this.state.email.includes("@")) {
+            emailError = "invalid email";
+        }
+
+        if (!this.state.phoneNumber) {
+            phoneNumberError = "Phone Number must be inputed";
+        }
+
+
+        if (emailError || firstNameError || lastNameError || middleNameError || ageError || addressError || stateError || phoneNumberError) {
+            this.setState({ emailError, firstNameError, lastNameError, middleNameError, ageError, addressError, stateError, phoneNumberError });
+            return false;
+        }
+
+        return true;
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
 
-        if (this.handleValidation()) {
-            alert("Form submitted");
-        } else {
-            alert("Form has errors.")
+        const isValid = this.handleValidation();
+        if (isValid) {
+            console.log(this.state);
+            // clear form
+            this.setState(initialState);
         }
-
-        console.log(this.state)
     }
     render() {
         return (
@@ -104,12 +138,17 @@ class Header extends Component {
                                             <label htmlFor="exampleInputEmail1">First Name</label>
                                             <input type="text" className="form-control" id="firstName"
                                                 placeholder="First Name" onChange={this.handleChange} />
-                                            <span style={{ color: "red" }}>{this.state.errors["firstName"]}</span>
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.firstNameError}
+                                            </div>
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Middle Name</label>
                                             <input type="text" className="form-control" id="middleName"
                                                 placeholder="Middle Name" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.middleNameError}
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row">
@@ -117,11 +156,18 @@ class Header extends Component {
                                             <label htmlFor="exampleInputEmail1">Last Name</label>
                                             <input type="text" className="form-control" id="lastName"
                                                 placeholder="Last Name" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.lastNameError}
+                                            </div>
                                         </div>
+
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Age</label>
                                             <input type="text" className="form-control" id="age"
                                                 aria-describedby="emailHelp" placeholder="Age" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.ageError}
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row">
@@ -129,11 +175,17 @@ class Header extends Component {
                                             <label htmlFor="exampleInputEmail1">Address</label>
                                             <input type="text" className="form-control" id="address"
                                                 placeholder="Home Address" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.addressError}
+                                            </div>
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">State</label>
                                             <input type="text" className="form-control" id="state"
                                                 placeholder="City, State" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.stateError}
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row">
@@ -141,30 +193,38 @@ class Header extends Component {
                                             <label htmlFor="exampleInputEmail1">Email Address</label>
                                             <input type="text" className="form-control" id="email"
                                                 placeholder="Email Address" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.emailError}
+                                            </div>
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Phone Number</label>
                                             <input type="text" className="form-control" id="phoneNumber"
                                                 placeholder="Phone Number" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.phoneNumberError}
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-md-12 form-txt">
+                                            <button type="submit" className="btn btn-submit">submit</button>
                                             <h2> <i className="fa fa-plus"></i> What’s the best way for employers to contact you?</h2>
                                             <h2> <i className="fa fa-plus"></i> We suggest including an email and phone number</h2>
                                         </div>
                                     </div>
+
+                                    <div className="header-buttons">
+                                        <Link to="/start" className="btn btn-back">
+                                            <i className="fa fa-angle-left"></i> Back</Link>
+                                        <Link to="/work-experience" className="btn btn-next">Next<i className="fa fa-angle-right"></i></Link>
+                                    </div>
                                 </form>
-                                <div className="header-buttons">
-                                    <Link to="/start" className="btn btn-back">
-                                        <i className="fa fa-angle-left"></i> Back</Link>
-                                    <Link to="/work-experience" className="btn btn-next">Next<i className="fa fa-angle-right"></i></Link>
-                                </div>
                             </div>
                             <div className="col-md-4 form-img">
                                 <img src="../images/cv.jpg" alt="" className="img-responsive" />
                                 <div className="preview">
-                                    <Link href="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
+                                    <Link to="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
                                 </div>
 
                             </div>

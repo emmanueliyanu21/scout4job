@@ -1369,6 +1369,13 @@
     .form-txt {
         padding-top: 10px;
     }
+
+    .form-txt .btn-submit {
+        background-color: #246DF7;
+        color: #fff;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
     
     .head-form form {
         background-color: #fff;
