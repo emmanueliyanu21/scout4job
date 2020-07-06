@@ -8,20 +8,20 @@ const Home = () => {
         <div className="app-header">
 
             {/* <!-- section two starts here --> */}
-            <div class="bk-blue">
-                <div class="container">
-                    <div class="row fr-block">
-                        <div class="col-md-6 lp-block">
+            <div className="bk-blue">
+                <div className="container">
+                    <div className="row fr-block">
+                        <div className="col-md-6 lp-block">
                             <h2>Your Resume, Made Easy</h2>
                             <p>CV Builder takes the hassle out of resume writing. You can choose from several templates and follow easy prompts
                     to create the perfect job-ready resume effortlessly.</p>
-                            <Link to="/resume-sample" class="btn btn-more btn-lick mb-5 mt-2">
+                            <Link to="/resume-sample" className="btn btn-more btn-lick mb-5 mt-2">
                                 Learn more
                 </Link>
                         </div>
-                        <div class="col-md-6 lp-img">
-                            {/* <!-- <img src="images/banner-1.jpg" class="img-responsive" alt=""> --> */}
-                            {/* <!-- <img src="images/undraw.png" class="img-responsive" alt=""> --> */}
+                        <div className="col-md-6 lp-img">
+                            {/* <!-- <img src="images/banner-1.jpg" className="img-responsive" alt=""> --> */}
+                            {/* <!-- <img src="images/undraw.png" className="img-responsive" alt=""> --> */}
                         </div>
                     </div>
                 </div>
@@ -30,61 +30,61 @@ const Home = () => {
             {/* <!-- section two ends here --> */}
 
             {/* <!-- section three starts here --> */}
-            <div class="bk-grey">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="sec-header">
-                                <h2><span><i class="fa fa-briefcase"></i> Featured services</span> </h2>
+            <div className="bk-grey">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="sec-header">
+                                <h2><span><i className="fa fa-briefcase"></i> Featured services</span> </h2>
                             </div>
-                            <div class="sc-3">
+                            <div className="sc-3">
                                 <h2>Additional Service that will</h2>
                                 <p>Grow your career</p>
                             </div>
-                            <div class="sc3-x1">
+                            <div className="sc3-x1">
                                 <h3>As a SEO Advisor or web crawler expert, I help organization adjust to the expanding significance
                                     of internet
                         promoting</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="sc3-x2 sc3-x3">
-                                <img src="./images/first.png" class="img-responsive" alt="" />
+                    <div className="row">
+                        <div className="col-md-3">
+                            <div className="sc3-x2 sc3-x3">
+                                <img src="./images/first.png" className="img-responsive" alt="" />
                                 <h2>CV Builder</h2>
                                 <p>For every experience level of professionals as well as the fresh graduates, our resume service will serve your need to stay relevant.</p>
 
                                 <Link to="/launch">
                                     <h3>
-                                        <i class="fa fa-long-arrow-right pr-2"></i> Learn more</h3>
+                                        <i className="fa fa-long-arrow-right pr-2"></i> Learn more</h3>
                                 </Link>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="sc3-x2">
-                                <img src="./images/second.png" class="img-responsive" alt="" />
+                        <div className="col-md-3">
+                            <div className="sc3-x2">
+                                <img src="./images/second.png" className="img-responsive" alt="" />
                                 <h2>Cover Letter</h2>
                                 <p>For every experience level of professionals as well as the fresh graduates, our cover letter service will serve your need to stay relevant.</p>
                                 <Link to="/cover-letter">
-                                    <h3><i class="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
+                                    <h3><i className="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
                                 </Link>
                             </div>
                         </div>
-                        <div class="col-md-3 sc3-x2">
-                            <img src="./images/thrid.png" class="img-responsive" alt="" />
+                        <div className="col-md-3 sc3-x2">
+                            <img src="./images/thrid.png" className="img-responsive" alt="" />
                             <h2>Job Search</h2>
                             <p>For every experience level of professionals as well as the fresh graduates, our Job updates service will serve get you hired.</p>
                             <Link to="/job-search">
-                                <h3><i class="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
+                                <h3><i className="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
                             </Link>
                         </div>
-                        <div class="col-md-3 sc3-x2">
-                            <img src="./images/fourth.png" class="img-responsive" alt="" />
+                        <div className="col-md-3 sc3-x2">
+                            <img src="./images/fourth.png" className="img-responsive" alt="" />
                             <h2>Interviews</h2>
                             <p>For every experience level of professionals as well as the fresh graduates, our Interview service will serve get you hired.</p>
                             <Link to="/interviews">
-                                <h3><i class="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
+                                <h3><i className="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
                             </Link>
                         </div>
                     </div>
@@ -95,70 +95,70 @@ const Home = () => {
 
             {/* <!-- section four starts here --> */}
             <div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="sec-header">
-                                <h2><span><i class="fa fa-briefcase"></i> Available Jobs</span> </h2>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="sec-header">
+                                <h2><span><i className="fa fa-briefcase"></i> Available Jobs</span> </h2>
                             </div>
                         </div>
                     </div>
-                    <div class="row ">
-                        <div class="col-md-4 ">
-                            <div class="sc4-x1">
+                    <div className="row ">
+                        <div className="col-md-4 ">
+                            <div className="sc4-x1">
                                 <Link to="/job-search">
-                                    <img src="./images/digital-marketing.png" class="img-responsive" alt="" />
-                                    <div class="inner-content">
-                                        <ul class="ul-sc4">
-                                            <li>Status:<span class="status">Ongoing</span></li>
-                                            <li class="pull-right"><i class="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
+                                    <img src="./images/digital-marketing.png" className="img-responsive" alt="" />
+                                    <div className="inner-content">
+                                        <ul className="ul-sc4">
+                                            <li>Status:<span className="status">Ongoing</span></li>
+                                            <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
                                         </ul>
                                         <h2>Digital Marketing Agency</h2>
                                         <p>Tech Cabals: Old Online
                             Trends That Have...</p>
-                                        <ul class="ul-sc4-x1">
-                                            <li><i class="fa fa-map-marker"></i> Lagos</li>
-                                            <li class="pull-right">Read more <i class="fa fa-forward"></i></li>
+                                        <ul className="ul-sc4-x1">
+                                            <li><i className="fa fa-map-marker"></i> Lagos</li>
+                                            <li className="pull-right">Read more <i className="fa fa-forward"></i></li>
                                         </ul>
                                     </div>
                                 </Link>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="sc4-x1">
+                        <div className="col-md-4">
+                            <div className="sc4-x1">
                                 <Link to="/job-search">
-                                    <img src="./images/web-design.png" class="img-responsive" alt="" />
-                                    <div class="inner-content">
-                                        <ul class="ul-sc4">
-                                            <li>Status:<span class="status">Ongoing</span></li>
-                                            <li class="pull-right"><i class="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
+                                    <img src="./images/web-design.png" className="img-responsive" alt="" />
+                                    <div className="inner-content">
+                                        <ul className="ul-sc4">
+                                            <li>Status:<span className="status">Ongoing</span></li>
+                                            <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
                                         </ul>
                                         <h2>Software Engineer</h2>
                                         <p>Andela: Old Online
                             Trends That Have...</p>
-                                        <ul class="ul-sc4-x1">
-                                            <li><i class="fa fa-map-marker"></i> Lagos</li>
-                                            <li class="pull-right">Read more <i class="fa fa-forward"></i></li>
+                                        <ul className="ul-sc4-x1">
+                                            <li><i className="fa fa-map-marker"></i> Lagos</li>
+                                            <li className="pull-right">Read more <i className="fa fa-forward"></i></li>
                                         </ul>
                                     </div>
                                 </Link>
                             </div>
                         </div>
-                        <div class="col-md-4 ">
-                            <div class="sc4-x1">
+                        <div className="col-md-4 ">
+                            <div className="sc4-x1">
                                 <Link to="/job-search">
-                                    <img src="./images/plumbering.png" class="img-responsive" alt="" />
-                                    <div class="inner-content">
-                                        <ul class="ul-sc4">
-                                            <li>Status:<span class="status">Ongoing</span></li>
-                                            <li class="pull-right"><i class="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
+                                    <img src="./images/plumbering.png" className="img-responsive" alt="" />
+                                    <div className="inner-content">
+                                        <ul className="ul-sc4">
+                                            <li>Status:<span className="status">Ongoing</span></li>
+                                            <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
                                         </ul>
                                         <h2>Plumber Agency</h2>
                                         <p>Digit Plum: we want to make sure
                             every...</p>
-                                        <ul class="ul-sc4-x1">
-                                            <li><i class="fa fa-map-marker"></i> Lagos</li>
-                                            <li class="pull-right">Read more <i class="fa fa-forward"></i></li>
+                                        <ul className="ul-sc4-x1">
+                                            <li><i className="fa fa-map-marker"></i> Lagos</li>
+                                            <li className="pull-right">Read more <i className="fa fa-forward"></i></li>
                                         </ul>
                                     </div>
                                 </Link>
@@ -167,11 +167,11 @@ const Home = () => {
 
 
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="inner-arrow">
-                                <li><i class="fa fa-long-arrow-left"></i></li>
-                                <li><i class="fa fa-long-arrow-right"></i></li>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <ul className="inner-arrow">
+                                <li><i className="fa fa-long-arrow-left"></i></li>
+                                <li><i className="fa fa-long-arrow-right"></i></li>
                             </ul>
                         </div>
                     </div>
@@ -246,21 +246,21 @@ const Home = () => {
 
 
             {/* <!-- TESTIMONIAL STARTS HERE --> */}
-            <section class="bk-grey">
-                <div class="container-fluid pad-test">
-                    <div class="row">
-                        <div class="col-md-12 pb-5">
-                            <div class="sec-header">
-                                <h2><span><i class="fa fa-briefcase"></i> Testimonials</span> </h2>
+            <section className="bk-grey">
+                <div className="container-fluid pad-test">
+                    <div className="row">
+                        <div className="col-md-12 pb-5">
+                            <div className="sec-header">
+                                <h2><span><i className="fa fa-briefcase"></i> Testimonials</span> </h2>
                             </div>
-                            <div class="sc-3">
+                            <div className="sc-3">
                                 <h2>We serve our clients with the</h2>
                                 <p>best of our capacity</p>
                             </div>
                         </div>
                     </div>
-                    <div class="test-content row ">
-                        <div class="col-md-4">
+                    <div className="test-content row ">
+                        <div className="col-md-4">
                             <div className="test-sec sec-1">
                                 <div className="row">
                                     <div className="col-md-3 test-img">
@@ -277,7 +277,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div className="col-md-4">
                             <div className="test-sec">
                                 <div className="row">
                                     <div className="col-md-3 test-img">
@@ -295,7 +295,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div className="col-md-4">
                             <div className="test-sec sec-1">
                                 <div className="row">
                                     <div className="col-md-3 test-img">
