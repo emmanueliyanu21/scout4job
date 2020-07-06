@@ -115,7 +115,7 @@ class App extends Component {
             <Route path="/experience" component={Experience} />
             <Route path="/out-of-job" component={OutOfJob} />
             <Route path="/style" component={Style} />
-            <Route path="/more-detail" component={MoreDetail} />
+            <Route path="/more-details" component={MoreDetail} />
             <Route path="/specific" component={Specific} />
             <Route path="/job-apply" component={JobApply} />
             <Route path="/finished" component={Finished} />
