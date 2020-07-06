@@ -180,7 +180,7 @@ class Education extends Component {
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Graduation Date</label>
-                                            <input type="text" className="form-control" id=""
+                                            <input type="text" className="form-control" id="gradDate"
                                                 onChange={this.handleChange} placeholder="Graduation Date" />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.gradDateError}
