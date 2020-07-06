@@ -106,7 +106,7 @@ const WorkExperienceExtra = () => {
                         <div className="col-md-4 form-img">
                             <img src="../images/cv.jpg" alt="" className="img-responsive" />
                             <div className="preview">
-                                <Link href="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
+                                <Link to="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
                             </div>
                         </div>
                     </div>

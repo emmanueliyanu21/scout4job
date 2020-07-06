@@ -21,6 +21,7 @@ const initialState = {
 };
 
 class Header extends Component {
+
     state = initialState;
 
     handleChange = (e) => {
@@ -71,7 +72,6 @@ class Header extends Component {
         if (!this.state.phoneNumber) {
             phoneNumberError = "Phone Number must be inputed";
         }
-
 
         if (emailError || firstNameError || lastNameError || middleNameError || ageError || addressError || stateError || phoneNumberError) {
             this.setState({ emailError, firstNameError, lastNameError, middleNameError, ageError, addressError, stateError, phoneNumberError });
@@ -160,7 +160,6 @@ class Header extends Component {
                                                 {this.state.lastNameError}
                                             </div>
                                         </div>
-
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Age</label>
                                             <input type="text" className="form-control" id="age"
@@ -213,20 +212,18 @@ class Header extends Component {
                                             <h2> <i className="fa fa-plus"></i> We suggest including an email and phone number</h2>
                                         </div>
                                     </div>
-
-                                    <div className="header-buttons">
-                                        <Link to="/start" className="btn btn-back">
-                                            <i className="fa fa-angle-left"></i> Back</Link>
-                                        <Link to="/work-experience" className="btn btn-next">Next<i className="fa fa-angle-right"></i></Link>
-                                    </div>
                                 </form>
+                                <div className="header-buttons">
+                                    <Link to="/start" className="btn btn-back">
+                                        <i className="fa fa-angle-left"></i> Back</Link>
+                                    <Link to="/work-experience" className="btn btn-next">Next<i className="fa fa-angle-right"></i></Link>
+                                </div>
                             </div>
                             <div className="col-md-4 form-img">
                                 <img src="../images/cv.jpg" alt="" className="img-responsive" />
                                 <div className="preview">
                                     <Link to="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
                                 </div>
-
                             </div>
                         </div>
                     </div>

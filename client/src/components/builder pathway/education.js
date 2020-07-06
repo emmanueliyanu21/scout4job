@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+
+const initialState = {
+    schoolName: '',
+    schoolLocation: '',
+    degreeName: '',
+    state: '',
+    address: '',
+    state: '',
+    startDate: '',
+    phoneNumber: '',
+    firstNameError: "",
+    middleNameError: "",
+    lastNameError: "",
+    ageError: "",
+    addressError: "",
+    stateError: "",
+    emailError: "",
+};
 
 const Education = () => {
     return (
         <div className="">
-            < section className="bk-grey" >
+            <section className="bk-grey" >
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8">
@@ -45,37 +63,37 @@ const Education = () => {
                             <form>
                                 <div className="row">
                                     <div className="form-group col-md-6">
-                                        <label for="exampleInputEmail1">School Name</label>
-                                        <input type="text" className="form-control" id="exampleInputEmail1"
+                                        <label htmlFor="exampleInputEmail1">School Name</label>
+                                        <input type="text" className="form-control" id="schoolName"
                                             aria-describedby="emailHelp" placeholder="School Name" />
                                     </div>
                                     <div className="form-group col-md-6">
-                                        <label for="exampleInputEmail1">School Location</label>
-                                        <input type="text" className="form-control" id="exampleInputEmail1"
+                                        <label htmlFor="exampleInputEmail1">School Location</label>
+                                        <input type="text" className="form-control" id="schoolLocation"
                                             aria-describedby="emailHelp" placeholder="School Location" />
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="form-group col-md-6">
-                                        <label for="exampleInputEmail1">Degree</label>
-                                        <input type="text" className="form-control" id="exampleInputEmail1"
+                                        <label htmlFor="exampleInputEmail1">Degree</label>
+                                        <input type="text" className="form-control" id="degreeName"
                                             aria-describedby="emailHelp" placeholder="Degree" />
                                     </div>
                                     <div className="form-group col-md-6">
-                                        <label for="exampleInputEmail1">State</label>
-                                        <input type="text" className="form-control" id="exampleInputEmail1"
+                                        <label htmlFor="exampleInputEmail1">State</label>
+                                        <input type="text" className="form-control" id="state"
                                             aria-describedby="emailHelp" placeholder="State" />
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="form-group col-md-6">
-                                        <label for="exampleInputEmail1">Start Date</label>
-                                        <input type="text" className="form-control" id="exampleInputEmail1"
+                                        <label htmlFor="exampleInputEmail1">Start Date</label>
+                                        <input type="text" className="form-control" id="startDate"
                                             aria-describedby="emailHelp" placeholder="Start Date" />
                                     </div>
                                     <div className="form-group col-md-6">
-                                        <label for="exampleInputEmail1">Graduation Date</label>
-                                        <input type="text" className="form-control" id="exampleInputEmail1"
+                                        <label htmlFor="exampleInputEmail1">Graduation Date</label>
+                                        <input type="text" className="form-control" id="gradDate"
                                             aria-describedby="emailHelp" placeholder="Graduation Date" />
                                     </div>
                                 </div>
