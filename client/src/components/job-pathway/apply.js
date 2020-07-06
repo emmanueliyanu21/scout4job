@@ -5,9 +5,11 @@ const initialState = {
     title: '',
     coverLetter: '',
     attachProfile: '',
+    curriculumVitae: '',
     titleError: "",
     coverLetterError: '',
-    attachProfileError: ''
+    attachProfileError: '',
+    curriculumVitaeError: ""
 };
 
 class Apply extends Component {
@@ -24,6 +26,7 @@ class Apply extends Component {
         let titleError = "";
         let coverLetterError = "";
         let attachProfileError = "";
+        let curriculumVitaeError = ""
 
         if (!this.state.title) {
             titleError = "Title cannot be blank";
@@ -37,8 +40,12 @@ class Apply extends Component {
             attachProfileError = "Title cannot be blank";
         }
 
-        if (coverLetterError || titleError || attachProfileError ) {
-            this.setState({ coverLetterError, titleError, attachProfileError });
+        if (!this.state.curriculumVitae) {
+            curriculumVitaeError = "Curriculum vitae cannot be blank";
+        }
+
+        if (coverLetterError || titleError || attachProfileError || curriculumVitaeError) {
+            this.setState({ coverLetterError, titleError, attachProfileError, curriculumVitaeError });
             return false;
         }
 
@@ -104,17 +111,18 @@ class Apply extends Component {
                                             <li><Link to=""><i className="fa fa-hand-pointer-o"></i> Select crafted resume</Link></li>
                                             <li><Link to=""><i className="fa fa-edit"></i> Create a resume</Link></li>
                                         </ul>
-                                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <textarea className="form-control" onChange={this.handleChange} id="curriculumVitae" rows="3"></textarea>
+                                        <div style={{ fontSize: 12, color: "red" }}>
+                                            {this.state.curriculumVitaeError}
+                                        </div>
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="exampleInputEmail1">Upload Additional Document: (attach any additional doc if
-                                any or leave blank)</label>
+                                        <label htmlFor="exampleInputEmail1">Upload Additional Document: (attach any additional doc if any or leave blank)</label>
                                         <input type="file" className="form-control-file" id="exampleFormControlFile1" />
                                     </div>
                                     <div className="questions">
                                         <div className="form-group">
-                                            <label htmlFor="exampleFormControlSelect1">Do you have previous experience in
-                                    research?</label>
+                                            <label htmlFor="exampleFormControlSelect1">Do you have previous experience in research?</label>
                                             <select className="form-control" style={{ width: "20%" }} id="exampleFormControlSelect1">
                                                 <option>Yes</option>
                                                 <option>No</option>
