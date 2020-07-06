@@ -7,7 +7,6 @@ const initialState = {
     degreeName: '',
     state: '',
     address: '',
-    state: '',
     startDate: '',
     gradDate: '',
     schoolNameError: "",

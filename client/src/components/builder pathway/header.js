@@ -218,6 +218,8 @@ class Header extends Component {
                                         <i className="fa fa-angle-left"></i> Back</Link>
                                     <Link to="/work-experience" className="btn btn-next">Next<i className="fa fa-angle-right"></i></Link>
                                 </div>
+
+
                             </div>
                             <div className="col-md-4 form-img">
                                 <img src="../images/cv.jpg" alt="" className="img-responsive" />

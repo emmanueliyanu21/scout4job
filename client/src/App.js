@@ -128,7 +128,7 @@ class App extends Component {
             <Route path="/faq" component={FAQ} />
             <Route path="/header-copy" component={HeaderCopy} />
             <Route path="/cv-preview" component={CVPreview} />
-            <Route path="/skill-detail" component={SkillDetails} />
+            <Route path="/skill-details" component={SkillDetails} />
             <Route path="/createpost" component={Createpost} />
 
             {/* <Route path="/about" component={About} /> */}

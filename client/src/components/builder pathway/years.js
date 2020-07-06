@@ -18,7 +18,6 @@ export class Years extends Component {
 
     handleFormSubmit = e => {
         e.preventDefault();
-
         console.log("You have submitted:", this.state.selectedOption);
     };
 
