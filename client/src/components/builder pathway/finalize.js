@@ -32,7 +32,7 @@ const Finalize = () => {
                             </ul>
                         </div>
                         <div className="col-md-4 txt-header">
-                            <Link href="" className="btn btn-headers">Extra Information</Link>
+                            <Link to="" className="btn btn-headers">Extra Information</Link>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ const Finalize = () => {
                                     <div className="form-group col-md-12">
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                                            <label className="form-check-label" for="defaultCheck1" >
+                                            <label className="form-check-label" htmlFor="defaultCheck1" >
                                                 Acomplishments
                                     </label>
                                         </div>
@@ -57,7 +57,7 @@ const Finalize = () => {
                                     <div className="form-group col-md-12">
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                                            <label className="form-check-label" for="defaultCheck1" >
+                                            <label className="form-check-label" htmlFor="defaultCheck1" >
                                                 Affiliations
                                     </label>
                                         </div>
@@ -67,7 +67,7 @@ const Finalize = () => {
                                     <div className="form-group col-md-12">
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                                            <label className="form-check-label" for="defaultCheck1" >
+                                            <label className="form-check-label" htmlFor="defaultCheck1" >
                                                 Website, Portfolio, Profiles
                                     </label>
                                         </div>
@@ -77,7 +77,7 @@ const Finalize = () => {
                                     <div className="form-group col-md-12">
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                                            <label className="form-check-label" for="defaultCheck1" >
+                                            <label className="form-check-label" htmlFor="defaultCheck1" >
                                                 Additional Information
                                     </label>
                                         </div>
@@ -87,7 +87,7 @@ const Finalize = () => {
                                     <div className="form-group col-md-12">
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                                            <label className="form-check-label" for="defaultCheck1" >
+                                            <label className="form-check-label" htmlFor="defaultCheck1" >
                                                 Acomplishments
                                     </label>
                                         </div>
@@ -97,7 +97,7 @@ const Finalize = () => {
                                     <div className="form-group col-md-12">
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                                            <label className="form-check-label" for="defaultCheck1" >
+                                            <label className="form-check-label" htmlFor="defaultCheck1" >
                                                 Acomplishments
                                     </label>
                                         </div>
@@ -120,7 +120,7 @@ const Finalize = () => {
                         <div className="col-md-4 form-img">
                             <img src="../images/cv.jpg" alt="" className="img-responsive" />
                             <div className="preview">
-                                <Link href="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
+                                <Link to="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
                             </div>
                         </div>
                     </div>

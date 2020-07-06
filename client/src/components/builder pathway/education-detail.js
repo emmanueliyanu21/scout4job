@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const EducationDetails = () => {
     return (
@@ -32,7 +32,7 @@ const EducationDetails = () => {
                             </ul>
                         </div>
                         <div className="col-md-4 txt-header">
-                            <Link href="" className="btn btn-headers">Work Experince</Link>
+                            <Link to="" className="btn btn-headers">Work Experince</Link>
                         </div>
                     </div>
                 </div>

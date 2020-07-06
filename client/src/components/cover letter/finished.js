@@ -5,12 +5,12 @@ const Finished = () => {
     return (
         <div className="">
             {/* <!-- body part here --> */}
-            <section class="bk-icon">
-                <div class="container ">
-                    <div class="row year-x1">
-                        <div class="white-bk col-md-12 p-5">
-                            <p class="pull-right pb-4">emmanueliyanu@gmail.com</p>
-                            <p class="pt-5">Dec 24, 2019</p>
+            <section className="bk-icon">
+                <div className="container ">
+                    <div className="row year-x1">
+                        <div className="white-bk col-md-12 p-5">
+                            <p className="pull-right pb-4">emmanueliyanu@gmail.com</p>
+                            <p className="pt-5">Dec 24, 2019</p>
                             <p>KPMG Nigeria</p>
                             <p>RE: Software Engineer, [Date]</p>
                             <p>Dear [Mr or Mrs Last Name]</p>

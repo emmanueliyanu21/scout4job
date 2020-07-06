@@ -32,7 +32,7 @@ const Skill = () => {
                             </ul>
                         </div>
                         <div className="col-md-4 txt-header">
-                            <Link href="" className="btn btn-headers">Skill Experince</Link>
+                            <Link to="" className="btn btn-headers">Skill Experince</Link>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ const Skill = () => {
                         <div className="col-md-4 form-img">
                             <img src="../images/cv.jpg" alt="" className="img-responsive" />
                             <div className="preview">
-                                <Link href="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
+                                <Link to="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
                             </div>
                         </div>
                     </div>
