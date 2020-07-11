@@ -2,10 +2,21 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const http = require('http');
+const path = require('path');
 
 const users = require("./routes/api/users");
 
 const app = express();
+
+// React build output folder branch
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+//send all other requests to the React app
+app.set('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build', '/index.html'));
+});
+
 
 // Bodyparser middleware
 app.use(
@@ -36,6 +47,10 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server up and running on port ${port} !`));
+// Set Port
+const port = process.env.PORT || '8000';
+app.set('port', port);
 
+const server = http.createServer(app);
+
+server.listen(port, () => console.log(`Running on port ${port}`));
