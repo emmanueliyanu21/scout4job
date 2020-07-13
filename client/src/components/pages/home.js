@@ -254,13 +254,14 @@ const Home = () => {
                                 <h2><span><i className="fa fa-briefcase"></i> Testimonials</span> </h2>
                             </div>
                             <div className="sc-3">
+                                <h1 class="animated infinite bounce">An animated element</h1>
                                 <h2>We serve our clients with the</h2>
                                 <p>best of our capacity</p>
                             </div>
                         </div>
                     </div>
                     <div className="test-content row ">
-                        <div className="col-md-4">
+                        <div className="col-md-4 mb-5">
                             <div className="test-sec sec-1">
                                 <div className="row">
                                     <div className="col-md-3 test-img">
@@ -277,10 +278,10 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 mb-5">
                             <div className="test-sec">
                                 <div className="row">
-                                    <div className="col-md-3 test-img">
+                                    <div className="col-md-3 test-img center-image">
                                         <img src="./images/testimonial-1.jpg" className="img-responsive" alt="Samuel" />
                                     </div>
                                     <div className="col-md-9 test-details">
@@ -298,8 +299,8 @@ const Home = () => {
                         <div className="col-md-4">
                             <div className="test-sec sec-1">
                                 <div className="row">
-                                    <div className="col-md-3 test-img">
-                                        <img src="./images/ellipse.png" className="img-responsive" alt="Dumpe" />
+                                    <div className="col-md-3 test-img center-image">
+                                        <img src="./images/testimonial-1.jpg" className="img-responsive" alt="Dumpe" />
                                     </div>
                                     <div className="col-md-9 test-details">
                                         <h2>Lilian Dumpe</h2>

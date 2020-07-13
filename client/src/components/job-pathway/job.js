@@ -64,7 +64,7 @@ class Job extends Component {
                         Get You Hired 33% Faster</p>
                             </div>
                         </div>
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit} className="space-icon-d">
                             <div className="row job-form">
                                 <div className="col-md-5 job-x1">
                                     <div className="">

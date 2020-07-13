@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee:wght@300;400;500;600;700;800&display=swap');
 
-@import url('font-awesome.min.css');
+/* @import url('font-awesome.min.css'); */
 .navbar-brand img{
     max-width: 45%;
 }
@@ -144,7 +144,7 @@
     /* section 2 starts here */
 .sc-3 h2 {
     text-align: center!important;
-    font-size: 28px!important;
+    font-size: 28px;
     font-family: nunito, sans-serif;
     font-weight: 600;
     color: #343434;
@@ -201,7 +201,6 @@
 }
 
 .sc3-x2 {
-    
     margin-bottom: 20px;
     padding: 30px 20px;
 }
@@ -265,8 +264,27 @@
     background-color: #fff;
     box-shadow: 0px 3px 12px -2px rgb(209, 209, 209);
     border-radius: 8px;
-
 }
+
+@media (max-width: 768px) {
+        .sc-3 h2 {
+            font-size: 18px!important;
+        }
+        .sc-3 p {
+            font-size: 22px!important;
+        }
+        .sc3-x2 img {
+            max-width: 320%;
+        } 
+        .center-image img {
+            max-width: 30%!important;
+        }
+        .sc3-x2 img {
+            max-width: 25%!important;
+        }
+        
+    }
+
     /* section 3 ends here */
     /* section 4 starts here */
 .ul-sc4 li {
@@ -658,6 +676,7 @@
         .soc-media-2 {
             display: none;
         }
+        
     }
     /* socia-mdeia ends */
     
@@ -1210,6 +1229,21 @@
         padding: 14px 20px;
         border-radius: 4px;
         margin-left: 30px;
+    }
+
+    @media (max-width: 768px) { 
+        .short-mss {
+            display: none!important;
+        }
+        .line-show {
+            border: none!important;
+        }
+        .sec-1 {
+            opacity: 1.0!important;
+        }
+        .test-sec p {
+            text-align: left!important;
+        }
     }
 
     .short-mss h2 {
@@ -2688,7 +2722,6 @@
     position: relative; 
     z-index:10;
     opacity: 0.3;
-    
 }
 
 .sec-1:hover {
@@ -3075,4 +3108,15 @@
 }
 
 /* dashboard styling ends here */
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globaly */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
 

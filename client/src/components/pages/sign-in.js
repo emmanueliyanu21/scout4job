@@ -104,14 +104,14 @@ export class Login extends Component {
                                         <div class="connect">
                                             <h2>Or connect with</h2>
                                         </div>
-                                        <div class="row fg-buttons">
+                                        {/* <div class="row fg-buttons">
                                             <div class="col-md-6">
                                                 <Link to="" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</Link>
                                             </div>
                                             <div class="col-md-6">
                                                 <Link to="" class="btn btn-google"><i class="fa fa-google"></i>Google</Link>
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div class="connect">
                                             <h2><Link to="/register"> Dont have an account? Register</Link></h2>
                                         </div>

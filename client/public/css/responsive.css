@@ -1,0 +1,37 @@
+@media (max-width: 768px) { 
+    .job-res p {
+        max-width: 90%!important;
+    }
+    .job-x1 {
+        margin-bottom: 10px!important;
+    }
+    .job-x2 {
+        margin-bottom: 10px!important;
+    }
+    .job-x1 .form-1 {
+        border-radius: 4px 4px 4px 4px!important;
+    }
+    .job-x3 a {
+        border-radius: 4px 4px 4px 4px!important;
+    }
+    .icon-d {
+        display: none!important;
+    }
+    .job-form {
+        margin: auto;
+        max-width: 80%;
+        border: none!important;
+    }
+    .space-icon-d {
+        padding-bottom: 40px;
+    }
+    .login-form form {
+        max-width: 100%!important;
+    }
+    .btn-facebook {
+        max-width: 100%!important;
+    }
+    .s-p {
+        max-width: 100%!important;
+    }
+}
