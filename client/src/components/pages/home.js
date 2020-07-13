@@ -13,7 +13,7 @@ const Home = () => {
                     <div className="row fr-block">
                         <div className="col-md-6 lp-block">
                             <h2>Your Resume, Made Easy</h2>
-                            <p>CV Builder takes the hassle out of resume writing. You can choose from several templates and follow easy prompts
+                            <p>Scout4Job takes the hassle out of resume writing. You can choose from several templates and follow easy prompts
                     to create the perfect job-ready resume effortlessly.</p>
                             <Link to="/resume-sample" className="btn btn-more btn-lick mb-5 mt-2">
                                 Learn more
