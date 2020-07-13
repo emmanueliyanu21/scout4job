@@ -8,7 +8,7 @@ const JobDetails = () => {
             <section className="bk-grey">
                 <div className="container">
                     <div className="row pt-5 pb-5">
-                        <div className="col-md-8 db-page pt-4">
+                        <div className="col-md-8 col-sm-12 db-page pt-4">
                             <div className="row">
                                 <div className="col-md-2 and-x1">
                                     <img src="../images/andela.png" className="img-responsive" alt="" />

@@ -139,7 +139,7 @@ class Apply extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="col-md-12 text-center mb-4 mt-4">
-                                            <Link to="/dashboard" className="btn btn-apply">Submit application</Link>
+                                            <Link type="submit" to="/dashboard" className="btn btn-apply">Submit application</Link>
                                         </div>
                                     </div>
                                 </form>

@@ -41,10 +41,6 @@ import Contact from './components/pages/contact-us';
 import HeaderCopy from './components/builder pathway/header-copy'
 import CVPreview from './components/builder pathway/cv-preview';
 import SkillDetails from './components/cover letter/skill-details';
-import Createpost from './components/admin/posts/create';
-import Editpost from './components/admin/posts/edit';
-import Admindashboard from './components/admin/dashboard'
-import Adminpostindex from './components/admin/posts/index'
 // import About from './components/pages/about'
 // import Footer from './components/pages/footer'
 
@@ -85,8 +81,6 @@ class App extends Component {
           {/* <p>{this.state.apiResponse}</p> */}
           <BrowserRouter>
             <Navbar />
-            <Route path="/post-index" component={Adminpostindex} />
-            <Route path="/admin-dashboard" component={Admindashboard} />
             <Route exact path="/" component={Home} />
             <Route path="/resume-sample" component={ResumeSample} />
             <Route path="/resume-builder" component={ResumeBuilder} />
@@ -103,7 +97,6 @@ class App extends Component {
             <Route path="/launch" component={Launch} />
             <Route path="/year" component={Year} />
             <Route path="/start" component={Start} />
-            <Route path="/edit-post" component={Editpost} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
@@ -129,7 +122,6 @@ class App extends Component {
             <Route path="/header-copy" component={HeaderCopy} />
             <Route path="/cv-preview" component={CVPreview} />
             <Route path="/skill-details" component={SkillDetails} />
-            <Route path="/createpost" component={Createpost} />
 
             {/* <Route path="/about" component={About} /> */}
 
