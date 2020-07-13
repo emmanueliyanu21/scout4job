@@ -34,4 +34,18 @@
     .s-p {
         max-width: 100%!important;
     }
+    .test-img img {
+        max-width: 20%!important;    
+    }
+    .start-com {
+        margin: auto;
+        max-width: 100%;
+    }
+    .ul-headers {
+        display: none!important;
+    }
+    .form-card .pull-right {
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+    }
 }

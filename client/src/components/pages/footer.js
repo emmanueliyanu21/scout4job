@@ -9,8 +9,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 short-mss">
-                            <h2><span>Build your professional cv & cover letter and stand to get your dream job <m-span
-                                className="sign-up">Sign up</m-span> </span> </h2>
+                            <h2><span>Build your professional cv & cover letter and stand to get your dream job  </span> </h2>
                         </div>
                     </div>
                 </div>
@@ -26,7 +25,7 @@ const Footer = () => {
                                 <li className="n-30"><i className="fa fa-map-marker"></i> <span>No 3, Bola Onasanya Crescent, Ogudu, Lagos</span>
                                 </li>
                                 <li><i className="fa fa-phone"></i>+2347-0685-6214</li>
-                                <li><i className="fa fa-envelope"></i> info@cv-builder.com.ng</li>
+                                <li><i className="fa fa-envelope"></i> info@scout4job.com</li>
                             </ul>
                             <ul className="ul-foot">
                                 <li className="active">Open Hours</li>

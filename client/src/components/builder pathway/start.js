@@ -12,10 +12,9 @@ const Start = () => {
                         <div className="white-bk col-md-12">
                             <div className="three-text">
                                 <h2>How do you want to start?</h2>
-
                             </div>
                             <div className="row start-com">
-                                <div className="col-md-6 start-res">
+                                <div className="col-md-6 start-res mb-5">
                                     <Link to="/header">
                                         <div className="start-x1">
                                             <img src="../images/idea 1.png" className="img-responsive" alt="" />
@@ -25,7 +24,7 @@ const Start = () => {
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-md-6 start-res">
+                                <div className="col-md-6 start-res mb-5">
                                     <Link to="/dashboard">
                                         <div className="start-x2">
                                             <img src="../images/laptop 1.png" className="img-responsive" alt="" />

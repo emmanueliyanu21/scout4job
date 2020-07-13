@@ -34,14 +34,14 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="sec-header">
+                            <div className="sec-header animated fadeInLeft delay-5s slow-5s">
                                 <h2><span><i className="fa fa-briefcase"></i> Featured services</span> </h2>
                             </div>
-                            <div className="sc-3">
+                            <div className="sc-3 animated fadeInLeft delay-5s slow-5s">
                                 <h2>Additional Service that will</h2>
                                 <p>Grow your career</p>
                             </div>
-                            <div className="sc3-x1">
+                            <div className="sc3-x1 animated fadeInLeft delay-5s slow-5s">
                                 <h3>As a SEO Advisor or web crawler expert, I help organization adjust to the expanding significance
                                     of internet
                         promoting</h3>
@@ -49,7 +49,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3">
+                        <div className="col-md-3 animated fadeInLeft delay-5s slow-5s">
                             <div className="sc3-x2 sc3-x3">
                                 <img src="./images/first.png" className="img-responsive" alt="" />
                                 <h2>CV Builder</h2>
@@ -61,7 +61,7 @@ const Home = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-md-3 animated fadeInBottomLeft delay-5s slow-5s">
                             <div className="sc3-x2">
                                 <img src="./images/second.png" className="img-responsive" alt="" />
                                 <h2>Cover Letter</h2>
@@ -71,7 +71,7 @@ const Home = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-md-3 sc3-x2">
+                        <div className="col-md-3 sc3-x2 animated fadeInBottomRight delay-5s slow-5s">
                             <img src="./images/thrid.png" className="img-responsive" alt="" />
                             <h2>Job Search</h2>
                             <p>For every experience level of professionals as well as the fresh graduates, our Job updates service will serve get you hired.</p>
@@ -79,7 +79,7 @@ const Home = () => {
                                 <h3><i className="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
                             </Link>
                         </div>
-                        <div className="col-md-3 sc3-x2">
+                        <div className="col-md-3 sc3-x2 animated fadeInRight delay-5s slow-5s">
                             <img src="./images/fourth.png" className="img-responsive" alt="" />
                             <h2>Interviews</h2>
                             <p>For every experience level of professionals as well as the fresh graduates, our Interview service will serve get you hired.</p>
@@ -104,7 +104,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row ">
-                        <div className="col-md-4 ">
+                        <div className="col-md-4 animated fadeInRight delay-5s slow-5s">
                             <div className="sc4-x1">
                                 <Link to="/job-search">
                                     <img src="./images/digital-marketing.png" className="img-responsive" alt="" />
@@ -124,7 +124,7 @@ const Home = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 animated fadeInLeft delay-5s slow-5s">
                             <div className="sc4-x1">
                                 <Link to="/job-search">
                                     <img src="./images/web-design.png" className="img-responsive" alt="" />
@@ -144,7 +144,7 @@ const Home = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-md-4 ">
+                        <div className="col-md-4 animated fadeInRight delay-5s slow-5s">
                             <div className="sc4-x1">
                                 <Link to="/job-search">
                                     <img src="./images/plumbering.png" className="img-responsive" alt="" />
@@ -211,28 +211,28 @@ const Home = () => {
             <section className="bk-dark-purple">
                 <div className="container">
                     <div className="row pad-show-off">
-                        <div className="col-md-3 show-off-section">
+                        <div className="col-md-3 show-off-section animated fadeInLeft delay-5s slow-5s">
                             <div className="line-show">
                                 <i className="fa fa-check-circle"></i>
                                 <h2>99%</h2>
                                 <p>PASSING TO UNIVERSITIES</p>
                             </div>
                         </div>
-                        <div className="col-md-3 show-off-section">
+                        <div className="col-md-3 show-off-section animated fadeInRight delay-5s slow-5s">
                             <div className="line-show">
                                 <i className="fa fa-user"></i>
                                 <h2>49K</h2>
                                 <p>STUDENTS ENROLLED</p>
                             </div>
                         </div>
-                        <div className="col-md-3 show-off-section">
+                        <div className="col-md-3 show-off-section animated fadeInLeft delay-5s slow-5s">
                             <div className="line-show">
                                 <i className="fa fa-smile-o"></i>
                                 <h2>2458</h2>
                                 <p>HAPPY SMILE</p>
                             </div>
                         </div>
-                        <div className="col-md-3 show-off-section">
+                        <div className="col-md-3 show-off-section animated fadeInRight delay-5s slow-5s">
                             <div className="line-show">
                                 <i className="fa fa-address-card"></i>
                                 <h2>1090</h2>
@@ -254,14 +254,13 @@ const Home = () => {
                                 <h2><span><i className="fa fa-briefcase"></i> Testimonials</span> </h2>
                             </div>
                             <div className="sc-3">
-                                <h1 class="animated infinite bounce">An animated element</h1>
                                 <h2>We serve our clients with the</h2>
                                 <p>best of our capacity</p>
                             </div>
                         </div>
                     </div>
                     <div className="test-content row ">
-                        <div className="col-md-4 mb-5">
+                        <div className="col-md-4 mb-5 animated fadeInLeft delay-5s slow-5s">
                             <div className="test-sec sec-1">
                                 <div className="row">
                                     <div className="col-md-3 test-img">
@@ -278,7 +277,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4 mb-5">
+                        <div className="col-md-4 mb-5 animated fadeInUp delay-5s slow-5s">
                             <div className="test-sec">
                                 <div className="row">
                                     <div className="col-md-3 test-img center-image">
@@ -296,7 +295,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 animated fadeInBottomRight delay-5s slow-5s">
                             <div className="test-sec sec-1">
                                 <div className="row">
                                     <div className="col-md-3 test-img center-image">

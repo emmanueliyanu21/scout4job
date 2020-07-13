@@ -17,7 +17,7 @@ const Specific = () => {
                             </div>
                             <div className="create">
                                 <Link to="/cover" className="btn btn-create mr-4"><i className="fa fa-backward"></i></Link>
-                                <Link to="/skill-detail" className="btn btn-create"><i className="fa fa-forward"></i></Link>
+                                <Link to="/skill-details" className="btn btn-create"><i className="fa fa-forward"></i></Link>
                             </div>
                         </div>
                     </div>
