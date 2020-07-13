@@ -90,7 +90,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 ft-copy">
-                            <h2>2020 © All right reserved by <span>cv-builder.com.ng</span></h2>
+                            <h2>2020 © All right reserved by <span>scout4job.com</span></h2>
                         </div>
                     </div>
                 </div>
