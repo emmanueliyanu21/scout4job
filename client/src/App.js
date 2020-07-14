@@ -30,7 +30,8 @@ import Style from './components/cover letter/style';
 import Specific from './components/cover letter/specific';
 import JobApply from './components/cover letter/job-apply';
 import Finished from './components/cover letter/finished';
-import JobDetail from './components/job-pathway/job-details';
+import JobDetails from './components/job-pathway/job-details';
+import JobScreen from './components/job-pathway/jobscreen';
 import Apply from './components/job-pathway/apply';
 // import NavHeader from './components/pages/nav-header';
 import FAQ from './components/pages/faq';
@@ -112,7 +113,9 @@ class App extends Component {
             <Route path="/specific" component={Specific} />
             <Route path="/job-apply" component={JobApply} />
             <Route path="/finished" component={Finished} />
-            <Route path="/products/:id" component={JobDetail} />
+            <Route path="/job/:id" component={JobDetails} />
+            <Route path="/jobscreen" component={JobScreen} />
+            {/* /jobs/:id */}
             <Route path="/apply" component={Apply} />
             <Route path="/login" component={SignIn} />
             <Route path="/register" component={SignUp} />

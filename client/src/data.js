@@ -1,13 +1,14 @@
 export default {
-    products: [
+    jobs: [
         {
             _id: '1',
             name: 'Digital Marketing Agency',
             image: '../images/digital-marketing.png',
-            location: 'Lagos',
+            location: 'Lagos, Nigeria',
             caption: 'Tech Cabals: Old Online Trends That Have...',
             category: 'marketing',
-            status: 'Ongoing'
+            status: 'Ongoing',
+            specialization: 'Technology'
         },
         {
             _id: '2',

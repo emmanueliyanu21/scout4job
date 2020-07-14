@@ -128,20 +128,21 @@ class Job extends Component {
                         <div className="row">
 
                             {
-                                data.products.map(product =>
+                                data.jobs.map(job =>
                                     <div className="col-md-4 j-x">
-                                        <Link to={"/product/" + product._id }>
-                                            <div className="sc4-x1">
-                                                <img src={product.image} className="img-responsive" alt="" />
+                                        <Link to={"/job/" + job._id}>
+                                            {/* "/job/" + job._id  */}
+                                            <div className="sc4-x1" key={job.id}>
+                                                <img src={job.image} className="img-responsive" alt="" />
                                                 <div className="inner-content">
                                                     <ul className="ul-sc4">
-                                                        <li>Status:<span className="status">{product.status}</span></li>
+                                                        <li>Status:<span className="status">{job.status}</span></li>
                                                         <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
                                                     </ul>
-                                                    <h2>{product.name}</h2>
-                                                    <p>{product.caption}</p>
+                                                    <h2>{job.name}</h2>
+                                                    <p>{job.caption}</p>
                                                     <ul className="ul-sc4-x1">
-                                                        <li><i className="fa fa-map-marker"></i> {product.location}</li>
+                                                        <li><i className="fa fa-map-marker"></i> {job.location}</li>
                                                         <li className="pull-right">Read more <i className="fa fa-forward"></i></li>
                                                     </ul>
                                                 </div>

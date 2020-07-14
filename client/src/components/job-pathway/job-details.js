@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import data from '../../data'
 
-const JobDetails = () => {
+const JobDetails = (props) => {
+    console.log(props.match.params.id)
+    const job = data.jobs.find(x => x._id === props.match.params.id)
     return (
         <div className="">
             {/* <!-- body starts here --> */}
@@ -14,7 +17,7 @@ const JobDetails = () => {
                                     <img src="../images/andela.png" className="img-responsive" alt="" />
                                 </div>
                                 <div className="col-md-10">
-                                    <h2>Creative and Passionate Writer</h2>
+                                    <h2>{job.name}</h2>
                                     <ul className="ul-job">
                                         <li>Writers Inc - <Link to=""> <span>(see more Jobs)</span></Link> </li>
                                         <li className=""><i className="fa fa-clock-o"></i> 4 days ago</li>
