@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../pages/footer'
+import data from '../../data'
 
 const initialState = {
     jobTitle: '',
@@ -123,66 +124,35 @@ class Job extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-md-4 j-x">
-                                <Link to="/job-details">
-                                    <div className="sc4-x1">
-                                        <img src="../images/digital-marketing.png" className="img-responsive" alt="" />
-                                        <div className="inner-content">
-                                            <ul className="ul-sc4">
-                                                <li>Status:<span className="status">Ongoing</span></li>
-                                                <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
-                                            </ul>
-                                            <h2>Digital Marketing Agency</h2>
-                                            <p>Tech Cabals: Old Online Trends That Have...</p>
-                                            <ul className="ul-sc4-x1">
-                                                <li><i className="fa fa-map-marker"></i> Lagos</li>
-                                                <li className="pull-right">Read more <i className="fa fa-forward"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
 
-                            <div className="col-md-4 j-x">
-                                <Link to="/job-details">
-                                    <div className="sc4-x1">
-                                        <img src="../images/web-design.png" className="img-responsive" alt="" />
-                                        <div className="inner-content">
-                                            <ul className="ul-sc4">
-                                                <li>Status:<span className="status">Ongoing</span></li>
-                                                <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
-                                            </ul>
-                                            <h2>Software Engineer</h2>
-                                            <p>Andela: Old Online Trends That Have...</p>
-                                            <ul className="ul-sc4-x1">
-                                                <li><i className="fa fa-map-marker"></i> Lagos</li>
-                                                <li className="pull-right">Read more <i className="fa fa-forward"></i></li>
-                                            </ul>
-                                        </div>
+                        <div className="row">
+                        
+                            {
+                                data.products.map(product => 
+                                    <div className="col-md-4 j-x">
+                                        <Link to="/job-details">
+                                            <div className="sc4-x1">
+                                                <img src="../images/digital-marketing.png" className="img-responsive" alt="" />
+                                                <div className="inner-content">
+                                                    <ul className="ul-sc4">
+                                                        <li>Status:<span className="status">Ongoing</span></li>
+                                                        <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
+                                                    </ul>
+                                                    <h2>{product.name}</h2>
+                                                    <p>{product.caption}</p>
+                                                    <ul className="ul-sc4-x1">
+                                                        <li><i className="fa fa-map-marker"></i> {product.location}</li>
+                                                        <li className="pull-right">Read more <i className="fa fa-forward"></i></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </Link>
                                     </div>
-                                </Link>
-                            </div>
-                            <div className="col-md-4 j-x">
-                                <Link to="/job-details">
-                                    <div className="sc4-x1">
-                                        <img src="../images/plumbering.png" className="img-responsive" alt="" />
-                                        <div className="inner-content">
-                                            <ul className="ul-sc4">
-                                                <li>Status:<span className="status">Ongoing</span></li>
-                                                <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
-                                            </ul>
-                                            <h2>Plumber Agency</h2>
-                                            <p>Digit Plum: we want to make sure every...</p>
-                                            <ul className="ul-sc4-x1">
-                                                <li><i className="fa fa-map-marker"></i> Lagos</li>
-                                                <li className="pull-right">Read more <i className="fa fa-forward"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
+                                    )
+                            }
+
                         </div>
+
                         <div className="row">
                             <div className="col-md-12">
                                 <ul className="inner-arrow">
