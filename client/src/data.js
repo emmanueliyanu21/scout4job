@@ -1,25 +1,31 @@
-export default  {
+export default {
     products: [
         {
+            _id: '1',
             name: 'Digital Marketing Agency',
-            image: '/images/d1.jpg',
+            image: '../images/digital-marketing.png',
             location: 'Lagos',
             caption: 'Tech Cabals: Old Online Trends That Have...',
-            category: 'marketing'
+            category: 'marketing',
+            status: 'Ongoing'
         },
         {
+            _id: '2',
             name: 'Software Engineer',
-            image: '/images/d1.jpg',
+            image: '../images/web-design.png',
             location: 'Lagos',
             caption: 'Andela: Old Online Trends That Have...',
-            category: 'software'
+            category: 'software',
+            status: 'Close'
         },
         {
+            _id: '3',
             name: 'Plumber Agency',
-            image: '/images/d1.jpg',
+            image: '../images/plumbering.png',
             location: 'Lagos',
             caption: 'Digit Plum: we want to make sure every...',
-            category: 'plu mber'
+            category: 'plumber',
+            status: 'Ongoing'
         }
     ]
 }

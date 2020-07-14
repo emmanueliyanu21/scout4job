@@ -126,16 +126,16 @@ class Job extends Component {
                         </div>
 
                         <div className="row">
-                        
+
                             {
-                                data.products.map(product => 
+                                data.products.map(product =>
                                     <div className="col-md-4 j-x">
-                                        <Link to="/job-details">
+                                        <Link to={"/product/" + product._id }>
                                             <div className="sc4-x1">
-                                                <img src="../images/digital-marketing.png" className="img-responsive" alt="" />
+                                                <img src={product.image} className="img-responsive" alt="" />
                                                 <div className="inner-content">
                                                     <ul className="ul-sc4">
-                                                        <li>Status:<span className="status">Ongoing</span></li>
+                                                        <li>Status:<span className="status">{product.status}</span></li>
                                                         <li className="pull-right"><i className="fa fa-clock-o"></i><span>Jan 12, 2020</span></li>
                                                     </ul>
                                                     <h2>{product.name}</h2>
@@ -148,7 +148,7 @@ class Job extends Component {
                                             </div>
                                         </Link>
                                     </div>
-                                    )
+                                )
                             }
 
                         </div>

@@ -112,7 +112,7 @@ class App extends Component {
             <Route path="/specific" component={Specific} />
             <Route path="/job-apply" component={JobApply} />
             <Route path="/finished" component={Finished} />
-            <Route path="/job-details" component={JobDetail} />
+            <Route path="/products/:id" component={JobDetail} />
             <Route path="/apply" component={Apply} />
             <Route path="/login" component={SignIn} />
             <Route path="/register" component={SignUp} />
