@@ -7,18 +7,60 @@ const initialState = {
     jobTitle: '',
     jobLocation: '',
     jobTitleError: '',
-    jobLocationError: ''
+    jobLocationError: '',
+
+    query: "",
+    data: [],
+    filteredData: []
+
 }
 
 class Job extends Component {
 
     state = initialState;
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.id]: e.target.value
+    handleInputChange = e => {
+        const query = e.target.value;
+
+        this.setState(prevState => {
+            const filteredData = prevState.data.filter(element => {
+                return element.name.toLowerCase().includes(query.toLowerCase());
+            });
+
+            return {
+                query,
+                filteredData
+            };
+
         });
+    };
+
+    getData = () => {
+        fetch(`http://localhost:4000/data`)
+            .then(response => response.json())
+            .then(data => {
+                const { query } = this.state;
+                const filteredData = data.filter(element => {
+                    return element.name.toLowerCase().includes(query.toLowerCase());
+                });
+
+               this.setState({
+                    data,
+                    filteredData
+                });
+
+            });
+    };
+
+    componentWillMount() {
+        this.getData();
     }
+
+    // handleChange = (e) => {
+    //     this.setState({
+    //         [e.target.id]: e.target.value
+    //     });
+    // }
 
     handleValidation() {
         let jobTitleError = "";
@@ -70,8 +112,8 @@ class Job extends Component {
                                 <div className="col-md-5 job-x1">
                                     <div className="">
                                         <div className="form-group">
-                                            <input type="text" className="form-control form-1" id="jobTitle"
-                                                onChange={this.handleChange} placeholder="Job Title" />
+                                            <input type="text" className="form-control form-1" value={this.state.query} id="jobTitle"
+                                                onChange={this.handleInputChange} placeholder="Job Title" />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.jobTitleError}
                                             </div>
@@ -81,7 +123,7 @@ class Job extends Component {
                                 <div className="col-md-5 job-x2">
                                     <div className="">
                                         <div className="form-group">
-                                            <select onChange={this.handleChange} className="form-control space-select pt-2 pb-2">
+                                            <select className="form-control space-select pt-2 pb-2">
                                                 <option>Lagos</option>
                                                 <option>Lagos Mainland</option>
                                                 <option>Lekki</option>

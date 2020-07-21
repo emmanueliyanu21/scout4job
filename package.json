@@ -40,6 +40,10 @@
     "validator": "^13.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
     "nodemon": "^2.0.2"
   }
 }

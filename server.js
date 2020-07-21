@@ -6,6 +6,7 @@ const http = require('http');
 const path = require('path');
 
 const users = require("./routes/api/users");
+const jobs = require("./routes/api/jobs")
 
 const app = express();
 
@@ -16,7 +17,6 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.set('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/build', '/index.html'));
 });
-
 
 // Bodyparser middleware
 app.use(
@@ -46,6 +46,7 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
+app.use("/api/jobs", jobs);
 
 // Set Port
 const port = process.env.PORT || '8000';

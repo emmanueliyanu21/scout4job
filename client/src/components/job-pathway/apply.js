@@ -75,7 +75,7 @@ class Apply extends Component {
                     <div className="container">
                         <div className="row pt-5 pb-5">
                             <div className="col-md-8 db-page pt-2 db-more">
-                                {/* <h2>Application for {job.name}</h2> */}
+                                <h2>Application for for the post of a Digital Maf rketer</h2>
                                 <form onSubmit={this.handleSubmit}>
                                     <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">Subject / Title</label>
