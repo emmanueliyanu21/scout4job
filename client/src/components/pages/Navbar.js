@@ -8,8 +8,7 @@ const Navbar = () => {
                 <div className="container">
 
                     <Link className="navbar-brand d-flex align-items-center m-0 p-0" to="./index.html">
-                        <img src="images/logo2-template.png" className="img-responsive" alt="" />
-                        <span>SCOUT4JOB</span>
+                        <img src="images/scout4jobs-logo.png" className="img-responsive" alt="" />
                     </Link>
 
                     <button className="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

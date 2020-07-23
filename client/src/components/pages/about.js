@@ -10,7 +10,7 @@ function About() {
             <div className="abt-cont">
                 <div className="container">
                     <div className="row pt-4 pb-5">
-                        <p>CV Builder takes the hassle out of resume writing. You can choose from several templates and follow easy prompts to create the perfect job-ready resume effortlessly.</p>
+                        <p>Scout4Job is committed to providing superior, creative, and accessible career solutions to individuals, and businesses. We do not just offer job openings information but help build professional careers.</p>
                     </div>
                 </div>
             </div>

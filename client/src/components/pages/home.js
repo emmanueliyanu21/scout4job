@@ -4,25 +4,30 @@ import Footer from '../pages/footer'
 
 
 const Home = () => {
+    // const particles = '';
+    // // particles.js
+    // particles.js.load('particles.js', 'paticles.json', function () {
+    //     console.log('paticles.json loaded')
+    // })
+
     return (
         <div className="app-header">
-
+            <div id="particles-js"></div>
             {/* <!-- section two starts here --> */}
             <div className="bk-blue">
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row fr-block">
-                        <div className="col-md-6 lp-block">
-                            <h2>Your Resume, Made Easy</h2>
-                            <p>Scout4Job takes the hassle out of resume writing. You can choose from several templates and follow easy prompts
-                    to create the perfect job-ready resume effortlessly.</p>
+                        <div className="col-md-12 lp-block">
+                            <h2>With Scout4Job!</h2>
+                            <p>We facilitate Recruitment, Employability, Enterprise, and Careers.</p>
                             <Link to="/resume-sample" className="btn btn-more btn-lick mb-5 mt-2">
                                 Learn more
                 </Link>
+                            <Link to="/resume-sample" className="btn btn-more btn-home-now mb-5 mt-2">
+                                Sign-up Now
+                </Link>
                         </div>
-                        <div className="col-md-6 lp-img">
-                            {/* <!-- <img src="images/banner-1.jpg" className="img-responsive" alt=""> --> */}
-                            {/* <!-- <img src="images/undraw.png" className="img-responsive" alt=""> --> */}
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -38,54 +43,46 @@ const Home = () => {
                                 <h2><span><i className="fa fa-briefcase"></i> Featured services</span> </h2>
                             </div>
                             <div className="sc-3 animated fadeInLeft delay-5s slow-5s">
-                                <h2>Additional Service that will</h2>
-                                <p>Grow your career</p>
+                                <h2>Create, Design, Develop your career portfolio</h2>
+                                <p>the way you want.</p>
                             </div>
-                            <div className="sc3-x1 animated fadeInLeft delay-5s slow-5s">
-                                <h3>As a SEO Advisor or web crawler expert, I help organization adjust to the expanding significance
-                                    of internet
-                        promoting</h3>
-                            </div>
+                            {/* <div className="sc3-x1 animated fadeInLeft delay-5s slow-5s">
+                                <h3>Create, Design, Develop your career portfolio the way you want.</h3>
+                            </div> */}
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3 animated fadeInLeft delay-5s slow-5s">
+                        <div className="col-md-4 animated fadeInLeft delay-5s slow-5s">
                             <div className="sc3-x2 sc3-x3">
                                 <img src="./images/first.png" className="img-responsive" alt="" />
                                 <h2>CV Builder</h2>
-                                <p>For every experience level of professionals as well as the fresh graduates, our resume service will serve your need to stay relevant.</p>
+                                <p>Design, build and customise the Resume of your choice with our exceptional CV templates.</p>
 
                                 <Link to="/launch">
                                     <h3>
-                                        <i className="fa fa-long-arrow-right pr-2"></i> Learn more</h3>
+                                        <i className="fa fa-long-arrow-right pr-2"></i>Get Started</h3>
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-md-3 animated fadeInBottomLeft delay-5s slow-5s">
+                        <div className="col-md-4 animated fadeInBottomLeft delay-5s slow-5s">
                             <div className="sc3-x2">
                                 <img src="./images/second.png" className="img-responsive" alt="" />
                                 <h2>Cover Letter</h2>
-                                <p>For every experience level of professionals as well as the fresh graduates, our cover letter service will serve your need to stay relevant.</p>
+                                <p>Design your own professional cover letter using any of our excellent letter templates.</p>
                                 <Link to="/cover-letter">
-                                    <h3><i className="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
+                                    <h3><i className="fa fa-long-arrow-right pr-2"></i>Get Started</h3>
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-md-3 sc3-x2 animated fadeInBottomRight delay-5s slow-5s">
-                            <img src="./images/thrid.png" className="img-responsive" alt="" />
-                            <h2>Job Search</h2>
-                            <p>For every experience level of professionals as well as the fresh graduates, our Job updates service will serve get you hired.</p>
-                            <Link to="/job-search">
-                                <h3><i className="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
-                            </Link>
-                        </div>
-                        <div className="col-md-3 sc3-x2 animated fadeInRight delay-5s slow-5s">
-                            <img src="./images/fourth.png" className="img-responsive" alt="" />
-                            <h2>Interviews</h2>
-                            <p>For every experience level of professionals as well as the fresh graduates, our Interview service will serve get you hired.</p>
-                            <Link to="/interviews">
-                                <h3><i className="fa fa-long-arrow-right pr-2"></i>Learn more</h3>
-                            </Link>
+                        <div className="col-md-4 animated fadeInBottomRight delay-5s slow-5s">
+                            <div className="sc3-x2 ">
+                                <img src="./images/thrid.png" className="img-responsive" alt="" />
+                                <h2>Job Search</h2>
+                                <p>Find, from our recommendations, a job that fits what you are looking for either as an entry-level graduate or a mid-level professional.</p>
+                                <Link to="/job-search">
+                                    <h3><i className="fa fa-long-arrow-right pr-2"></i>Get Started</h3>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -214,28 +211,28 @@ const Home = () => {
                         <div className="col-md-3 show-off-section animated fadeInLeft delay-5s slow-5s">
                             <div className="line-show">
                                 <i className="fa fa-check-circle"></i>
-                                <h2>99%</h2>
+                                <h2>0%</h2>
                                 <p>PASSING TO UNIVERSITIES</p>
                             </div>
                         </div>
                         <div className="col-md-3 show-off-section animated fadeInRight delay-5s slow-5s">
                             <div className="line-show">
                                 <i className="fa fa-user"></i>
-                                <h2>49K</h2>
-                                <p>STUDENTS ENROLLED</p>
+                                <h2>00</h2>
+                                <p>Employee ENROLLED</p>
                             </div>
                         </div>
                         <div className="col-md-3 show-off-section animated fadeInLeft delay-5s slow-5s">
                             <div className="line-show">
                                 <i className="fa fa-smile-o"></i>
-                                <h2>2458</h2>
+                                <h2>00</h2>
                                 <p>HAPPY SMILE</p>
                             </div>
                         </div>
                         <div className="col-md-3 show-off-section animated fadeInRight delay-5s slow-5s">
                             <div className="line-show">
                                 <i className="fa fa-address-card"></i>
-                                <h2>1090</h2>
+                                <h2>00</h2>
                                 <p>CERTIFIED TEACHERS</p>
                             </div>
                         </div>
@@ -299,11 +296,11 @@ const Home = () => {
                             <div className="test-sec sec-1">
                                 <div className="row">
                                     <div className="col-md-3 test-img center-image">
-                                        <img src="./images/testimonial-1.jpg" className="img-responsive" alt="Dumpe" />
+                                        <img src="./images/testimonial-2.jpg" className="img-responsive" alt="Dumpe" />
                                     </div>
                                     <div className="col-md-9 test-details">
                                         <h2>Lilian Dumpe</h2>
-                                        <p>Student, University of Lagos</p>
+                                        <p>CEO, IGROW</p>
                                     </div>
                                 </div>
                                 <div className="text-center pt-3">

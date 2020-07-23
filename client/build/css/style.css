@@ -4,8 +4,25 @@
 
 /* @import url('font-awesome.min.css'); */
 
+ #particles-js {
+        color: #fff;
+        position: absolute;
+        top: 10;
+        width: 100%;
+        height: 650px;
+        /* opacity: 0.2; */
+    }
+
+
 .navbar-brand img {
-    display: block!important;
+    /* display: block!important; */
+    max-width: 5%;
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .navbar-brand span {
@@ -15,14 +32,10 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 22px!important;
 }
-
-.navbar-brand img{
-    max-width: 45%;
-}
     .navbar-nav li {
         font-family: nunito, sans-serif;
         font-size: 16px;
-        padding-right: 15px;
+        padding-left: 15px;
     }
 
     .navbar-nav li .dropdown-item {
@@ -31,8 +44,8 @@
     }
     
     .navbar-light {
-        background-color: #246DF7!important;
-        color: #fff!important;
+        background-color: #fff!important;
+        color: #246DF7!important;
     }
     
     .nav-line {
@@ -59,7 +72,8 @@
     }
     
     .navbar-light li a {
-        color: #fff!important;
+        color: #246DF7!important;
+        border-bottom: 2px solid #fff;
     }
 
     .navbar-light li .dropdown-menu a {
@@ -88,7 +102,7 @@
     }
     
     .bk-blue {
-        background: url("../images/bk1.png");
+        background: url("../images/bk1.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -104,12 +118,11 @@
     .lp-block p {
         color: #fff;
         font-family: nunito, sans-serif;
-        font-size: 20px;
+        font-size: 22px;
         letter-spacing: 0.3;
         padding-top: 20px;
         padding-bottom: 10px;
-        max-width: 95%;
-        font-weight: 500;
+        font-weight: 600;
     }
     
     .btn-more {
@@ -117,21 +130,38 @@
         font-family: nunito, sans-serif;
         background-color: rgba(255, 255, 255, 0.15);
         /* background-color: #FBA51A!important; */
-        font-size: 15px;
+        font-size: 20px;
+        padding: 12px 25px;
+        margin-right: 30px;
+    }
+
+    .btn-home-now {
+        color: #fff;
+        font-family: nunito, sans-serif;
+        background-color: #FBA51A!important;
+        font-size: 20px;
         padding: 12px 25px;
     }
     
     .btn-more:hover {
         background-color: #fff;
-        color: #00ACEE!important;
+        color: #246DF7!important;
+    }
+
+    .btn-home-now:hover {
+        background-color: #fff!important;
+        color: #246DF7!important;
     }
     
     .fr-block {
-        padding-bottom: 13%;
+        padding-bottom: 15%;
+        padding-top: 15%;
     }
     
     .lp-block {
-        padding-top: 15%;
+        background-color: rgba(15, 45, 102, 0.6);
+        text-align: center;
+        padding-top: 30px;
     }
     /* .bk-grey {
     background-color: ;
@@ -237,7 +267,7 @@
     padding-top: 15px;
 }
 .sc3-x2 p {
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: #788088;
     padding-left: 10px;
@@ -261,8 +291,8 @@
 }
 
 .sc3-x3 {
-    background-color: #fff;
-    box-shadow: 0px 3px 12px -2px rgb(209, 209, 209);
+    /* background-color: #fff; */
+    /* box-shadow: 0px 3px 12px -2px rgb(209, 209, 209); */
     border-radius: 8px;
 }
 
@@ -472,7 +502,7 @@
     /* BLOCK 3 STARTS HERE */
     
     .bk-grey {
-        background-color: #f8fafb;
+        background-color: #f2f5fa;
     }
     
     .jl-x1 {
@@ -930,7 +960,7 @@
     }
     
     .bk-grey {
-        background-color: #f8fafb;
+        background-color: #f2f5fa;
     }
     
     .bk2-btn {
@@ -1429,6 +1459,15 @@
         color: #fff;
         margin-bottom: 30px;
         margin-top: 10px;
+    }
+
+    .form-txt .btn-submit {
+        background-color: rgb(30, 95, 214);
+        -webkit-transition: background 0.5s linear;
+        -moz-transition: background 0.5s linear;
+        -ms-transition: background 0.5s linear;
+        -o-transition: background 0.5s linear;
+        transition: background 0.5s linear;
     }
     
     .head-form form {
@@ -1959,6 +1998,8 @@
 
 .temp-x1 {
     padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 

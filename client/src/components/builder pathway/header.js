@@ -122,7 +122,7 @@ class Header extends Component {
                                 </ul>
                             </div>
                             <div className="col-md-4 txt-header">
-                                <Link to="" className="btn btn-headers">Headers</Link>
+                                <Link to="" className="btn btn-headers">Personal Details</Link>
                             </div>
                         </div>
                     </div>
@@ -207,7 +207,7 @@ class Header extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="col-md-12 form-txt">
-                                            <button type="submit" className="btn btn-submit">submit</button>
+                                            <button type="submit" className="btn btn-submit">Submit</button>
                                             <h2> <i className="fa fa-plus"></i> What’s the best way for employers to contact you?</h2>
                                             <h2> <i className="fa fa-plus"></i> We suggest including an email and phone number</h2>
                                         </div>
@@ -222,7 +222,10 @@ class Header extends Component {
 
                             </div>
                             <div className="col-md-4 form-img">
-                                <img src="../images/cv.jpg" alt="" className="img-responsive" />
+                                {/* <img src="../images/cv.jpg" alt="" className="img-responsive" /> */}
+                                <div className="">
+
+                                </div>
                                 <div className="preview">
                                     <Link to="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
                                 </div>

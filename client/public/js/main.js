@@ -42,4 +42,8 @@ $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
 
+// particles.js
+particles.js.load('particles.js', 'paticles.json', function () {
+    console.log('paticles.json loaded')
+})
 // carousel script end here

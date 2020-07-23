@@ -9,7 +9,7 @@ const ResumeBuilder = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 bk0-inner-text">
-                            <h2>Try <span>CV-Builder</span> Resume</h2>
+                            <h2>Try <span>Resume</span> Builder</h2>
                             <p>It's Free-to-Use and Proven to Get You Hired 33% Faster</p>
                             <div className="bk0-button">
                                 <Link to="/launch" className="btn btn-start" href="">Start Now</Link>
@@ -25,7 +25,7 @@ const ResumeBuilder = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 bk1-inner-text pt-3">
-                            <h2>CV-Builder Resume is Perfect for YOU</h2>
+                            <h2>Resume Builder is Perfect for YOU</h2>
                             <p>It takes the hassle out of resume writing and only ours is proven to help you get hired 70%
                         faster</p>
                         </div>
@@ -42,7 +42,7 @@ const ResumeBuilder = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-5 bk2-text">
-                            <h2>CV-Builder Resume</h2>
+                            <h2>Resume Builder</h2>
                             <div className="bk2-inner-txt">
                                 <p><i className="fa fa-circle"></i>Pick from our professionally crafted resume designs
                         </p>
@@ -72,13 +72,13 @@ const ResumeBuilder = () => {
                     </div>
                     <div className="row">
                         <div className="col-md-4 bk3-img">
-                            <Link to=""><img src="../images/cv.jpg" alt="" className="img-responsive" /></Link>
+                            <Link to="/launch"><img src="../images/template-0.jpg" alt="" className="img-responsive" /></Link>
                         </div>
                         <div className="col-md-4 bk3-img">
-                            <Link to=""><img src="../images/cv.jpg" alt="" className="img-responsive" /></Link>
+                            <Link to="/launch"><img src="../images/template-2.jpg" alt="" className="img-responsive" /></Link>
                         </div>
                         <div className="col-md-4 bk3-img">
-                            <Link to=""><img src="../images/cv.jpg" alt="" className="img-responsive" /></Link>
+                            <Link to="/launch"><img src="../images/template-3.jpg" alt="" className="img-responsive" /></Link>
                         </div>
                     </div>
                     <div className="row">
