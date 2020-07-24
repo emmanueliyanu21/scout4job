@@ -24,7 +24,7 @@ const Footer = () => {
                             <ul className="ul-footer pt-3">
                                 <li className="n-30"><i className="fa fa-map-marker"></i> <span>No 3, Bola Onasanya Crescent, Ogudu, Lagos</span>
                                 </li>
-                                <li><i className="fa fa-phone"></i>+2347-0685-6214</li>
+                                <li><i className="fa fa-phone"></i>+2348-0944-44912   </li>
                                 <li><i className="fa fa-envelope"></i> info@scout4job.com</li>
                             </ul>
                             <ul className="ul-foot">

@@ -13,16 +13,16 @@ const SkillDetails = () => {
                         software engineer position?</h2>
 
                             <div className="option-x1 pt-5 mb-5">
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Technical Writing</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Network Development</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Technical Analysis</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Data Collection</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Project Management</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Virtualization</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Software Development</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Programming</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">System Development</a>
-                                <a href="./job-apply.html" className="btn btn-yes mb-3">Project Management</a>
+                                <a href="" className="btn btn-yes mb-3">Technical Writing</a>
+                                <a href="" className="btn btn-yes mb-3">Network Development</a>
+                                <a href="" className="btn btn-yes mb-3">Technical Analysis</a>
+                                <a href="" className="btn btn-yes mb-3">Data Collection</a>
+                                <a href="" className="btn btn-yes mb-3">Project Management</a>
+                                <a href="" className="btn btn-yes mb-3">Virtualization</a>
+                                <a href="" className="btn btn-yes mb-3">Software Development</a>
+                                <a href="" className="btn btn-yes mb-3">Programming</a>
+                                <a href="" className="btn btn-yes mb-3">System Development</a>
+                                <a href="" className="btn btn-yes mb-3">Project Management</a>
 
                             </div>
                             <div className="create">

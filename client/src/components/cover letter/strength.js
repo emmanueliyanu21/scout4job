@@ -13,15 +13,15 @@ const Strength = () => {
                         software engineer position?</h2>
 
                             <div className="option-x1 pt-5 mb-5">
-                                <Link to="" className="btn btn-yes mb-3">Collaboration</Link>
-                                <Link to="" className="btn btn-yes mb-3">Communication</Link>
-                                <Link to="" className="btn btn-yes mb-3">Critical Thinking</Link>
-                                <Link to="" className="btn btn-yes mb-3">Customer Service</Link>
-                                <Link to="" className="btn btn-yes mb-3">Decision Making</Link>
-                                <Link to="" className="btn btn-yes mb-3">Delegation</Link>
-                                <Link to="" className="btn btn-yes mb-3">Innovation</Link>
-                                <Link to="" className="btn btn-yes mb-3">Interpersonal</Link>
-                                <Link to="" className="btn btn-yes mb-3">Leadership</Link>
+                                <a href="" className="btn btn-yes mb-3">Collaboration</a>
+                                <a href="" className="btn btn-yes mb-3">Communication</a>
+                                <a href="" to="" className="btn btn-yes mb-3">Critical Thinking</a>
+                                <a href="" className="btn btn-yes mb-3">Customer Service</a>
+                                <a href="" className="btn btn-yes mb-3">Decision Making</a>
+                                <a href="" className="btn btn-yes mb-3">Delegation</a>
+                                <a href="" className="btn btn-yes mb-3">Innovation</a>
+                                <a href="" className="btn btn-yes mb-3">Interpersonal</a>
+                                <a href="" className="btn btn-yes mb-3">Leadership</a>
                                 {/* <!-- <a href="./job-apply.html" className="btn btn-yes mb-3">Project Management</a> --> */}
 
                             </div>

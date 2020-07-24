@@ -123,7 +123,7 @@ class WorkExperience extends Component {
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Job Title</label>
                                             <input type="text" className="form-control" id="jobTitle"
-                                                aria-describedby="emailHelp" placeholder="Job Title" />
+                                                 placeholder="Job Title" />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.jobTitleError}
                                             </div>
@@ -131,7 +131,7 @@ class WorkExperience extends Component {
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Employer</label>
                                             <input type="text" className="form-control" id="Employee"
-                                                aria-describedby="emailHelp" placeholder="Employer" />
+                                                 placeholder="Employer" />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.EmployeeError}
                                             </div>
@@ -141,7 +141,7 @@ class WorkExperience extends Component {
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">City</label>
                                             <input type="text" className="form-control" id="city"
-                                                aria-describedby="emailHelp" placeholder="City" />
+                                                 placeholder="City" />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.cityError}
                                             </div>
@@ -149,7 +149,7 @@ class WorkExperience extends Component {
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">State</label>
                                             <input type="text" className="form-control" id="state"
-                                                aria-describedby="emailHelp" placeholder="State" />
+                                                 placeholder="State" />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.stateError}
                                             </div>
@@ -159,7 +159,7 @@ class WorkExperience extends Component {
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Start Date</label>
                                             <input type="text" className="form-control" id="date"
-                                                aria-describedby="emailHelp" placeholder="Start Date" />
+                                                 placeholder="Start Date" />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.dateError}
                                             </div>
@@ -167,7 +167,7 @@ class WorkExperience extends Component {
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">End Date</label>
                                             <input type="text" className="form-control" id="endDate"
-                                                aria-describedby="emailHelp" placeholder="End Date" />
+                                                placeholder="End Date" />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.endDateError}
                                             </div>
@@ -192,9 +192,11 @@ class WorkExperience extends Component {
                                 </div>
                             </div>
                             <div className="col-md-4 form-img">
-                                <img src="../images/cv.jpg" alt="" className="img-responsive" />
-                                <div className="preview">
-                                    <Link to="#" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link>
+                                <div className="personal-details">
+                                    <p>
+                                        <span className="text-left">{this.state.jobTitle} {this.state.Employee} {this.state.city} {this.state.state} </span>
+                                        <span className="pull-right"> {this.state.date} {this.state.endDate}</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>

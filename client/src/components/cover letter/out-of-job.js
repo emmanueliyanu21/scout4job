@@ -12,7 +12,7 @@ const componentName = () => {
                             <h2>Have you been out of job for last 6 month?</h2>
                             <p>It’s okay if you dont have. We will give you a letter to customer later</p>
                             <div className="option-x1 pt-5 mb-5">
-                                <Link to="/more-details" className="btn btn-yes">Yes</Link>
+                                <Link to="/style" className="btn btn-yes">Yes</Link>
                                 <Link to="/style" className="btn btn-no">No</Link>
                             </div>
                             <div className="create">
