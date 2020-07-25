@@ -7,7 +7,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-lg navbar-light nav-line">
                 <div className="container">
 
-                    <Link className="navbar-brand d-flex align-items-center m-0 p-0" to="./index.html">
+                    <Link className="navbar-brand d-flex align-items-center m-0 p-0" to="/">
                         <img src="images/scout4jobs-logo.png" className="img-responsive" alt="" />
                     </Link>
 
@@ -18,9 +18,9 @@ const Navbar = () => {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav cap-bt ml-auto">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/">HOME <span className="sr-only">(current)</span></Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item dropdown">
                                 <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,11 +39,17 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/cover-letter">COVER LETTER</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/about-us">ABOUT</Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item ">
                                 <Link className="nav-link active" to="/login">SIGN IN</Link>
+                            </li>
+                            <li className="nav-item account-create">
+                                <Link className="nav-link active" to="/register">
+                                    <span> Create an account
+                                         </span>
+                                </Link>
                             </li>
                         </ul>
                     </div>
