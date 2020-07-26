@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 /* @import url('font-awesome.min.css'); */
@@ -55,7 +55,7 @@
     .cap-bt li a {
         padding: 9px 12px!important;
         border-radius: 4px;
-        font-weight: 600;
+        font-weight: 550;
     }
     
     .cap-bt li a:hover {
@@ -72,7 +72,7 @@
     }
     
     .navbar-light li a {
-        color: #246DF7!important;
+        color: #343434!important;
         border-bottom: 2px solid #fff;
     }
 
