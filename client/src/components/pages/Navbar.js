@@ -24,7 +24,7 @@ const Navbar = () => {
                             <li className="nav-item dropdown">
                                 <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    RESUME
+                                    Resume
                         </Link>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <Link className="dropdown-item" to="/resume-builder">Resume Builder</Link>
@@ -34,16 +34,16 @@ const Navbar = () => {
                             </li>
 
                             <li className="nav-item">
-                                <Link className="nav-link" to="/job-search">JOB SEARCH</Link>
+                                <Link className="nav-link" to="/job-search">Job Search</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/cover-letter">COVER LETTER</Link>
+                                <Link className="nav-link" to="/cover-letter">Cover Letter</Link>
                             </li>
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/about-us">ABOUT</Link>
                             </li> */}
                             <li className="nav-item ">
-                                <Link className="nav-link active" to="/login">SIGN IN</Link>
+                                <Link className="nav-link active" to="/login">Login</Link>
                             </li>
                             <li className="nav-item account-create">
                                 <Link className="nav-link active" to="/register">
