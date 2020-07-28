@@ -21,24 +21,17 @@ const Navbar = () => {
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/">HOME <span className="sr-only">(current)</span></Link>
                             </li> */}
-                            <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Resume
-                        </Link>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <Link className="dropdown-item" to="/resume-builder">Resume Builder</Link>
-                                    <Link className="dropdown-item" to="/resume-sample">Resume Samples</Link>
-                                    {/* <!-- <a class="dropdown-item" href="#">Write Resume</a> --> */}
-                                </div>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/resume-builder">Resume</Link>
                             </li>
+
                             <li className="nav-item">
                                 <Link className="nav-link" to="/cover-letter">Cover Letter</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/job-search">Job Search</Link>
                             </li>
-                           
+
                             {/* <li className="nav-item">
                                 <Link className="nav-link" to="/about-us">ABOUT</Link>
                             </li> */}

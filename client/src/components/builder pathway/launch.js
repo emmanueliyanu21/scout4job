@@ -34,7 +34,7 @@ const Launch = () => {
 
                     </div>
                     <div className="create pb-4 pt-4">
-                        <Link to="/year" className="btn btn-create">Create my resume</Link>
+                        <Link to="/template" className="btn btn-create">Create my resume</Link>
                     </div>
                 </div>
             </section>

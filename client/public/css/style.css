@@ -510,12 +510,24 @@
         font-size: 18px!important;
         padding-top: 24px!important;
         padding-bottom: 24px!important;
+        background-color: #E2E8EE;
+        border: none!important;
+    }
+
+    .form-group textarea {
+        font-family: nunito, sans-serif!important;
+        font-size: 18px!important;
+        padding-top: 24px!important;
+        padding-bottom: 24px!important;
+        background-color: #E2E8EE;
+        border: none!important;
     }
     
     .form-group input:focus {
         /* outline: none transparent!important; */
         /* border: none!important; */
-        box-shadow: none!important;
+        /* box-shadow: none!important; */
+        /* border: 1px solid #f9f9f9!important; */
     }
     
     .form-group .btn-search {
@@ -1501,6 +1513,48 @@
         padding: 40px 40px;
         max-width: 100%;
     }
+
+    .head-form form .personal-Details {
+        color: #246DF7;
+        font-size: 22px;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+
+    .head-form form .personal-Details .fa {
+        color: #fff;
+        background-color: #246DF7;
+        padding: 8px;
+        font-size: 18px;
+        border-radius: 50px;
+        margin-right: 5px;
+    }
+
+    .head-form form .yellow-header .fa {
+        color: #fff;
+        background-color: #FBA51A;
+        padding: 8px 10px;
+        font-size: 18px;
+        border-radius: 50px;
+        margin-right: 5px;
+    }
+
+    .head-form form .green-header .fa {
+        color: #fff;
+        background-color: #71C055;
+        padding: 8px;
+        font-size: 18px;
+        border-radius: 50px;
+        margin-right: 5px;
+    }
+
+    .yellow-header {
+        color: #FBA51A!important;
+    }
+
+    .green-header {
+        color: #71C055!important;
+    }
     
     .head-form {
         padding-top: 20px;
@@ -1514,6 +1568,7 @@
         height: 600px;
         margin-top: 20px;
         border-radius: 4px;
+        /* position: fixed; */
     }
     
     .form-img {
@@ -1525,7 +1580,7 @@
         font-size: 12px;
         font-family: Nunito, sans-serif;
         margin-bottom: 3px!important;
-    }
+    } 
 
     .personal-details p {
         font-size: 10px;

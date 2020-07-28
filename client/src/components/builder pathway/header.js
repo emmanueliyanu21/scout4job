@@ -77,45 +77,19 @@ class Header extends Component {
     render() {
         return (
             <div className="">
-                <section className="bk-grey">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-8">
-                                <ul className="ul-headers">
-                                    <li className="ul-h1">
-                                        <i className="fa fa-edit"></i>
-                                        <span>1</span>
-                                    </li>
-                                    <li className="ul-h1">
-                                        <i className="fa fa-suitcase"></i>
-                                        <span>2</span>
-                                    </li>
-                                    <li className="ul-h1">
-                                        <i className="fa fa-suitcase x1"></i>
-                                        <span>3</span>
-                                    </li>
-                                    <li className="ul-h1">
-                                        <i className="fa fa-suitcase x2"></i>
-                                        <span>4</span>
-                                    </li>
-                                    <li className="ul-h1">
-                                        <i className="fa fa-suitcase"></i>
-                                        <span>5</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="col-md-4 txt-header">
-                                <Link to="" className="btn btn-headers">Personal Details</Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+
                 {/* <!-- Form starts here --> */}
                 <section className="bk-grey">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-8 head-form">
                                 <form onSubmit={this.handleSubmit} noValidate>
+                                    {/* personal details start here */}
+                                    <div className="section-caption">
+                                        <h2 className="personal-Details">
+                                            <i className="fa fa-edit"></i>
+                                            Personal Details</h2>
+                                    </div>
                                     <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">First Name</label>
@@ -172,31 +146,185 @@ class Header extends Component {
                                             </div>
                                         </div>
                                     </div>
+                                    {/* personal details ends here */}
+                                    <div className="section-caption pt-4">
+                                        <h2 className="personal-Details yellow-header">
+                                            <i className="fa fa-user"></i>
+                                            Professional Summary</h2>
+                                    </div>
                                     <div className="row">
-                                        <div className="col-md-12 form-txt">
-                                            <button type="submit" className="btn btn-submit">Submit</button>
-                                            <h2> <i className="fa fa-plus"></i> What’s the best way for employers to contact you?</h2>
-                                            <h2> <i className="fa fa-plus"></i> We suggest including an email and phone number</h2>
+                                        <div className="form-group col-md-12">
+                                            <label htmlFor="exampleInputEmail1">Include 2-3 clear sentences about your overall experience</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="e.g. Passionate about software development for 8+ years and a track 
+record of...." rows="3"></textarea>
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.addressError}
+                                            </div>
                                         </div>
                                     </div>
+                                    <div className="section-caption pt-4">
+                                        <h2 className="personal-Details green-header">
+                                            <i className="fa fa-briefcase"></i>
+                                            Employment History</h2>
+                                    </div>
+                                    <div className="row">
+                                        <div className="form-group col-md-6">
+                                            <label htmlFor="exampleInputEmail1">Job Title</label>
+                                            <input type="text" className="form-control" id="firstName"
+                                                placeholder="Job Title" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.firstNameError}
+                                            </div>
+                                        </div>
+                                        <div className="form-group col-md-6">
+                                            <label htmlFor="exampleInputEmail1">Employer</label>
+                                            <input type="text" className="form-control" id="lastName"
+                                                placeholder="Company Name" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.lastNameError}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="form-group col-md-6 ">
+                                            <div className="row">
+                                                <div className="form-group col-md-6">
+                                                <label htmlFor="exampleInputEmail1">Start Date</label>
+                                                <input type="text" className="form-control" id="firstName"
+                                                    placeholder="02 July" onChange={this.handleChange} />
+                                                <div style={{ fontSize: 12, color: "red" }}>
+                                                    {this.state.firstNameError}
+                                                </div>
+                                            </div>
+                                                <div className="form-group col-md-6">
+                                                <label htmlFor="exampleInputEmail1">End Date</label>
+                                                <input type="text" className="form-control" id="firstName"
+                                                    placeholder="02 July" onChange={this.handleChange} />
+                                                <div style={{ fontSize: 12, color: "red" }}>
+                                                    {this.state.firstNameError}
+                                                </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                        <div className="form-group col-md-6">
+                                            <label htmlFor="exampleInputEmail1">City</label>
+                                            <input type="text" className="form-control" id="lastName"
+                                                placeholder="City, Country" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.lastNameError}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="form-group col-md-12">
+                                            <label htmlFor="exampleInputEmail1">Description</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="e.g. Passionate about software development for 8+ years and a track 
+record of...." rows="3"></textarea>
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.addressError}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="section-caption pt-4">
+                                        <h2 className="personal-Details">
+                                            <i className="fa fa-book"></i>
+                                            Education History</h2>
+                                    </div>
+                                    <div className="row">
+                                        <div className="form-group col-md-6">
+                                            <label htmlFor="exampleInputEmail1">School Name</label>
+                                            <input type="text" className="form-control" id="firstName"
+                                                placeholder="Name" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.firstNameError}
+                                            </div>
+                                        </div>
+                                        <div className="form-group col-md-6">
+                                            <label htmlFor="exampleInputEmail1">Degree</label>
+                                            <input type="text" className="form-control" id="lastName"
+                                                placeholder="Msc" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.lastNameError}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="form-group col-md-6 ">
+                                            <div className="row">
+                                                <div className="form-group col-md-6">
+                                                <label htmlFor="exampleInputEmail1">Start Date</label>
+                                                <input type="text" className="form-control" id="firstName"
+                                                    placeholder="02 July" onChange={this.handleChange} />
+                                                <div style={{ fontSize: 12, color: "red" }}>
+                                                    {this.state.firstNameError}
+                                                </div>
+                                            </div>
+                                                <div className="form-group col-md-6">
+                                                <label htmlFor="exampleInputEmail1">End Date</label>
+                                                <input type="text" className="form-control" id="firstName"
+                                                    placeholder="02 July" onChange={this.handleChange} />
+                                                <div style={{ fontSize: 12, color: "red" }}>
+                                                    {this.state.firstNameError}
+                                                </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                        <div className="form-group col-md-6">
+                                            <label htmlFor="exampleInputEmail1">City</label>
+                                            <input type="text" className="form-control" id="lastName"
+                                                placeholder="City, Country" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.lastNameError}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="form-group col-md-12">
+                                            <label htmlFor="exampleInputEmail1">Description</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="e.g. Passionate about software development for 8+ years and a track 
+record of...." rows="3"></textarea>
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.addressError}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="section-caption pt-4">
+                                        <h2 className="personal-Details yellow-header">
+                                            <i className="fa fa-globe"></i>
+                                            Website &amp; Social Links</h2>
+                                    </div>
+                                    <div className="row">
+                                        <div className="form-group col-md-6">
+                                            <label htmlFor="exampleInputEmail1">Name</label>
+                                            <input type="text" className="form-control" id="firstName"
+                                                placeholder="" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.firstNameError}
+                                            </div>
+                                        </div>
+                                        <div className="form-group col-md-6">
+                                            <label htmlFor="exampleInputEmail1">Link</label>
+                                            <input type="text" className="form-control" id="lastName"
+                                                placeholder="" onChange={this.handleChange} />
+                                            <div style={{ fontSize: 12, color: "red" }}>
+                                                {this.state.lastNameError}
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div className="header-buttons">
-                                        <Link to="/start" className="btn btn-back">
-                                            <i className="fa fa-angle-left"></i> Back</Link>
-                                        <Link to="/work-experience" type="submit" className="btn btn-next">Next<i className="fa fa-angle-right"></i></Link>
+                                        <Link to="/work-experience" type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></Link>
                                     </div>
                                 </form>
 
                             </div>
                             <div className="col-md-4 form-img">
-                                {/* <img src="../images/cv.jpg" alt="" className="img-responsive" /> */}
-
                                 <div className="personal-details text-center">
                                     <h2>{this.state.firstName} {this.state.lastName}</h2>
                                     <p>{this.state.address} {this.state.state}</p>
                                     <p>{this.state.phoneNumber} | {this.state.email}</p>
                                 </div>
                                 <div className="preview">
-                                    {/* <Link to="" className="btn btn-preview"><i className="fa fa-eye"></i> Preview</Link> */}
                                 </div>
                             </div>
                         </div>
