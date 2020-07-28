@@ -21,6 +21,8 @@ const initialState = {
     startDate2: '',
     endDate2: '',
     educationDescription: '',
+    websiteName: '',
+    linkName: '',
     firstNameError: "",
     lastNameError: "",
     addressError: "",
@@ -38,6 +40,8 @@ const initialState = {
     startDate2Error: '',
     endDate2Error: '',
     educationDescriptionError: '',
+    websiteNameError: '',
+    linkNameError: ''
 };
 
 class Header extends Component {
@@ -69,6 +73,8 @@ class Header extends Component {
         let startDate2Error = "";
         let endDate2Error = "";
         let educationDescriptionError = "";
+        let websiteNameError = "";
+        let linkNameError = "";
         // let passwordError = "";
 
         if (!this.state.firstName) {
@@ -128,19 +134,27 @@ class Header extends Component {
         }
 
         if (!this.state.startDate2) {
-            startDate2Error = "Degree Name must be included";
+            startDate2Error = "Start Date must be included";
         }
 
         if (!this.state.endDate2) {
-            endDate2Error = "Degree Name must be included";
+            endDate2Error = "End Date must be included";
         }
 
         if (!this.state.educationDescription) {
-            educationDescriptionError = "Degree Name must be included";
+            educationDescriptionError = "Description must be included";
         }
 
-        if (emailError || firstNameError || lastNameError || addressError || stateError || phoneNumberError || summaryError || jobTitleError || employerError || cityError || startDate1Error || endDate1Error || employmentSummaryError || schoolNameError || degreeNameError || startDate2Error || endDate2Error || educationDescriptionError ) {
-            this.setState({ emailError, firstNameError, lastNameError, addressError, stateError, phoneNumberError, summaryError, jobTitleError, employerError, cityError, startDate1Error, endDate1Error, employmentSummaryError, schoolNameError, degreeNameError, startDate2Error, endDate2Error, educationDescriptionError });
+        if (!this.state.websiteName) {
+            websiteNameError = "Description must be included";
+        }
+
+        if (!this.state.linkName) {
+            linkNameError = "Description must be included";
+        }
+
+        if (emailError || firstNameError || lastNameError || addressError || stateError || phoneNumberError || summaryError || jobTitleError || employerError || cityError || startDate1Error || endDate1Error || employmentSummaryError || schoolNameError || degreeNameError || startDate2Error || endDate2Error || educationDescriptionError || websiteNameError || linkNameError ) {
+            this.setState({ emailError, firstNameError, lastNameError, addressError, stateError, phoneNumberError, summaryError, jobTitleError, employerError, cityError, startDate1Error, endDate1Error, employmentSummaryError, schoolNameError, degreeNameError, startDate2Error, endDate2Error, educationDescriptionError, websiteNameError, linkNameError });
             return false;
         }
 
@@ -388,18 +402,18 @@ record of...." rows="3"></textarea>
                                     <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Name</label>
-                                            <input type="text" className="form-control" id="firstName"
+                                            <input type="text" className="form-control" id="websiteName"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.firstNameError}
+                                                {this.state.websiteNameError}
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label htmlFor="exampleInputEmail1">Link</label>
-                                            <input type="text" className="form-control" id="lastName"
+                                            <input type="text" className="form-control" id="linkName"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.lastNameError}
+                                                {this.state.linkNameError}
                                             </div>
                                         </div>
                                     </div>
