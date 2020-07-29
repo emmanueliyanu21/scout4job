@@ -13,7 +13,7 @@ const ResumeBuilder = () => {
                             <p>It's Free-to-Use and Proven to Get You Hired 33% Faster</p>
                             <div className="bk0-button">
                                 <Link to="/launch" className="btn btn-start" href="">Start Now</Link>
-                                <Link to="/resume-sample" className="btn btn-more" href="">Learn more</Link>
+                                {/* <Link to="/resume-sample" className="btn btn-more" href="">Learn more</Link> */}
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ const ResumeBuilder = () => {
                         </div>
                         <div className="col-md-6 bk1-txt">
                             <Link className="btn btn-start" to="/launch">Start Now</Link>
-                            <Link className="btn btn-more" to="/resume-sample">Learn more</Link>
+                            {/* <Link className="btn btn-more" to="/resume-sample">Learn more</Link> */}
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const ResumeBuilder = () => {
                             </div>
                             <div className="bk2-btn">
                                 <Link to="/launch" className="btn btn-start btn-now">Start Now</Link>
-                                <Link to="/resume-sample" className="btn bk2-btn-more">Learn more</Link>
+                                {/* <Link to="/resume-sample" className="btn bk2-btn-more">Learn more</Link> */}
                             </div>
                         </div>
                         <div className="col-md-7 bk2-img pt-5 pb-5">
@@ -81,14 +81,14 @@ const ResumeBuilder = () => {
                             <Link to="/launch"><img src="../images/template-3.jpg" alt="" className="img-responsive" /></Link>
                         </div>
                     </div>
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col-md-12">
                             <ul className="inner-arrow">
                                 <li><Link to=""><i className="fa fa-long-arrow-left"></i></Link></li>
                                 <li><Link to=""><i className="fa fa-long-arrow-right"></i></Link></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </section>
             {/* // {/* <!-- block 3 ends here --> */}

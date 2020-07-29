@@ -177,9 +177,9 @@ class Header extends Component {
 
                 {/* <!-- Form starts here --> */}
                 <section className="bk-grey">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-8 head-form">
+                    <div className="container-fluid">
+                        <div className="row step-x1">
+                            <div className="col-md-6 page-scrollable head-form">
                                 <form onSubmit={this.handleSubmit} noValidate>
                                     {/* personal details start here */}
                                     <div className="section-caption">
@@ -424,23 +424,25 @@ record of...." rows="3"></textarea>
                                 </form>
 
                             </div>
-                            <div className="col-md-4 form-img ">
-                                <div className="personal-details text-center">
-                                    <h2>{this.state.firstName} {this.state.lastName}</h2>
-                                    <p>{this.state.address} {this.state.state}</p>
-                                    <p>{this.state.phoneNumber}  {this.state.email}</p>
-                                </div>
-                                <div className="output-proffesional-summary">
-                                    <p>{this.state.summary}</p>
-                                </div>
-                                <div className="preview">
+                            <div className="col-md-6 sidebar-fixed  ">
+                                <div className="form-img">
+                                    <div className="personal-details text-center">
+                                        <h2>{this.state.firstName} {this.state.lastName}</h2>
+                                        <p>{this.state.address} {this.state.state}</p>
+                                        <p>{this.state.phoneNumber}  {this.state.email}</p>
+                                    </div>
+                                    <div className="output-proffesional-summary">
+                                        <p>{this.state.summary}</p>
+                                    </div>
+                                    <div className="preview">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 {/* <!-- Form ends here-- > */}
-                <Footer />
+                {/* <Footer /> */}
             </div >
         )
     }

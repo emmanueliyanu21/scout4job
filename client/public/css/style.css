@@ -1563,24 +1563,41 @@
     
     .form-img {
         max-width: 100%;
-        box-shadow: 0px 3px 12px -2px rgb(209, 209, 209)!important;
         background-color: #fff;
-        /* position: fixed;
-        top: 20;
-        right: 0;
-        width: 500px; */
-        height: 600px;
         margin-top: 20px;
+        margin-bottom: 20px;
         border-radius: 4px;
-        /* position: fixed; */
+        min-height: 600px;
+    }
+
+    .page-scrollable {
+        min-height: 1000px;
+        width: 100%;
+        margin-right: 5px;
+        overflow: auto;
+        position: absolute;
+        left: 0%;
+    }
+
+    .sidebar-fixed {
+        border: 1px solid #ddd;
+        width: 50%;
+        background-color: #E2E8EE;
+        min-height: 600px;
+        position: fixed;
+        right: 0px;
+    }
+
+    .step-x1 {
+        width: 100%; min-height: 200px;
     }
     
     .form-img {
-        padding-top: 20px;
+        /* padding-top: 20px; */
     }
 
     .border-img {
-        position: relative;
+        /* position: relative; */
     }
 
     .personal-details h2 {

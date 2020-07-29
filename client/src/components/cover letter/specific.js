@@ -61,10 +61,10 @@ class Specific extends Component {
             <div className="">
                 {/* <!-- body part here --> */}
                 <section className="bk-dotted pr-5 pl-4">
-                    <div className="container-fluid">
-                        <div className="row step-x1 pt-5 pb-5">
+                    <div className="grid-container">
+                        <div className="row step-x1  pb-5">
                             {/* <div className="col-md-6 db-page pt-5"> */}
-                            <div className="col-md-6 head-form">
+                            <div className="col-md-6 page-scrollable head-form">
                                 <form onSubmit={this.handleSubmit} noValidate>
                                     {/* personal details start here */}
                                     <div className="section-caption">
@@ -173,8 +173,9 @@ record of...." rows="3"></textarea>
                                     {/* Letter details ends here */}
                                 </form>
                             </div>
-                            <div className="col-md-6 form-img">
-
+                            <div className="col-md-6 sidebar-fixed ">
+                                <div className="form-img">
+                                    </div>
                             </div>
                         </div>
 
