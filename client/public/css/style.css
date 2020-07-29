@@ -1562,10 +1562,11 @@
     }
     
     .form-img {
-        max-width: 100%;
+        max-width: 80%;
         background-color: #fff;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
         border-radius: 4px;
         min-height: 600px;
     }
@@ -1577,12 +1578,15 @@
         overflow: auto;
         position: absolute;
         left: 0%;
+        background-color: #f9f9f9;
     }
 
     .sidebar-fixed {
         border: 1px solid #ddd;
         width: 50%;
         background-color: #E2E8EE;
+        padding-top: 40px;
+        padding-bottom: 40px;
         min-height: 600px;
         position: fixed;
         right: 0px;
@@ -1593,18 +1597,20 @@
     }
     
     .form-img {
-        /* padding-top: 20px; */
+        padding-top: 20px;
     }
 
     .border-img {
         /* position: relative; */
     }
 
-    .personal-details h2 {
+    .form-img .personal-details h2 {
         color: #000;
+        font-weight: 600;
         font-size: 12px;
         font-family: Nunito, sans-serif;
-        margin-bottom: 3px!important;
+        margin-bottom: 0px!important;
+        padding-bottom: 4px!important;
     } 
 
     .personal-details p {
@@ -1619,6 +1625,24 @@
         font-family: Nunito, sans-serif;
         color: #7b8088;
         margin-bottom: 3px!important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .employment-history p {
+        font-size: 12px;
+        font-family: Nunito, sans-serif;
+    }
+
+    .employment-history {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .employment-history ul li {
+        font-size: 12px;
+        font-family: Nunito, sans-serif;
+        list-style: none;
     }
     
     .btn-back {

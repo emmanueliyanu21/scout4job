@@ -173,7 +173,7 @@ record of...." rows="3"></textarea>
                                     {/* Letter details ends here */}
                                 </form>
                             </div>
-                            <div className="col-md-6 sidebar-fixed ">
+                            <div className="col-md-6 sidebar-fixed">
                                 <div className="form-img">
                                     </div>
                             </div>

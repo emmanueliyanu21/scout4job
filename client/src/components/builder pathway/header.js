@@ -319,7 +319,7 @@ record of...." rows="3"></textarea>
                                     <div className="row">
                                         <div className="form-group col-md-12">
                                             <label htmlFor="exampleInputEmail1">Description</label>
-                                            <textarea class="form-control" id="employmentSummary" placeholder="e.g. Passionate about software development for 8+ years and a track 
+                                            <textarea class="form-control" onChange={this.handleChange}  id="employmentSummary" placeholder="e.g. Passionate about software development for 8+ years and a track 
 record of...." rows="3"></textarea>
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.employmentSummaryError}
@@ -426,14 +426,32 @@ record of...." rows="3"></textarea>
                             </div>
                             <div className="col-md-6 sidebar-fixed  ">
                                 <div className="form-img">
+                                    {/* header starts here */}
                                     <div className="personal-details text-center">
                                         <h2>{this.state.firstName} {this.state.lastName}</h2>
                                         <p>{this.state.address} {this.state.state}</p>
                                         <p>{this.state.phoneNumber}  {this.state.email}</p>
                                     </div>
-                                    <div className="output-proffesional-summary">
+                                    {/* header ends here */}
+                                    {/* professional summary starts here */}
+                                    <div className="output-proffesional-summary pt-3">
                                         <p>{this.state.summary}</p>
                                     </div>
+                                    {/* professional summary ends here */}
+                                    {/* Employment summary starts here */}
+                                    <div className="employment-history pt-3">
+                                        <p>
+                                            <span className="text-left"> {this.state.jobTitle} {this.state.employer} {this.state.city} </span>
+                                            <span className="pull-right"> {this.state.startDate1} {this.state.endDate1} </span>
+                                        </p>
+                                        <ul>
+                                            <li>{this.state.employmentSummary}</li>
+                                        </ul>
+                                    </div>
+                                    {/* Employment summary ends here */}
+                                    {/* Education summary starts here */}
+
+                                    {/* Education summary ends here */}
                                     <div className="preview">
                                     </div>
                                 </div>
