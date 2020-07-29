@@ -1954,10 +1954,11 @@
    
     /* body part start here */
 .bk-dotted {
-    background: url("../images/dotted-bk.png");
+    /* background: url("../images/dotted-bk.png"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #f9f9f9;
 }
 
 .three-text h2 {
@@ -1978,15 +1979,10 @@
     max-width: 60%;
 }
 
-.step-x1 {
-    text-align: center;
-}
-
 .step-x1 h2 {
     font-size: 18px;
     font-family: nunito, sans-serif;
     line-height: 1.4;
-    max-width: 80%;
     margin: auto;
     padding-bottom: 10px;
 }

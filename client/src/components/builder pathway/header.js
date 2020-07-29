@@ -424,7 +424,7 @@ record of...." rows="3"></textarea>
                                 </form>
 
                             </div>
-                            <div className="col-md-4 form-img">
+                            <div className="col-md-4 form-img ">
                                 <div className="personal-details text-center">
                                     <h2>{this.state.firstName} {this.state.lastName}</h2>
                                     <p>{this.state.address} {this.state.state}</p>
