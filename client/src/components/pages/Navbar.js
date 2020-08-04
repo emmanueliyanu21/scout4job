@@ -22,7 +22,7 @@ const Navbar = () => {
                                 <Link className="nav-link" to="/">HOME <span className="sr-only">(current)</span></Link>
                             </li> */}
                             <li className="nav-item">
-                                <Link className="nav-link" to="/resume-builder">Resume</Link>
+                                <Link className="nav-link" to="/launch">Resume</Link>
                             </li>
 
                             <li className="nav-item">

@@ -73,4 +73,37 @@
         outline: none!important;
         box-sizing: none!important;
     }
+    .page-scrollable {
+        min-height: 1000px;
+        width: 100%;
+        margin-right: 5px;
+        overflow: auto;
+        position: relative!important;
+        left: 0%;
+        background-color: #f9f9f9;
+    }
+
+    .sidebar-fixed {
+        border: 1px solid #ddd;
+        width: 100%!important;
+        background-color: #E2E8EE;
+        min-height: 800px!important;
+        position: relative!important;
+        right: 0px;
+    }
+    .form-img {
+        max-width: 100%!important;
+    }
+
+    .resume-options {
+        max-width: 100%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    .resume-options .select-template {
+        padding-top: 10px;
+    }
+    .navbar-brand img {
+        display: none!important;
+    }
 }

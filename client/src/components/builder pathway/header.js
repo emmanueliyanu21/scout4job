@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from '../pages/footer'
+// import Footer from '../pages/footer'
 
 const initialState = {
     firstName: '',
@@ -179,7 +179,7 @@ class Header extends Component {
                 <section className="bk-grey">
                     <div className="container-fluid">
                         <div className="row step-x1">
-                            <div className="col-md-6 page-scrollable head-form">
+                            <div className="col-md-6 col-sm-12 page-scrollable head-form">
                                 <form onSubmit={this.handleSubmit} noValidate>
                                     {/* personal details start here */}
                                     <div className="section-caption">
@@ -189,7 +189,7 @@ class Header extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">First Name</label>
+                                            <label htmlFor="firstName">First Name</label>
                                             <input type="text" className="form-control" id="firstName"
                                                 placeholder="First Name" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -197,7 +197,7 @@ class Header extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Last Name</label>
+                                            <label htmlFor="lastName">Last Name</label>
                                             <input type="text" className="form-control" id="lastName"
                                                 placeholder="Last Name" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -206,10 +206,8 @@ class Header extends Component {
                                         </div>
                                     </div>
                                     <div className="row">
-                                    </div>
-                                    <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Address</label>
+                                            <label htmlFor="address">Address</label>
                                             <input type="text" className="form-control" id="address"
                                                 placeholder="Home Address" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -217,7 +215,7 @@ class Header extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">State</label>
+                                            <label htmlFor="state">State</label>
                                             <input type="text" className="form-control" id="state"
                                                 placeholder="City, State" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -270,7 +268,7 @@ record of...." rows="3"></textarea>
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Job Title</label>
+                                            <label htmlFor="jobTitle">Job Title</label>
                                             <input type="text" className="form-control" id="jobTitle"
                                                 placeholder="Job Title" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -278,7 +276,7 @@ record of...." rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Employer</label>
+                                            <label htmlFor="employer">Employer</label>
                                             <input type="text" className="form-control" id="employer"
                                                 placeholder="Company Name" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -290,7 +288,7 @@ record of...." rows="3"></textarea>
                                         <div className="form-group col-md-6 ">
                                             <div className="row">
                                                 <div className="form-group col-md-6">
-                                                <label htmlFor="exampleInputEmail1">Start Date</label>
+                                                    <label htmlFor="startDate1">Start Date</label>
                                                 <input type="text" className="form-control" id="startDate1"
                                                     placeholder="02 July" onChange={this.handleChange} />
                                                 <div style={{ fontSize: 12, color: "red" }}>
@@ -298,7 +296,7 @@ record of...." rows="3"></textarea>
                                                 </div>
                                             </div>
                                                 <div className="form-group col-md-6">
-                                                <label htmlFor="exampleInputEmail1">End Date</label>
+                                                    <label htmlFor="endDate1">End Date</label>
                                                 <input type="text" className="form-control" id="endDate1"
                                                     placeholder="02 July" onChange={this.handleChange} />
                                                 <div style={{ fontSize: 12, color: "red" }}>
@@ -335,7 +333,7 @@ record of...." rows="3"></textarea>
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">School Name</label>
+                                            <label htmlFor="schoolName">School Name</label>
                                             <input type="text" className="form-control" id="schoolName"
                                                 placeholder="Name" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -343,7 +341,7 @@ record of...." rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Degree</label>
+                                            <label htmlFor="degreeName">Degree</label>
                                             <input type="text" className="form-control" id="degreeName"
                                                 placeholder="Msc" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -355,7 +353,7 @@ record of...." rows="3"></textarea>
                                         <div className="form-group col-md-6 ">
                                                 <div className="row">
                                                     <div className="form-group col-md-6">
-                                                        <label htmlFor="exampleInputEmail1">Start Date</label>
+                                                    <label htmlFor="startDate2">Start Date</label>
                                                         <input type="text" className="form-control" id="startDate2"
                                                             placeholder="02 July" onChange={this.handleChange} />
                                                         <div style={{ fontSize: 12, color: "red" }}>
@@ -363,7 +361,7 @@ record of...." rows="3"></textarea>
                                                         </div>
                                                     </div>
                                                     <div className="form-group col-md-6">
-                                                        <label htmlFor="exampleInputEmail1">End Date</label>
+                                                    <label htmlFor="endDate2">End Date</label>
                                                         <input type="text" className="form-control" id="endDate2"
                                                             placeholder="02 July" onChange={this.handleChange} />
                                                         <div style={{ fontSize: 12, color: "red" }}>
@@ -383,7 +381,7 @@ record of...." rows="3"></textarea>
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-12">
-                                            <label htmlFor="exampleInputEmail1">Description</label>
+                                            <label htmlFor="educationDescription">Description</label>
                                             <textarea class="form-control" id="educationDescription" placeholder="e.g. Passionate about software development for 8+ years and a track 
 record of...." rows="3"></textarea>
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -401,7 +399,7 @@ record of...." rows="3"></textarea>
                                     {/* website links ends */}
                                     <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Name</label>
+                                            <label htmlFor="websiteName">Name</label>
                                             <input type="text" className="form-control" id="websiteName"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -409,7 +407,7 @@ record of...." rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Link</label>
+                                            <label htmlFor="linkName">Link</label>
                                             <input type="text" className="form-control" id="linkName"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -424,7 +422,12 @@ record of...." rows="3"></textarea>
                                 </form>
 
                             </div>
-                            <div className="col-md-6 sidebar-fixed  ">
+                            <div className="col-md-6 col-sm-12 sidebar-fixed">
+                                <div className="resume-options">
+                                    <button className="btn btn-primary btn-download">Download PDF</button>
+                                    <button className="btn btn-primary btn-dot">...</button>
+                                    <Link to="/template" className="select-template pull-right">Select a template</Link>
+                                </div>
                                 <div className="form-img">
                                     {/* header starts here */}
                                     <div className="personal-details text-center">
@@ -455,6 +458,7 @@ record of...." rows="3"></textarea>
                                     <div className="preview">
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>

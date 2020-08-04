@@ -12,7 +12,7 @@ const Template = () => {
                         <div className="white-bk col-md-12">
                             <div className="three-text">
                                 <h2>Here are the best templates for you</h2>
-                                <p>They’re great for people with 0-3 years of experience.</p>
+                                {/* <p>They’re great for people with 0-3 years of experience.</p> */}
                             </div>
                             <div className="row temp-x1">
                                 <div className="col-md-4">

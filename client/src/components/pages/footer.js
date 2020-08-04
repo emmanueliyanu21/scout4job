@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="">
             {/* // < !--block 5 starts here-- > */}
-            <section className="dk-bk-grey n1-line">
+            {/* <section className="dk-bk-grey n1-line">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 short-mss">
@@ -13,13 +13,16 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <section className="dk-bk-grey ul-f1">
                 <div className="container">
                     <div className="row main-footer">
                         <div className="col-md-4">
                             <div className="ul-ft">
-                                <img src="../images/logo2-template.png" className="img-responsive" alt="" />
+                                {/* <img src="../images/logo2-template.png" className="img-responsive" alt="" /> */}
+                            </div>
+                            <div className="ul-ft">
+                                <h2>Contacts</h2>
                             </div>
                             <ul className="ul-footer pt-3">
                                 <li className="n-30"><i className="fa fa-map-marker"></i> <span>No 3, Bola Onasanya Crescent, Ogudu, Lagos</span>

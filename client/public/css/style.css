@@ -15,11 +15,9 @@
 
 
 .navbar-brand img {
-    /* display: block!important; */
     max-width: 5%;
     position: absolute;
     top: 3;
-    /* left: 0; */
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -1568,7 +1566,23 @@
         padding-top: 20px;
         padding-bottom: 20px;
         border-radius: 4px;
-        min-height: 600px;
+        min-height: 500px;
+    }
+
+    .resume-options {
+        max-width: 80%;
+        margin: auto;
+        padding-bottom: 15px;
+    }
+
+    .resume-options .select-template {
+        padding-top: 12px;
+        color: #343434;
+    }
+
+    .resume-options .select-template:hover {
+        color: #246DF7!important;
+        text-decoration: none;
     }
 
     .page-scrollable {
@@ -1612,6 +1626,21 @@
         margin-bottom: 0px!important;
         padding-bottom: 4px!important;
     } 
+
+    .btn-download {
+        font-family: Nunito, sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 10px 15px!important;
+    }
+
+    .btn-dot {
+        font-family: Nunito, sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 10px 15px!important;
+        margin-left: 5px;
+    }
 
     .personal-details p {
         font-size: 10px;
@@ -3326,3 +3355,18 @@
   --animate-delay: 0.9s;
 }
 
+
+/* dashboard styling */
+.white-page-cv {
+    background-color: #fff;
+    min-height: 200px;
+}
+
+.white-page-cv .output-details h2 {
+    color: #000!important;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: Nunito, sans-serif;
+    margin-bottom: 0px!important;
+    padding-bottom: 4px!important;
+}

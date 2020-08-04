@@ -74,7 +74,7 @@ class Specific extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Full Name</label>
+                                            <label htmlFor="fullName">Full Name</label>
                                             <input type="text" className="form-control" id="fullName"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -82,7 +82,7 @@ class Specific extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Job Title</label>
+                                            <label htmlFor="jobTitle">Job Title</label>
                                             <input type="text" className="form-control" id="jobTitle"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -91,10 +91,8 @@ class Specific extends Component {
                                         </div>
                                     </div>
                                     <div className="row">
-                                    </div>
-                                    <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Address</label>
+                                            <label htmlFor="address">Address</label>
                                             <input type="text" className="form-control" id="address"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -102,7 +100,7 @@ class Specific extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">State</label>
+                                            <label htmlFor="state">State</label>
                                             <input type="text" className="form-control" id="state"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -112,7 +110,7 @@ class Specific extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Phone Number</label>
+                                            <label htmlFor="phoneNumber">Phone Number</label>
                                             <input type="text" className="form-control" id="phoneNumber"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -120,7 +118,7 @@ class Specific extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Email Address</label>
+                                            <label htmlFor="email">Email Address</label>
                                             <input type="text" className="form-control" id="email"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -137,7 +135,7 @@ class Specific extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Company Name</label>
+                                            <label htmlFor="phoneNumber">Company Name</label>
                                             <input type="text" className="form-control" id="phoneNumber"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -145,7 +143,7 @@ class Specific extends Component {
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">Hiring Manager name</label>
+                                            <label htmlFor="email">Hiring Manager name</label>
                                             <input type="text" className="form-control" id="email"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -162,7 +160,7 @@ class Specific extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-12">
-                                            <label htmlFor="exampleInputEmail1">3–4 paragraphs explaining why you're the perfect candidate for a specific job</label>
+                                            <label htmlFor="summary">3–4 paragraphs explaining why you're the perfect candidate for a specific job</label>
                                             <textarea class="form-control" id="summary" onChange={this.handleChange} placeholder="e.g. Passionate about software development for 8+ years and a track 
 record of...." rows="3"></textarea>
                                             <div style={{ fontSize: 12, color: "red" }}>
@@ -174,6 +172,11 @@ record of...." rows="3"></textarea>
                                 </form>
                             </div>
                             <div className="col-md-6 sidebar-fixed">
+                                <div className="resume-options">
+                                    <button className="btn btn-primary btn-download">Download PDF</button>
+                                    <button className="btn btn-primary btn-dot">...</button>
+                                    <Link to="/template" className="select-template pull-right">Select a template</Link>
+                                </div>
                                 <div className="form-img">
                                     </div>
                             </div>

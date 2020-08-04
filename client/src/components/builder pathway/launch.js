@@ -13,19 +13,19 @@ const Launch = () => {
                         <h2>Just three simple steps</h2>
                     </div>
                     <div className="row step-x1">
-                        <div className="col-md-4">
+                        <div className="col-md-4 text-center">
                             <img src="../images/one.png" className="img-responsive" alt="" />
                             <h2>Select a template from our
                                 library of professional
                         designs</h2>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 text-center">
                             <img src="../images/two.png" className="img-responsive" alt="" />
                             <h2>Build your resume with
                                 our industry-specific
                         bullet points</h2>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 text-center">
                             <img src="../images/three.png" className="img-responsive" alt="" />
                             <h2>Download your resume,
                                 print it out and get it

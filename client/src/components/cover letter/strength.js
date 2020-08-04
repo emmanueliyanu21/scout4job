@@ -13,7 +13,7 @@ const Strength = () => {
                         software engineer position?</h2>
 
                             <div className="option-x1 pt-5 mb-5">
-                                <a href="" className="btn btn-yes mb-3">Collaboration</a>
+                                {/* <a href="" className="btn btn-yes mb-3">Collaboration</a>
                                 <a href="" className="btn btn-yes mb-3">Communication</a>
                                 <a href="" to="" className="btn btn-yes mb-3">Critical Thinking</a>
                                 <a href="" className="btn btn-yes mb-3">Customer Service</a>
@@ -21,7 +21,7 @@ const Strength = () => {
                                 <a href="" className="btn btn-yes mb-3">Delegation</a>
                                 <a href="" className="btn btn-yes mb-3">Innovation</a>
                                 <a href="" className="btn btn-yes mb-3">Interpersonal</a>
-                                <a href="" className="btn btn-yes mb-3">Leadership</a>
+                                <a href="" className="btn btn-yes mb-3">Leadership</a> */}
                                 {/* <!-- <a href="./job-apply.html" className="btn btn-yes mb-3">Project Management</a> --> */}
 
                             </div>

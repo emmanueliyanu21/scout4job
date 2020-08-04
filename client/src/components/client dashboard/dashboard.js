@@ -11,6 +11,9 @@ class Dashboard extends Component {
   };
 
   render() {
+    console.log(this.props.covers);
+    const covers = this.props.covers;
+    const { vitaes } = this.props.vitaes;
     const { user } = this.props.auth;
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
@@ -54,21 +57,21 @@ class Dashboard extends Component {
           </div>
 
           <div className="tab-content mt-4">
-            <div role="tabpanel" id="my-profile" class="tab-pane active">
-              <div class="row">
-                <div class="col-md-12 col-sm-12">
-                  <div class="card">
-                    <div class="card-header">
+            <div role="tabpanel" id="my-profile" className="tab-pane active">
+              <div className="row">
+                <div className="col-md-12 col-sm-12">
+                  <div className="card">
+                    <div className="card-header">
                       <strong>My Profile</strong>
                     </div>
-                    <div class="list-group list-group-flush">
-                      <Link to="#" class="list-group-item list-group-item-action small">
+                    <div className="list-group list-group-flush">
+                      <Link to="#" className="list-group-item list-group-item-action small">
                         Name: Oladejo Emmanuel Segun
                                         </Link>
-                      <Link to="#" class="list-group-item list-group-item-action small">
+                      <Link to="#" className="list-group-item list-group-item-action small">
                         ID Number: 238301469
                                         </Link>
-                      <Link to="#" class="list-group-item list-group-item-action small">
+                      <Link to="#" className="list-group-item list-group-item-action small">
                         Address: No 36, Fetuga Str, Lady-Lak, Lagos
                                         </Link>
                     </div>
@@ -77,69 +80,57 @@ class Dashboard extends Component {
               </div>
             </div>
             {/*  */}
-            <div role="tabpanel" id="job-search" class="tab-pane fade">
-              <div class="row">
-                <div class="col-md-12 col-sm-12">
-                  <div class="card">
-                    <div class="card-header">
+            <div role="tabpanel" id="job-search" className="tab-pane fade">
+              <div className="row">
+                <div className="col-md-12 col-sm-12">
+                  <div className="card">
+                    <div className="card-header">
                       <strong>Available Jobs</strong>
                     </div>
-                    <div class="list-group list-group-flush">
-                      <Link to="#" class="list-group-item list-group-item-action small">
-                        Andela Senior Front End Developer Apply
-                                        </Link>
-                      <Link to="#" class="list-group-item list-group-item-action small">
-                        Andela Senior Front End Developer Apply
-                                        </Link>
-                      <Link to="#" class="list-group-item list-group-item-action small">
-                        Andela Senior Front End Developer Apply
-                                        </Link>
+                    <div className="list-group list-group-flush">
+                      
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             {/*  */}
-            <div role="tabpanel" id="cover-letter" class="tab-pane fade">
-              <div class="row">
-                <div class="col-md-12 col-sm-12">
-                  <div class="card">
-                    <div class="card-header">
+            <div role="tabpanel" id="cover-letter" className="tab-pane fade">
+              <div className="row">
+                <div className="col-md-12 col-sm-12">
+                  <div className="card">
+                    <div className="card-header">
                       <strong>Cover Letter</strong>
                     </div>
-                    <div class="list-group list-group-flush">
-                      <Link to="#" class="list-group-item list-group-item-action small">
-                        Name: Oladejo Emmanuel Segun
-                                        </Link>
-                      <Link to="#" class="list-group-item list-group-item-action small">
-                        ID Number: 238301469
-                                        </Link>
-                      <Link href="#" class="list-group-item list-group-item-action small">
-                        Address: No 36, Fetuga Str, Lady-Lak, Lagos
-                                        </Link>
+                    <div className="list-group list-group-flush">
+                      {covers && covers.map(cover => {
+                        return (
+                          <h2 className="">{cover.firstName}</h2>
+                        )
+                      })}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             {/*  */}
-            <div role="tabpanel" id="curriculum-vitae" class="tab-pane fade">
-              <div class="row">
-                <div class="col-md-12 col-sm-12">
-                  <div class="card">
-                    <div class="card-header">
+            <div role="tabpanel" id="curriculum-vitae" className="tab-pane fade">
+              <div className="row">
+                <div className="col-md-12 col-sm-12">
+                  <div className="card">
+                    <div className="card-header">
                       <strong>Curriculum Vitae</strong>
                     </div>
-                    <div class="list-group list-group-flush">
-                      <Link to="#" class="list-group-item list-group-item-action small">
-                        Name: Oladejo Emmanuel Segun
-                                        </Link>
-                      <Link href="#" class="list-group-item list-group-item-action small">
-                        ID Number: 238301469
-                                        </Link>
-                      <Link to="#" class="list-group-item list-group-item-action small">
-                        Address: No 36, Fetuga Str, Lady-Lak, Lagos
-                                        </Link>
+                    <div className="list-group list-group-flush white-page-cv">
+                      <div className="output-details text-center">
+                        {vitaes && vitaes.map(vitae => {
+                          return (
+                            <div key={vitae.id}>
+                              <h2 className="">{vitae.firstName} {vitae.lastName}</h2>
+                            </div>
+                          )
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -158,7 +149,9 @@ Dashboard.propTypes = {
   auth: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
+  vitaes: state.vitae.vitaes,
+  covers: state.cover.covers,
 });
 export default connect(
   mapStateToProps,
