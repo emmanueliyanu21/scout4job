@@ -1,5 +1,5 @@
-// export default {
-//     jobs: [
+// export default jobs(); {
+//     [
 //         {
 //             _id: '1',
 //             name: 'Digital Marketing Agency',

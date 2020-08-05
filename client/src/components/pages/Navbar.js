@@ -44,6 +44,12 @@ const Navbar = () => {
                                          </span>
                                 </Link>
                             </li>
+                            <li className="nav-item account-employer">
+                                <Link className="nav-link active" to="/register">
+                                    <span> Employer
+                                         </span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

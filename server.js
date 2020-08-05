@@ -6,7 +6,7 @@ const http = require('http');
 const path = require('path');
 
 const users = require("./routes/api/users");
-const jobs = require("./routes/api/jobs")
+const jobs = require("./routes/api/jobs");
 
 const app = express();
 
