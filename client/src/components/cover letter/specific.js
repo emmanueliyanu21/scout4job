@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { createCover } from '../../store/actions/coverActions'
 
 const initialState = {
     fullName: '',
@@ -54,6 +56,18 @@ class Specific extends Component {
 
         return true;
 
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+
+        const isValid = this.handleValidation();
+        if (isValid) {
+            // console.log(this.state);
+            this.props.createCover(this.state)
+            // clear form
+            this.setState(initialState);
+        }
     }
 
     render() {
@@ -161,7 +175,7 @@ class Specific extends Component {
                                     <div className="row">
                                         <div className="form-group col-md-12">
                                             <label htmlFor="summary">3–4 paragraphs explaining why you're the perfect candidate for a specific job</label>
-                                            <textarea class="form-control" id="summary" onChange={this.handleChange} placeholder="e.g. Passionate about software development for 8+ years and a track 
+                                            <textarea className="form-control" id="summary" onChange={this.handleChange} placeholder="e.g. Passionate about software development for 8+ years and a track 
 record of...." rows="3"></textarea>
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.summaryError}
@@ -169,6 +183,11 @@ record of...." rows="3"></textarea>
                                         </div>
                                     </div>
                                     {/* Letter details ends here */}
+
+                                    <div className="header-buttons">
+                                        <button type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></button>
+                                    </div>
+                                    
                                 </form>
                             </div>
                             <div className="col-md-6 sidebar-fixed">
@@ -191,6 +210,12 @@ record of...." rows="3"></textarea>
     }
 }
 
-export default Specific
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createCover: (cover) => dispatch(createCover(cover))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Specific)
 
 

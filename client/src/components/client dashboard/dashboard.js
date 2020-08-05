@@ -13,7 +13,8 @@ class Dashboard extends Component {
   render() {
     console.log(this.props.covers);
     const covers = this.props.covers;
-    const { vitaes } = this.props.vitaes;
+    const vitaes = this.props.vitaes;
+    console.log(this.props.vitaes);
     const { user } = this.props.auth;
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
@@ -27,7 +28,8 @@ class Dashboard extends Component {
           <div className="bk-dark-purple-dashboard">
             <div className="row pad-dashboard">
               <div className="col-md-2 dash-board-image ul-dash-board-image">
-                <img src="./images/dashboard-image.jpg" alt="" />
+                <i className="fa fa-user"></i>
+                <img src="./images/user.png" alt="" />
               </div>
               <div className="col-md-6 profile-details">
                 <h4>
@@ -88,7 +90,7 @@ class Dashboard extends Component {
                       <strong>Available Jobs</strong>
                     </div>
                     <div className="list-group list-group-flush">
-                      
+
                     </div>
                   </div>
                 </div>
@@ -103,11 +105,12 @@ class Dashboard extends Component {
                       <strong>Cover Letter</strong>
                     </div>
                     <div className="list-group list-group-flush">
-                      {covers && covers.map(cover => {
+                      {/* {covers && covers.map(cover => {
                         return (
-                          <h2 className="">{cover.firstName}</h2>
+                          
                         )
-                      })}
+                      })} */}
+                      <h2 className="">{covers.firstName}</h2>
                     </div>
                   </div>
                 </div>
@@ -123,13 +126,14 @@ class Dashboard extends Component {
                     </div>
                     <div className="list-group list-group-flush white-page-cv">
                       <div className="output-details text-center">
-                        {vitaes && vitaes.map(vitae => {
+                        {/* {vitaes && vitaes.map(vitae => {
                           return (
                             <div key={vitae.id}>
-                              <h2 className="">{vitae.firstName} {vitae.lastName}</h2>
+                              
                             </div>
                           )
-                        })}
+                        })} */}
+                        <h2 className="">{vitaes.firstName} {vitaes.lastName}</h2>
                       </div>
                     </div>
                   </div>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 // import Footer from '../pages/footer'
+import { connect } from 'react-redux'
+import { createVitae } from '../../store/actions/vitaeActions'
 
 const initialState = {
     firstName: '',
@@ -417,7 +419,7 @@ record of...." rows="3"></textarea>
                                     </div>
 
                                     <div className="header-buttons">
-                                        <Link to="/work-experience" type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></Link>
+                                        <button type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></button>
                                     </div>
                                 </form>
 
@@ -470,6 +472,12 @@ record of...." rows="3"></textarea>
     }
 }
 
-export default Header
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createVitae: (vitae) => dispatch(createVitae(vitae))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Header)
 
 
