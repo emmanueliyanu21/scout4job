@@ -173,6 +173,10 @@ class Header extends Component {
             this.setState(initialState);
         }
     }
+
+    handleClick = (e) => {
+
+    }
     render() {
         return (
             <div className="">
@@ -268,55 +272,56 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-briefcase"></i>
                                             Employment History</h2>
                                     </div>
-                                    <div className="row">
-                                        <div className="form-group col-md-6">
-                                            <label htmlFor="jobTitle">Job Title</label>
-                                            <input type="text" className="form-control" id="jobTitle"
-                                                placeholder="Job Title" onChange={this.handleChange} />
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.jobTitleError}
-                                            </div>
-                                        </div>
-                                        <div className="form-group col-md-6">
-                                            <label htmlFor="employer">Employer</label>
-                                            <input type="text" className="form-control" id="employer"
-                                                placeholder="Company Name" onChange={this.handleChange} />
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.employerError}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="form-group col-md-6 ">
-                                            <div className="row">
-                                                <div className="form-group col-md-6">
-                                                    <label htmlFor="startDate1">Start Date</label>
-                                                <input type="text" className="form-control" id="startDate1"
-                                                    placeholder="02 July" onChange={this.handleChange} />
+                                    <div id="">
+                                        <div className="row">
+                                            <div className="form-group col-md-6">
+                                                <label htmlFor="jobTitle">Job Title</label>
+                                                <input type="text" className="form-control" id="jobTitle"
+                                                    placeholder="Job Title" onChange={this.handleChange} />
                                                 <div style={{ fontSize: 12, color: "red" }}>
-                                                    {this.state.startDate1Error}
+                                                    {this.state.jobTitleError}
                                                 </div>
                                             </div>
-                                                <div className="form-group col-md-6">
-                                                    <label htmlFor="endDate1">End Date</label>
-                                                <input type="text" className="form-control" id="endDate1"
-                                                    placeholder="02 July" onChange={this.handleChange} />
+                                            <div className="form-group col-md-6">
+                                                <label htmlFor="employer">Employer</label>
+                                                <input type="text" className="form-control" id="employer"
+                                                    placeholder="Company Name" onChange={this.handleChange} />
                                                 <div style={{ fontSize: 12, color: "red" }}>
-                                                        {this.state.endDate1Error}
+                                                    {this.state.employerError}
                                                 </div>
                                             </div>
-                                            </div>
-                                            </div>
-                                        <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">City</label>
-                                            <input type="text" className="form-control" id="city"
-                                                placeholder="City, Country" onChange={this.handleChange} />
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.cityError}
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="row">
+                                        <div className="row">
+                                            <div className="form-group col-md-6 ">
+                                                <div className="row">
+                                                    <div className="form-group col-md-6">
+                                                        <label htmlFor="startDate1">Start Date</label>
+                                                    <input type="text" className="form-control" id="startDate1"
+                                                        placeholder="02 July" onChange={this.handleChange} />
+                                                    <div style={{ fontSize: 12, color: "red" }}>
+                                                        {this.state.startDate1Error}
+                                                    </div>
+                                                </div>
+                                                    <div className="form-group col-md-6">
+                                                        <label htmlFor="endDate1">End Date</label>
+                                                    <input type="text" className="form-control" id="endDate1"
+                                                        placeholder="02 July" onChange={this.handleChange} />
+                                                    <div style={{ fontSize: 12, color: "red" }}>
+                                                            {this.state.endDate1Error}
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                            <div className="form-group col-md-6">
+                                                <label htmlFor="exampleInputEmail1">City</label>
+                                                <input type="text" className="form-control" id="city"
+                                                    placeholder="City, Country" onChange={this.handleChange} />
+                                                <div style={{ fontSize: 12, color: "red" }}>
+                                                    {this.state.cityError}
+                                                </div>
+                                            </div>
+                                        </div>                                 
+                                        <div className="row">
                                         <div className="form-group col-md-12">
                                             <label htmlFor="exampleInputEmail1">Description</label>
                                             <textarea class="form-control" onChange={this.handleChange}  id="employmentSummary" placeholder="e.g. Passionate about software development for 8+ years and a track 
@@ -324,6 +329,12 @@ record of...." rows="3"></textarea>
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.employmentSummaryError}
                                             </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <Link to="/" onClick={this.handleClick}><i className="fa fa-plus"></i> Add Employment History </Link>
                                         </div>
                                     </div>
                                     {/* employment history ends */}
@@ -391,6 +402,11 @@ record of...." rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <Link to="/"><i className="fa fa-plus"></i> Add Educational History </Link>
+                                        </div>
+                                    </div>
                                     {/* education history ends */}
                                     {/* website links starts */}
                                     <div className="section-caption pt-4">
@@ -398,6 +414,7 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-globe"></i>
                                             Website &amp; Social Links</h2>
                                     </div>
+                                    
                                     {/* website links ends */}
                                     <div className="row">
                                         <div className="form-group col-md-6">
@@ -417,7 +434,11 @@ record of...." rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <Link to="/"><i className="fa fa-plus"></i> Add Social Link </Link>
+                                        </div>
+                                    </div>
                                     <div className="header-buttons">
                                         <button type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></button>
                                     </div>
