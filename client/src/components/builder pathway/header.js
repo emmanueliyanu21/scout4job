@@ -3,58 +3,144 @@ import { Link } from 'react-router-dom'
 // import Footer from '../pages/footer'
 import { connect } from 'react-redux'
 import { createVitae } from '../../store/actions/vitaeActions'
+import JobList from './jobList'
+import EduList from './educationList'
+import SocialLink from './socialLink'
 
-const initialState = {
-    firstName: '',
-    lastName: '',
-    address: '',
-    state: '',
-    email: '',
-    summary: '',
-    jobTitle: '',
-    employer: '',
-    city: '',
-    startDate1: '',
-    endDate1: '',
-    phoneNumber: '',
-    employmentSummary: '',
-    schoolName: '',
-    degreeName: '',
-    startDate2: '',
-    endDate2: '',
-    educationDescription: '',
-    websiteName: '',
-    linkName: '',
-    firstNameError: "",
-    lastNameError: "",
-    addressError: "",
-    stateError: "",
-    emailError: "",
-    summaryError: "",
-    jobTitleError: "",
-    employerError: '',
-    cityError: '',
-    startDate1Error: '',
-    endDate1Error: '',
-    employmentSummary: '',
-    schoolNameError: '',
-    degreeNameError: '',
-    startDate2Error: '',
-    endDate2Error: '',
-    educationDescriptionError: '',
-    websiteNameError: '',
-    linkNameError: ''
-};
+// const initialState = 
 
 class Header extends Component {
 
-    state = initialState;
+    // state = initialState;
+    state = {
+
+        jobList: [{ index: Math.random(), jobTitle: "", employer: "", startDate: "", endDate: "", city: "", description: "" }],
+        eduList: [{ index: Math.random(), schoolName: "", degreeName: "", startDate2: "", endDate2: "", cityEdu: "", eduDescription: "" }],
+        socialLink: [{ index: Math.random(), websiteName: "", linkName: ""}],
+        firstName: '',
+        lastName: '',
+        address: '',
+        state: '',
+        email: '',
+        summary: '',
+        jobTitle: '',
+        employer: '',
+        city: '',
+        startDate1: '',
+        endDate1: '',
+        phoneNumber: '',
+        employmentSummary: '',
+        schoolName: '',
+        degreeName: '',
+        startDate2: '',
+        endDate2: '',
+        educationDescription: '',
+        websiteName: '',
+        linkName: '',
+        firstNameError: "",
+        lastNameError: "",
+        addressError: "",
+        stateError: "",
+        emailError: "",
+        summaryError: "",
+        jobTitleError: "",
+        employerError: '',
+        cityError: '',
+        startDate1Error: '',
+        endDate1Error: '',
+        // employmentSummary: '',
+        schoolNameError: '',
+        degreeNameError: '',
+        startDate2Error: '',
+        endDate2Error: '',
+        educationDescriptionError: '',
+        websiteNameError: '',
+        linkNameError: '',
+    };
 
     handleChange = (e) => {
+        if (["jobTitle", "employer", "startDate", "endDate", "city", "description"].includes(e.target.name)) {
+            let jobList = [...this.state.jobList]
+            jobList[e.target.dataset.id][e.target.name] = e.target.value;
+        } else {
+            this.setState({ [e.target.name]: e.target.value })
+        }
+
+        if (["schoolName", "degreeName", "startDate2", "endDate2", "cityEdu", "eduDescription"].includes(e.target.name)) {
+            let eduList = [...this.state.eduList]
+            eduList[e.target.dataset.id][e.target.name] = e.target.value;
+        } else {
+            this.setState({ [e.target.name]: e.target.value })
+        }
+
+        if (["websiteName", "linkName"].includes(e.target.name)) {
+            let socialLink = [...this.state.socialLink]
+            socialLink[e.target.dataset.id][e.target.name] = e.target.value;
+        } else {
+            this.setState({ [e.target.name]: e.target.value })
+        }
+
+    }
+
+    addNewRow = (e) => {
+        this.setState((prevState) => ({
+            jobList: [...prevState.jobList, { index: Math.random(), jobTitle: "", employer: "", startDate: "", endDate: "", city: "", description: "" }],
+        }));
+    }
+
+    addeduRow = (e) => {
+        this.setState((prevState) => ({
+            eduList: [...prevState.eduList, { index: Math.random(), schoolName: "", degreeName: "", startDate2: "", endDate2: "", cityEdu: "", eduDescription: "" }]
+        }))
+    }
+
+    addsocialRow = (e) => {
+        this.setState((prevState) => ({
+            socialLink: [...prevState.socialLink, { index: Math.random(), websiteName: "", linkName: "" } ]
+        }))
+    }
+
+    deteteRow = (index) => {
         this.setState({
-            [e.target.id]: e.target.value
+            jobList: this.state.jobList.filter((s, sindex) => index !== sindex),
         });
     }
+
+    deleteEduRow = (index) => {
+        this.setState({
+            eduList: this.state.eduList.filter((s, sindex) => index !== sindex),
+        })
+    }
+
+    deleteSocialRow = (index) => {
+        this.setState({
+            socialLink: this.state.socialLink.filter((s, sindex) => index !== sindex)
+        })
+    }
+
+    clickOnDelete(record) {
+        this.setState({
+            jobList: this.state.jobList.filter(r => r !== record),
+        });
+    }
+
+    clickOnEduDelete(record) {
+        this.setState({
+            eduList: this.state.eduList.filter(r => r !== record)
+        })
+    }
+
+    deleteOnSocialRow = (record) => {
+        this.setState({
+            socialLink: this.state.socialLink.filter(r => r !== record)
+        })
+    }
+
+    // handleChange = (e) => {
+    //     this.setState({
+    //         [e.target.id]: e.target.value
+    //     });
+    // }
 
     handleValidation() {
         let firstNameError = "";
@@ -170,7 +256,7 @@ class Header extends Component {
         if (isValid) {
             console.log(this.state);
             // clear form
-            this.setState(initialState);
+            this.setState(this.state);
         }
     }
 
@@ -178,6 +264,9 @@ class Header extends Component {
 
     }
     render() {
+        let { jobList } = this.state//let { notes, date, description, taskList } = this.state
+        let { eduList } = this.state
+        let { socialLink } = this.state
         return (
             <div className="">
 
@@ -257,7 +346,7 @@ class Header extends Component {
                                     <div className="row">
                                         <div className="form-group col-md-12">
                                             <label htmlFor="exampleInputEmail1">Include 2-3 clear sentences about your overall experience</label>
-                                            <textarea class="form-control" id="summary" onChange={this.handleChange} placeholder="e.g. Passionate about software development for 8+ years and a track 
+                                            <textarea className="form-control" id="summary" onChange={this.handleChange} placeholder="e.g. Passionate about software development for 8+ years and a track 
 record of...." rows="3"></textarea>
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.summaryError}
@@ -272,7 +361,7 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-briefcase"></i>
                                             Employment History</h2>
                                     </div>
-                                    <div id="">
+                                    {/* <div id="">
                                         <div className="row">
                                             <div className="form-group col-md-6">
                                                 <label htmlFor="jobTitle">Job Title</label>
@@ -324,17 +413,18 @@ record of...." rows="3"></textarea>
                                         <div className="row">
                                         <div className="form-group col-md-12">
                                             <label htmlFor="exampleInputEmail1">Description</label>
-                                            <textarea class="form-control" onChange={this.handleChange}  id="employmentSummary" placeholder="e.g. Passionate about software development for 8+ years and a track 
+                                            <textarea className="form-control" onChange={this.handleChange}  id="employmentSummary" placeholder="e.g. Passionate about software development for 8+ years and a track 
 record of...." rows="3"></textarea>
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.employmentSummaryError}
                                             </div>
                                         </div>
                                     </div>
-                                    </div>
+                                    </div> */}
+                                    <JobList jobList={jobList} add={this.addNewRow} delete={this.clickOnDelete.bind(this)}/>
                                     <div className="row">
-                                        <div className="col-md-12">
-                                            <Link to="/" onClick={this.handleClick}><i className="fa fa-plus"></i> Add Employment History </Link>
+                                        <div className="col-md-12 add-employment pb-2">
+                                            <button className="" type="button" onClick={this.addNewRow} ><i className="fa fa-plus"></i> Add Employment History </button>
                                         </div>
                                     </div>
                                     {/* employment history ends */}
@@ -344,7 +434,7 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-book"></i>
                                             Education History</h2>
                                     </div>
-                                    <div className="row">
+                                    {/* <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="schoolName">School Name</label>
                                             <input type="text" className="form-control" id="schoolName"
@@ -395,18 +485,20 @@ record of...." rows="3"></textarea>
                                     <div className="row">
                                         <div className="form-group col-md-12">
                                             <label htmlFor="educationDescription">Description</label>
-                                            <textarea class="form-control" id="educationDescription" placeholder="e.g. Passionate about software development for 8+ years and a track 
+                                            <textarea className="form-control" id="educationDescription" placeholder="e.g. Passionate about software development for 8+ years and a track 
 record of...." rows="3"></textarea>
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.educationDescriptionError}
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
+                                    <EduList eduList={eduList} add={this.addeduRow} delete={this.clickOnEduDelete.bind(this)} />
                                     <div className="row">
-                                        <div className="col-md-12">
-                                            <Link to="/"><i className="fa fa-plus"></i> Add Educational History </Link>
+                                        <div className="col-md-12 add-employment pb-2">
+                                            <button className="" type="button" onClick={this.addeduRow} ><i className="fa fa-plus"></i> Add Educational History </button>
                                         </div>
                                     </div>
+                                   
                                     {/* education history ends */}
                                     {/* website links starts */}
                                     <div className="section-caption pt-4">
@@ -416,7 +508,7 @@ record of...." rows="3"></textarea>
                                     </div>
                                     
                                     {/* website links ends */}
-                                    <div className="row">
+                                    {/* <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="websiteName">Name</label>
                                             <input type="text" className="form-control" id="websiteName"
@@ -433,12 +525,14 @@ record of...." rows="3"></textarea>
                                                 {this.state.linkNameError}
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
+                                    <SocialLink socialLink={socialLink} add={this.addsocialRow} delete={this.deleteOnSocialRow.bind(this)} />
                                     <div className="row">
-                                        <div className="col-md-12">
-                                            <Link to="/"><i className="fa fa-plus"></i> Add Social Link </Link>
+                                        <div className="col-md-12 add-employment pb-2">
+                                            <button className="" type="button" onClick={this.addsocialRow} ><i className="fa fa-plus"></i> Add Social Link </button>
                                         </div>
                                     </div>
+
                                     <div className="header-buttons">
                                         <button type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></button>
                                     </div>
@@ -446,11 +540,11 @@ record of...." rows="3"></textarea>
 
                             </div>
                             <div className="col-md-6 col-sm-12 sidebar-fixed">
-                                <div className="resume-options">
+                                {/* <div className="resume-options">
                                     <button className="btn btn-primary btn-download">Download PDF</button>
                                     <button className="btn btn-primary btn-dot">...</button>
                                     <Link to="/template" className="select-template pull-right">Select a template</Link>
-                                </div>
+                                </div> */}
                                 <div className="form-img">
                                     {/* header starts here */}
                                     <div className="personal-details text-center">

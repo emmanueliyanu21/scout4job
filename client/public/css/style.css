@@ -1584,7 +1584,7 @@
         padding-top: 20px;
         padding-bottom: 20px;
         border-radius: 4px;
-        min-height: 500px;
+        min-height: 700px;
     }
 
     .resume-options {
@@ -3387,4 +3387,23 @@
     font-family: Nunito, sans-serif;
     margin-bottom: 0px!important;
     padding-bottom: 4px!important;
+}
+
+.add-employment button {
+    background-color: transparent!important;
+    border: none!important;
+}
+
+.add-employment {
+    padding-top: 20px;
+}
+
+.add-employment button:focus {
+    outline: none!important;
+    box-shadow: none!important;
+    border: none!important;
+}
+
+.additional-button .hide-button {
+    display: none!important;
 }
