@@ -103,7 +103,7 @@ export class Register extends Component {
                                             />
                                             <span className="red-text">{errors.password}</span>
                                         </div>
-                                        <div class="row">
+                                        {/* <div class="row">
                                             <div class="form-group form-check check-login col-md-6">
                                                 <input type="checkbox" class="form-check-input" id="exampleCheck1" />
                                                 <label class="form-check-label" for="exampleCheck1">Remember me</label>
@@ -114,7 +114,7 @@ export class Register extends Component {
                                 </Link>
 
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div class="login">
                                             <button type="submit" class="btn btn-login btn-block">Sign Up</button>
                                         </div>

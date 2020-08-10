@@ -4,9 +4,14 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const http = require('http');
 const path = require('path');
+const cors = require('cors')
 
+
+//Load Routes
 const users = require("./routes/api/users");
 const jobs = require("./routes/api/jobs");
+const resumes = require("./routes/api/resumes");
+const covers = require("./routes/api/covers");
 
 const app = express();
 
@@ -24,6 +29,7 @@ app.use(
         extended: false
     })
 );
+app.use(cors())
 app.use(bodyParser.json());
 
 // DB Config
@@ -33,7 +39,7 @@ const db = require("./config/keys").mongoURI;
 mongoose
     .connect(
         db,
-        { useUnifiedTopology: true }
+        { useNewUrlParser: true }
     )
     .then(() => console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
@@ -44,9 +50,12 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 
+
 // Routes
 app.use("/api/users", users);
-app.use("/api/jobs", jobs);
+app.use("/api", jobs);
+app.use("/api", covers);
+app.use("/api", resumes)
 
 // Set Port
 const port = process.env.PORT || '8000';

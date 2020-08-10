@@ -1,25 +1,25 @@
 const express = require("express")
 const router = express.Router()
-const Job = require('../../models/Job')
+const Cover = require('../../models/Cover')
 
-router.post('/jobs', (req, res) => {
+router.post('/covers', (req, res) => {
 
-    const job = new Job(req.body)
+    const cover = new Cover(req.body)
 
-    job.save().then(() => {
+    cover.save().then(() => {
         return res.status(200).json({
             success: true,
-            id: job._id,
-            message: 'Job posting successfully created',
+            id: cover._id,
+            message: 'cover letter created',
         })
     })
         .catch(error => {
             return res.status(400).json({
                 error,
-                message: 'Job Posting not created',
+                message: 'cover not created',
             })
         })
-}
+    }
 );
 
 

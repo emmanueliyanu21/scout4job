@@ -6,6 +6,7 @@ import { createVitae } from '../../store/actions/vitaeActions'
 import JobList from './jobList'
 import EduList from './educationList'
 import SocialLink from './socialLink'
+import axios from 'axios';
 
 // const initialState = 
 
@@ -252,12 +253,23 @@ class Header extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
 
-        const isValid = this.handleValidation();
-        if (isValid) {
-            console.log(this.state);
-            // clear form
-            this.setState(this.state);
-        }
+        // const isValid = this.handleValidation();
+        // if (isValid) {
+        //     console.log(this.state);
+        //     // clear form
+        //     this.setState(this.state);
+        // }
+
+        console.log(this.state.item)
+        axios({
+            method: 'post',
+            url: 'http://localhost:8000/api/resumes',
+            data: {
+                resume: this.state.firstName,
+            }
+        });
+        this.setState({ firstName: '' })
+
     }
 
     handleClick = (e) => {
