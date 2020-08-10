@@ -42,7 +42,7 @@ export class Login extends Component {
             email: this.state.email,
             password: this.state.password
         };
-        console.log(userData);
+        // console.log(userData);
 
         this.props.loginUser(userData);
 
@@ -86,7 +86,7 @@ export class Login extends Component {
                                             />
                                             <span className="red-text"> {errors.password} {errors.passwordincorrect}</span>
                                         </div>
-                                        <div class="row">
+                                        {/* <div class="row">
                                             <div class="form-group form-check check-login col-md-6">
                                                 <input type="checkbox" class="form-check-input" id="exampleCheck1" />
                                                 <label class="form-check-label" htmlFor="exampleCheck1">Remember me</label>
@@ -97,13 +97,13 @@ export class Login extends Component {
                                 </Link>
 
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div class="login">
                                             <button type="submit" class="btn btn-login btn-block">Login in</button>
                                         </div>
-                                        <div class="connect">
+                                        {/* <div class="connect">
                                             <h2>Or connect with</h2>
-                                        </div>
+                                        </div> */}
                                         {/* <div class="row fg-buttons">
                                             <div class="col-md-6">
                                                 <Link to="" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</Link>
