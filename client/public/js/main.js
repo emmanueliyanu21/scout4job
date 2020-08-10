@@ -43,7 +43,7 @@ $('.stop').on('click', function () {
 })
 
 // particles.js
-particles.js.load('particles.js', 'paticles.json', function () {
-    console.log('paticles.json loaded')
-})
+// particles.js.load('particles.js', 'paticles.json', function () {
+//     console.log('paticles.json loaded')
+// })
 // carousel script end here

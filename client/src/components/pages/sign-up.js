@@ -43,7 +43,7 @@ export class Register extends Component {
             password2: this.state.password2
         };
 
-        console.log(newUser);
+        // console.log(newUser);
         // console.log(this.state);
         // this.props.createProject(this.state)
 
