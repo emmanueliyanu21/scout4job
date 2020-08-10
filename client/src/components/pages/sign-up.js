@@ -118,9 +118,9 @@ export class Register extends Component {
                                         <div class="login">
                                             <button type="submit" class="btn btn-login btn-block">Sign Up</button>
                                         </div>
-                                        <div class="connect">
+                                        {/* <div class="connect">
                                             <h2>Or connect with</h2>
-                                        </div>
+                                        </div> */}
                                         {/* <div class="row fg-buttons">
                                             <div class="col-md-6">
                                                 <Link to="" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</Link>
