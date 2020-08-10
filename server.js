@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const http = require('http');
 const path = require('path');
-const cors = require('cors')
+// const cors = require('cors')
 
 
 //Load Routes
@@ -29,7 +29,7 @@ app.use(
         extended: false
     })
 );
-app.use(cors())
+// app.use(cors())
 app.use(bodyParser.json());
 
 // DB Config
@@ -39,7 +39,7 @@ const db = require("./config/keys").mongoURI;
 mongoose
     .connect(
         db,
-        { useNewUrlParser: true }
+        { useUnifiedTopology: true }
     )
     .then(() => console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
