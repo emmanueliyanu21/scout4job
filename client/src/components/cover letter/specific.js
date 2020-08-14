@@ -2,23 +2,28 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createCover } from '../../store/actions/coverActions'
-
-const initialState = {
-    fullName: '',
-    address: '',
-    state: '',
-    email: '',
-    phoneNumber: '',
-    fullNameError: "",
-    addressError: "",
-    stateError: "",
-    emailError: "",
-    phoneNumberError: ""
-};
+import axios from 'axios';
 
 class Specific extends Component {
 
-    state = initialState;
+    state = {
+        fullName: '',
+        jobTitle: '',
+        address: '',
+        state: '',
+        email: '',
+        phoneNumber: '',
+        managerName: '',
+        companyName: '',
+        summary: '',
+        fullNameError: "",
+        jobTitleError: "",
+        addressError: "",
+        stateError: "",
+        emailError: "",
+        phoneNumberError: "",
+        summaryError: ""
+    };
 
     handleChange = (e) => {
         this.setState({
@@ -58,17 +63,39 @@ class Specific extends Component {
 
     }
 
+    // handleSubmit = (e) => {
+    //     e.preventDefault()
+
+    //     const isValid = this.handleValidation();
+    //     if (isValid) {
+    //         // console.log(this.state);
+    //         this.props.createCover(this.state)
+    //         // clear form
+    //         this.setState(initialState);
+    //     }
+    // }
+
     handleSubmit = (e) => {
         e.preventDefault()
 
-        const isValid = this.handleValidation();
-        if (isValid) {
-            // console.log(this.state);
-            this.props.createCover(this.state)
-            // clear form
-            this.setState(initialState);
-        }
+        axios({
+            method: 'post',
+            url: 'http://localhost:8000/api/covers',
+            data: {
+                fullName: this.state.fullName,
+                address: this.state.address,
+                state: this.state.state,
+                phoneNumber: this.state.phoneNumber,
+                email: this.state.email,
+                summary: this.state.summary,
+                managerName: this.state.managerName,
+                companyName: this.state.companyName,
+            }
+        });
+        this.setState({ firstName: '' })
+
     }
+
 
     render() {
         return (
@@ -150,15 +177,15 @@ class Specific extends Component {
                                     <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="phoneNumber">Company Name</label>
-                                            <input type="text" className="form-control" id="phoneNumber"
+                                            <input type="text" className="form-control" id="companyName"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.phoneNumberError}
+                                                {this.state.companyNameError}
                                             </div>
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label htmlFor="email">Hiring Manager name</label>
-                                            <input type="text" className="form-control" id="email"
+                                            <input type="text" className="form-control" id="managerName"
                                                 placeholder="" onChange={this.handleChange} />
                                             <div style={{ fontSize: 12, color: "red" }}>
                                                 {this.state.emailError}
@@ -191,16 +218,32 @@ record of...." rows="3"></textarea>
                                 </form>
                             </div>
                             <div className="col-md-6 sidebar-fixed">
-                                <div className="resume-options">
+                                {/* <div className="resume-options">
                                     <button className="btn btn-primary btn-download">Download PDF</button>
                                     <button className="btn btn-primary btn-dot">...</button>
                                     <Link to="/template" className="select-template pull-right">Select a template</Link>
-                                </div>
-                                <div className="form-img">
+                                </div> */}
+                                <div className="form-img cover-letter">
+                                    <div className="personal-details text-center">
+                                        <h2>{this.state.fullName}</h2>
+                                        <p>{this.state.jobTitle}</p>
+                                        <p>{this.state.address} {this.state.state}</p>
                                     </div>
+                                    <div className="phone-Email-section pt-3">
+                                            <span className="text-left">{this.state.phoneNumber} </span>
+                                            <span className="pull-right">{this.state.email}</span>
+                                       
+                                    </div>
+                                    <div className="pt-3">
+                                        <h2>{this.state.managerName}</h2>
+                                        <p>{this.state.companyName}</p>
+                                    </div>
+                                    <div className="cover-body pt-5">
+                                        <p>{this.state.summary}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </section>
 

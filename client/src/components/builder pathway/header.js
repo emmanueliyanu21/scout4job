@@ -17,7 +17,7 @@ class Header extends Component {
 
         jobList: [{ index: Math.random(), jobTitle: "", employer: "", startDate: "", endDate: "", city: "", description: "" }],
         eduList: [{ index: Math.random(), schoolName: "", degreeName: "", startDate2: "", endDate2: "", cityEdu: "", eduDescription: "" }],
-        socialLink: [{ index: Math.random(), websiteName: "", linkName: ""}],
+        socialLink: [{ index: Math.random(), websiteName: "", linkName: "" }],
         firstName: '',
         lastName: '',
         address: '',
@@ -84,7 +84,7 @@ class Header extends Component {
         this.setState({
             [e.target.id]: e.target.value
         });
-        
+
     }
 
     addNewRow = (e) => {
@@ -101,7 +101,7 @@ class Header extends Component {
 
     addsocialRow = (e) => {
         this.setState((prevState) => ({
-            socialLink: [...prevState.socialLink, { index: Math.random(), websiteName: "", linkName: "" } ]
+            socialLink: [...prevState.socialLink, { index: Math.random(), websiteName: "", linkName: "" }]
         }))
     }
 
@@ -246,7 +246,7 @@ class Header extends Component {
             linkNameError = "Description must be included";
         }
 
-        if (emailError || firstNameError || lastNameError || addressError || stateError || phoneNumberError || summaryError || jobTitleError || employerError || cityError || startDate1Error || endDate1Error || employmentSummaryError || schoolNameError || degreeNameError || startDate2Error || endDate2Error || educationDescriptionError || websiteNameError || linkNameError ) {
+        if (emailError || firstNameError || lastNameError || addressError || stateError || phoneNumberError || summaryError || jobTitleError || employerError || cityError || startDate1Error || endDate1Error || employmentSummaryError || schoolNameError || degreeNameError || startDate2Error || endDate2Error || educationDescriptionError || websiteNameError || linkNameError) {
             this.setState({ emailError, firstNameError, lastNameError, addressError, stateError, phoneNumberError, summaryError, jobTitleError, employerError, cityError, startDate1Error, endDate1Error, employmentSummaryError, schoolNameError, degreeNameError, startDate2Error, endDate2Error, educationDescriptionError, websiteNameError, linkNameError });
             return false;
         }
@@ -264,12 +264,30 @@ class Header extends Component {
         //     this.setState(this.state);
         // }
 
-        console.log(this.state.item)
         axios({
             method: 'post',
             url: 'http://localhost:8000/api/resumes',
             data: {
-                resume: this.state.firstName,
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                address: this.state.address,
+                state: this.state.state,
+                phoneNumber: this.state.phoneNumber,
+                email: this.state.email,
+                summary: this.state.summary,
+                jobTitle: this.state.jobTitle,
+                employer: this.state.employer,
+                city: this.state.city,
+                startDate1: this.state.startDate1,
+                endDate1: this.state.endDate1,
+                employmentSummary: this.state.employmentSummary,
+                schoolName: this.state.schoolName,
+                degreeName: this.state.degreeName,
+                startDate2: this.state.startDate2,
+                endDate2: this.state.endDate2,
+                educationDescription: this.state.educationDescription,
+                websiteName: this.state.websiteName,
+                linkName: this.state.websiteName,
             }
         });
         this.setState({ firstName: '' })
@@ -377,7 +395,7 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-briefcase"></i>
                                             Employment History</h2>
                                     </div>
-                                    {/* <div id="">
+                                    <div id="">
                                         <div className="row">
                                             <div className="form-group col-md-6">
                                                 <label htmlFor="jobTitle">Job Title</label>
@@ -436,8 +454,8 @@ record of...." rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    </div> */}
-                                    <JobList jobList={jobList} add={this.addNewRow} delete={this.clickOnDelete.bind(this)}/>
+                                    </div>
+                                    {/* <JobList jobList={jobList} add={this.addNewRow} delete={this.clickOnDelete.bind(this)}/> */}
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
                                             <button className="" type="button" onClick={this.addNewRow} ><i className="fa fa-plus"></i> Add Employment History </button>
@@ -450,7 +468,7 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-book"></i>
                                             Education History</h2>
                                     </div>
-                                    {/* <div className="row">
+                                    <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="schoolName">School Name</label>
                                             <input type="text" className="form-control" id="schoolName"
@@ -507,14 +525,14 @@ record of...." rows="3"></textarea>
                                                 {this.state.educationDescriptionError}
                                             </div>
                                         </div>
-                                    </div> */}
-                                    <EduList eduList={eduList} add={this.addeduRow} delete={this.clickOnEduDelete.bind(this)} />
+                                    </div>
+                                    {/* <EduList eduList={eduList} add={this.addeduRow} delete={this.clickOnEduDelete.bind(this)} /> */}
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
                                             <button className="" type="button" onClick={this.addeduRow} ><i className="fa fa-plus"></i> Add Educational History </button>
                                         </div>
                                     </div>
-                                   
+
                                     {/* education history ends */}
                                     {/* website links starts */}
                                     <div className="section-caption pt-4">
@@ -522,9 +540,9 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-globe"></i>
                                             Website &amp; Social Links</h2>
                                     </div>
-                                    
+
                                     {/* website links ends */}
-                                    {/* <div className="row">
+                                    <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="websiteName">Name</label>
                                             <input type="text" className="form-control" id="websiteName"
@@ -541,8 +559,8 @@ record of...." rows="3"></textarea>
                                                 {this.state.linkNameError}
                                             </div>
                                         </div>
-                                    </div> */}
-                                    <SocialLink socialLink={socialLink} add={this.addsocialRow} delete={this.deleteOnSocialRow.bind(this)} />
+                                    </div>
+                                    {/* <SocialLink socialLink={socialLink} add={this.addsocialRow} delete={this.deleteOnSocialRow.bind(this)} /> */}
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
                                             <button className="" type="button" onClick={this.addsocialRow} ><i className="fa fa-plus"></i> Add Social Link </button>
@@ -550,7 +568,7 @@ record of...." rows="3"></textarea>
                                     </div>
 
                                     <div className="header-buttons">
-                                        <button type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></button>
+                                        <button type="submit" onClick={this.handleSubmit} className="btn btn-next">Submit<i className="fa fa-angle-right"></i></button>
                                     </div>
                                 </form>
 
@@ -591,7 +609,7 @@ record of...." rows="3"></textarea>
                                     <div className="preview">
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

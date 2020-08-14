@@ -36,7 +36,7 @@ class Job extends Component {
     };
 
     getData = () => {
-        fetch(`http://localhost:4000/data`)
+        fetch(`http://localhost:8000/data`)
             .then(response => response.json())
             .then(data => {
                 const { query } = this.state;

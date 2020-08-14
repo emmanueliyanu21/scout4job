@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const http = require('http');
 const path = require('path');
-// const cors = require('cors')
+const cors = require('cors')
 
 
 //Load Routes
@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.set('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/build', '/index.html'));
 });
+app.use(cors())
 
 // Bodyparser middleware
 app.use(

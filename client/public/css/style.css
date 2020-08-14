@@ -3407,3 +3407,34 @@
 .additional-button .hide-button {
     display: none!important;
 }
+
+.cover-letter .personal-details h2 {
+    text-transform: uppercase;
+    font-size: 20px!important;
+}
+
+.cover-letter {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.cover-letter .phone-Email-section span{
+    font-family: Nunito, sans-serif!important;
+    font-size: 14px!important;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.cover-letter .phone-Email-section h2 {
+    
+}
+
+.cover-letter .cover-body p {
+    font-size: 14px;
+    font-family: Nunito, sans-serif!important;
+}
+
+.jobTitle p {
+    color: #343434!important;
+    font-size: 16px!important;
+    font-family: Nunito, sans-serif;
+}
