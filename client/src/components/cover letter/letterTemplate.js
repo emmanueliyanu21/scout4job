@@ -13,17 +13,17 @@ export class LetterTemplates extends Component {
                         <div className="row pt-5 pb-5">
                             <div className="col-md-4 letter-template">
                                 <Link to="/template-1">
-                                    <img src="../images/letter-template/letter-1.png" />
+                                    <img src="../images/letter-template/letter-1.png" alt="Template 1" />
                                 </Link>
                             </div>
                             <div className="col-md-4 letter-template">
                                 <Link to="/specific">
-                                    <img src="../images/letter-template/letter-2.png" />
+                                    <img src="../images/letter-template/letter-2.png" alt="Template 1" />
                                 </Link>
                             </div>
                             <div className="col-md-4 letter-template">
                                 <Link to="/template-3">
-                                    <img src="../images/letter-template/letter-3.png" />
+                                    <img src="../images/letter-template/letter-3.png" alt="Template 1" />
                                 </Link>
                             </div>
                         </div>

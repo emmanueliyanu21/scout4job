@@ -56,18 +56,18 @@ export class Login extends Component {
             <div className="">
                 <Navbar />
                 {/* < !--Form starts here-- > */}
-                <section class="bk-grey bk-sign-up">
+                <section className="bk-grey bk-sign-up">
                     <div className="overlay">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 login-form">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-md-12 login-form">
                                     <form noValidate onSubmit={this.handleSubmit}>
-                                        <div class="main-text">
-                                            <h2><i class="fa fa-edit"></i>Login</h2>
+                                        <div className="main-text">
+                                            <h2><i className="fa fa-edit"></i>Login</h2>
                                         </div>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label htmlFor="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control"
+                                            <input type="email" className="form-control"
                                                 aria-describedby="emailHelp" id="email" error={errors.email} required onChange={this.handleChange} placeholder="Enter email"
                                             // className={classnames("", {
                                             //     invalid: errors.email || errors.emailnotfound
@@ -78,9 +78,9 @@ export class Login extends Component {
                                                 {errors.emailnotfound}
                                             </span>
                                         </div>
-                                        <div class="form-group">
+                                        <div className="form-group">
                                             <label htmlFor="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control"
+                                            <input type="password" className="form-control"
                                                 id="password" onChange={this.handleChange} error={errors.password} required placeholder="Password"
                                             // className={classnames("", {
                                             //     invalid: errors.password || errors.passwordincorrect
@@ -88,39 +88,39 @@ export class Login extends Component {
                                             />
                                             <span className="red-text"> {errors.password} {errors.passwordincorrect}</span>
                                         </div>
-                                        {/* <div class="row">
-                                            <div class="form-group form-check check-login col-md-6">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                                <label class="form-check-label" htmlFor="exampleCheck1">Remember me</label>
+                                        {/* <div className="row">
+                                            <div className="form-group form-check check-login col-md-6">
+                                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                                <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                                             </div>
-                                            <div class="col-md-6 text-right login-txt">
+                                            <div className="col-md-6 text-right login-txt">
                                                 <Link to="">
                                                     Forget Password
                                 </Link>
 
                                             </div>
                                         </div> */}
-                                        <div class="login">
-                                            <button type="submit" class="btn btn-login btn-block">Login in</button>
+                                        <div className="login">
+                                            <button type="submit" className="btn btn-login btn-block">Login in</button>
                                         </div>
-                                        {/* <div class="connect">
+                                        {/* <div className="connect">
                                             <h2>Or connect with</h2>
                                         </div> */}
-                                        {/* <div class="row fg-buttons">
-                                            <div class="col-md-6">
-                                                <Link to="" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</Link>
+                                        {/* <div className="row fg-buttons">
+                                            <div className="col-md-6">
+                                                <Link to="" className="btn btn-facebook"><i className="fa fa-facebook"></i> Facebook</Link>
                                             </div>
-                                            <div class="col-md-6">
-                                                <Link to="" class="btn btn-google"><i class="fa fa-google"></i>Google</Link>
+                                            <div className="col-md-6">
+                                                <Link to="" className="btn btn-google"><i className="fa fa-google"></i>Google</Link>
                                             </div>
                                         </div> */}
-                                        <div class="connect">
+                                        <div className="connect">
                                             <h2><Link to="/register"> Dont have an account? Register</Link></h2>
                                         </div>
                                     </form>
                                 </div>
-                                {/* <div class="col-md-5 login-img">
-                                <img src="../images/vector1.svg" class="img-responsive" alt="" />
+                                {/* <div className="col-md-5 login-img">
+                                <img src="../images/vector1.svg" className="img-responsive" alt="" />
                             </div> */}
                             </div>
                         </div>

@@ -21,15 +21,15 @@ class Dashboard extends Component {
         <div className="row">
           <div className="col s12 center-align">
             {/* <button className="btn pull-left">  Profile </button> */}
-            <button onClick={this.onLogoutClick} className="btn pull-right">  Logout </button>
+
           </div>
         </div>
         <div className="container">
           <div className="bk-dark-purple-dashboard">
             <div className="row pad-dashboard">
               <div className="col-md-2 dash-board-image ul-dash-board-image">
-                <i className="fa fa-user"></i>
-                <img src="./images/user.png" alt="" />
+                <i className="fa fa-user-circle"></i>
+                {/* <img src="./images/user.png" alt="" /> */}
               </div>
               <div className="col-md-6 profile-details">
                 <h4>
@@ -39,8 +39,8 @@ class Dashboard extends Component {
               </div>
               <div className="col-md-4 dash-board-image">
                 <ul className="ul-profile-list">
-                  <li> Phone: {vitaes.phoneNumber}</li>
-                  <li> Email: {vitaes.email} </li>
+                  <li> Phone: {user.phoneNumber}</li>
+                  <li> Email: {user.email} </li>
                   <li> Location: {vitaes.address}</li>
                 </ul>
               </div>
@@ -54,7 +54,7 @@ class Dashboard extends Component {
             <button role="tab" data-toggle="tab" href="#job-search" className="btn btn-general">Job </button>
             <button role="tab" data-toggle="tab" href="#cover-letter" className="btn btn-general ">Cover Letter</button>
             <button role="tab" data-toggle="tab" href="#curriculum-vitae" className="btn btn-general">Curriculum Vitae</button>
-
+            <button onClick={this.onLogoutClick} className="btn pull-right">  Logout </button>
 
           </div>
 
@@ -68,13 +68,13 @@ class Dashboard extends Component {
                     </div>
                     <div className="list-group list-group-flush">
                       <Link to="#" className="list-group-item list-group-item-action small">
-                        Name: Oladejo Emmanuel Segun
+                        Name:
                                         </Link>
                       <Link to="#" className="list-group-item list-group-item-action small">
-                        ID Number: 238301469
+                        ID Number:
                                         </Link>
                       <Link to="#" className="list-group-item list-group-item-action small">
-                        Address: No 36, Fetuga Str, Lady-Lak, Lagos
+                        Address:
                                         </Link>
                     </div>
                   </div>

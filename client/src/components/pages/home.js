@@ -106,7 +106,9 @@ const Home = () => {
                         <div className="col-md-4 animated fadeInRight delay-5s slow-5s">
                             <div className="sc4-x1">
                                 <Link to="/job-search">
-                                    <img src="./images/digital-marketing.png" className="img-responsive" alt="" />
+                                    <div className="inner">
+                                        <img src="./images/digital-marketing.png" className="img-responsive" alt="" />
+                                    </div>
                                     <div className="inner-content">
                                         <ul className="ul-sc4">
                                             <li>Status:<span className="status">Ongoing</span></li>
@@ -126,7 +128,9 @@ const Home = () => {
                         <div className="col-md-4 animated fadeInLeft delay-5s slow-5s">
                             <div className="sc4-x1">
                                 <Link to="/job-search">
-                                    <img src="./images/web-design.png" className="img-responsive" alt="" />
+                                    <div className="inner">
+                                        <img src="./images/web-design.png" className="img-responsive" alt="" />
+                                    </div>
                                     <div className="inner-content">
                                         <ul className="ul-sc4">
                                             <li>Status:<span className="status">Ongoing</span></li>
@@ -146,7 +150,9 @@ const Home = () => {
                         <div className="col-md-4 animated fadeInRight delay-5s slow-5s">
                             <div className="sc4-x1">
                                 <Link to="/job-search">
-                                    <img src="./images/plumbering.png" className="img-responsive" alt="" />
+                                    <div className="inner">
+                                        <img src="./images/plumbering.png" className="img-responsive" alt="" />
+                                    </div>
                                     <div className="inner-content">
                                         <ul className="ul-sc4">
                                             <li>Status:<span className="status">Ongoing</span></li>

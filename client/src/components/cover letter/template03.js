@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createCover } from '../../store/actions/coverActions'
 import axios from 'axios';
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 class TemplateNO3 extends Component {
 
@@ -212,7 +215,9 @@ record of...." rows="3"></textarea>
                                     {/* Letter details ends here */}
 
                                     <div className="header-buttons">
-                                        <button className="btn btn-primary btn-download">Download PDF</button>
+                                        <Pdf targetRef={ref} filename="cover-letter.pdf">
+                                            {({ toPdf }) => <button onClick={toPdf} className="btn btn-primary btn-download">Download PDF</button>}
+                                        </Pdf>
                                         <button type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></button>
                                     </div>
                                     
@@ -224,7 +229,7 @@ record of...." rows="3"></textarea>
                                     <button className="btn btn-primary btn-dot">...</button>
                                     <Link to="/template" className="select-template pull-right">Select a template</Link>
                                 </div> */}
-                                <div className="form-img cover-letter template-3">
+                                <div className="form-img cover-letter template-3" ref={ref}>
                                     <div className="personal-details-template-3">
                                         <h2>{this.state.fullName}</h2>
                                         <p>{this.state.jobTitle}</p>

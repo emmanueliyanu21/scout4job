@@ -1583,10 +1583,10 @@
     }
     
     .form-img {
-        max-width: 80%;
+        max-width: 100%;
         background-color: #fff;
         margin: auto;
-        padding-top: 20px;
+        /* padding-top: 20px; */
         padding-bottom: 20px;
         border-radius: 4px;
         min-height: 700px;
@@ -1658,7 +1658,7 @@
     }
 
     .personal-details-template-1 h2 {
-        color: #000;
+        color: #000!important;
         font-weight: 600;
         font-size: 16px!important;
         font-family: Nunito, sans-serif;
@@ -1668,6 +1668,7 @@
 
     .personal-details-template-1 p {
         margin-bottom: 3px!important;
+        color: #000!important;
     }
 
     .personal-details-template-1 {
@@ -1704,8 +1705,6 @@
         padding: 10px 15px!important;
         margin-left: 5px;
     }
-
-    
 
     .output-proffesional-summary p {
         font-size: 12px;
@@ -3339,8 +3338,9 @@
     margin-right: 15px!important;
 }
 
-.ul-dash-board-image img {
-    max-width: 100%;
+.ul-dash-board-image .fa-user-circle {
+    font-size: 150px;
+    color: #fff;
     border-radius: 100%;
 }
 
@@ -3371,7 +3371,7 @@
 
 .bk-dark-white .btn-general {
     border-radius: 2px;
-    color: #7B8088;
+    color: #000;
     padding: 8px 15px!important;
     font-family: Avenir, sans-serif;
     font-weight: 600;
@@ -3470,13 +3470,10 @@
     font-weight: 600;
 }
 
-.cover-letter .phone-Email-section h2 {
-    
-}
-
 .cover-letter .cover-body p {
     font-size: 14px;
     font-family: Nunito, sans-serif!important;
+    color: #000!important;
 }
 
 .jobTitle p {
@@ -3490,4 +3487,20 @@
     max-width: 100%;
 }
 
+
+
 /* letter template ends */
+
+/* extra  */
+
+.inner {
+    overflow: hidden;
+}
+
+.inner img {
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.5);
+}
