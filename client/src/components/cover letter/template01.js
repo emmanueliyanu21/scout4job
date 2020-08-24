@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { createCover } from '../../store/actions/coverActions'
 import axios from 'axios';
 
-class Specific extends Component {
+class TemplateNO1 extends Component {
 
     state = {
         fullName: '',
@@ -212,6 +212,7 @@ record of...." rows="3"></textarea>
                                     {/* Letter details ends here */}
 
                                     <div className="header-buttons">
+                                        <button className="btn btn-primary btn-download">Download PDF</button>
                                         <button type="submit" className="btn btn-next">Submit<i className="fa fa-angle-right"></i></button>
                                     </div>
                                     
@@ -224,19 +225,14 @@ record of...." rows="3"></textarea>
                                     <Link to="/template" className="select-template pull-right">Select a template</Link>
                                 </div> */}
                                 <div className="form-img cover-letter">
-                                    <div className="personal-details text-center">
-                                        <h2>{this.state.fullName}</h2>
-                                        <p>{this.state.jobTitle}</p>
+                                    <div className="personal-details-template-1 text-center">
+                                        <h2>{this.state.fullName} {this.state.jobTitle} </h2>
                                         <p>{this.state.address} {this.state.state}</p>
+                                        <p>{this.state.phoneNumber} {this.state.email} </p>
                                     </div>
-                                    <div className="phone-Email-section pt-3">
-                                            <span className="text-left">{this.state.phoneNumber} </span>
-                                            <span className="pull-right">{this.state.email}</span>
-                                       
-                                    </div>
-                                    <div className="pt-3">
-                                        <h2>{this.state.managerName}</h2>
-                                        <p>{this.state.companyName}</p>
+                                    <div className="pt-3 company-name row">
+                                        <div className="col-md-6">{this.state.managerName}</div>
+                                        <div className="col-md-6">{this.state.companyName}</div>
                                     </div>
                                     <div className="cover-body pt-5">
                                         <p>{this.state.summary}</p>
@@ -259,6 +255,6 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(Specific)
+export default connect(null, mapDispatchToProps)(TemplateNO1)
 
 

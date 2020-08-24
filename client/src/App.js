@@ -6,7 +6,7 @@ import ResumeBuilder from './components/cv builder/resume-builder';
 import Cover from './components/cover letter/cover';
 import JobSearch from './components/job-pathway/job';
 import Interviews from './components/interviews/interviews'
-import Navbar from './components/pages/Navbar';
+// import Navbar from './components/pages/Navbar';
 import Education from './components/builder pathway/education';
 import Skill from './components/builder pathway/skill';
 import EducationDetail from './components/builder pathway/education-detail';
@@ -27,7 +27,7 @@ import Experience from './components/cover letter/experience';
 import OutOfJob from './components/cover letter/out-of-job';
 import MoreDetail from './components/cover letter/more-details';
 import Style from './components/cover letter/style';
-import Specific from './components/cover letter/specific';
+import Specific from './components/cover letter/template02';
 import JobApply from './components/cover letter/job-apply';
 import Finished from './components/cover letter/finished';
 import JobDetails from './components/job-pathway/job-details';
@@ -42,6 +42,9 @@ import Contact from './components/pages/contact-us';
 import HeaderCopy from './components/builder pathway/header-copy'
 import CVPreview from './components/builder pathway/cv-preview';
 import SkillDetails from './components/cover letter/skill-details';
+import LetterTemplate from './components/cover letter/letterTemplate';
+import TemplateNO1 from './components/cover letter/template01';
+import TemplateNO3 from './components/cover letter/template03';
 // import About from './components/pages/about'
 // import Footer from './components/pages/footer'
 
@@ -81,7 +84,7 @@ class App extends Component {
         <Provider store={store}>
           {/* <p>{this.state.apiResponse}</p> */}
           <BrowserRouter>
-            <Navbar />
+            <Route path="/specific" component={Specific} />
             <Route exact path="/" component={Home} />
             <Route path="/resume-sample" component={ResumeSample} />
             <Route path="/resume-builder" component={ResumeBuilder} />
@@ -110,7 +113,7 @@ class App extends Component {
             <Route path="/out-of-job" component={OutOfJob} />
             <Route path="/style" component={Style} />
             <Route path="/more-details" component={MoreDetail} />
-            <Route path="/specific" component={Specific} />
+
             <Route path="/job-apply" component={JobApply} />
             <Route path="/finished" component={Finished} />
             <Route path="/job/:id" component={JobDetails} />
@@ -125,7 +128,9 @@ class App extends Component {
             <Route path="/header-copy" component={HeaderCopy} />
             <Route path="/cv-preview" component={CVPreview} />
             <Route path="/skill-details" component={SkillDetails} />
-
+            <Route path="/letter-template" component={LetterTemplate} />
+            <Route path="/template-1" component={TemplateNO1} />
+            <Route path="/template-3" component={TemplateNO3} />
             {/* <Route path="/about" component={About} /> */}
 
             {/* <Footer /> */}

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Footer from './footer'
 import PropTypes from "prop-types";
 import { registerUser } from "../../store/actions/authActions";
+import Navbar from './Navbar';
 // import classnames from "classnames";
 
 export class Register extends Component {
@@ -21,7 +22,7 @@ export class Register extends Component {
             });
         }
     }
-    
+
     componentDidMount() {
         // If logged in and user navigates to Register page, should redirect them to dashboard
         if (this.props.auth.isAuthenticated) {
@@ -54,7 +55,8 @@ export class Register extends Component {
     render() {
         const { errors } = this.state;
         return (
-            <div>
+            <div className="">
+                <Navbar />
                 {/* < !--Form starts here-- > */}
                 <section class="bk-grey bk-sign-up">
                     <div className="overlay">

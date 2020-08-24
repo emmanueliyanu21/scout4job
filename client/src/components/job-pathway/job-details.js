@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import data from '../../data'
+import Navbar from '../pages/Navbar'
 
 const JobDetails = (props) => {
     console.log(props.match.params.id)
     const job = data.jobs.find(x => x._id === props.match.params.id)
     return (
         <div className="">
+            <Navbar />
             {/* <!-- body starts here --> */}
             <section className="bk-grey">
                 <div className="container">

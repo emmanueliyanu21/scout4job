@@ -4,6 +4,7 @@ import Footer from './footer'
 import { connect } from 'react-redux'
 import PropTypes from "prop-types";
 import { loginUser } from "../../store/actions/authActions";
+import Navbar from './Navbar';
 // import classnames from "classnames";
 
 export class Login extends Component {
@@ -53,6 +54,7 @@ export class Login extends Component {
         const { errors } = this.state;
         return (
             <div className="">
+                <Navbar />
                 {/* < !--Form starts here-- > */}
                 <section class="bk-grey bk-sign-up">
                     <div className="overlay">

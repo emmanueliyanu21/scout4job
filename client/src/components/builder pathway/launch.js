@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../pages/footer'
+import Navbar from '../pages/Navbar'
 
 const Launch = () => {
     return (
         <div className="">
-
+            <Navbar />
             {/* <!-- body part here --> */}
             <section className="bk-dotted">
                 <div className="container">

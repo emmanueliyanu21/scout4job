@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../pages/footer'
 import data from '../../data'
+import Navbar from '../pages/Navbar'
 
 const initialState = {
     jobTitle: '',
@@ -44,7 +45,7 @@ class Job extends Component {
                     return element.name.toLowerCase().includes(query.toLowerCase());
                 });
 
-               this.setState({
+                this.setState({
                     data,
                     filteredData
                 });
@@ -97,6 +98,7 @@ class Job extends Component {
     render() {
         return (
             <div className="">
+                <Navbar />
                 {/* <!-- body starts here --> */}
                 <section className="bk-image">
                     <div className="container">

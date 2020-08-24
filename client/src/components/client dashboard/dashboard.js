@@ -35,13 +35,13 @@ class Dashboard extends Component {
                 <h4>
                   <b>Hey dear </b> {user.name.split(" ")[0]}
                 </h4>
-                <p>UI/UX Designer</p>
+                <p>{vitaes.jobTitle}</p>
               </div>
               <div className="col-md-4 dash-board-image">
                 <ul className="ul-profile-list">
-                  <li><i className="fa fa-phone"></i> Phone: 0706-857-6214</li>
-                  <li><i className="fa fa-envelope"></i> Email: emmanueliyanu2012@gmail.com</li>
-                  <li><i className="fa fa-map-marker"></i>&nbsp;  Location: Lagos Nigeria</li>
+                  <li> Phone: {vitaes.phoneNumber}</li>
+                  <li> Email: {vitaes.email} </li>
+                  <li> Location: {vitaes.address}</li>
                 </ul>
               </div>
             </div>
@@ -110,7 +110,8 @@ class Dashboard extends Component {
                           
                         )
                       })} */}
-                      <h2 className="">{covers.firstName}</h2>
+                      <h2 className="">{covers.fullName}</h2>
+                      {/* <h2>{this.state.fullName}</h2> */}
                     </div>
                   </div>
                 </div>

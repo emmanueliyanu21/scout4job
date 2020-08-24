@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../pages/footer'
+import Navbar from '../pages/Navbar'
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
 
     return (
         <div className="app-header">
+            <Navbar />
             <div id="particles-js"></div>
             {/* <!-- section two starts here --> */}
             <div className="bk-blue">

@@ -167,16 +167,16 @@
         font-family: nunito, sans-serif;
         background-color: rgba(255, 255, 255, 0.15);
         /* background-color: #FBA51A!important; */
-        font-size: 20px;
+        font-size: 16px;
         padding: 12px 25px;
-        margin-right: 30px;
+        margin-right: 15px;
     }
 
     .btn-home-now {
         color: #fff;
         font-family: nunito, sans-serif;
         background-color: #FBA51A!important;
-        font-size: 20px;
+        font-size: 16px;
         padding: 12px 25px;
     }
     
@@ -1530,6 +1530,11 @@
         max-width: 100%;
     }
 
+    .cover-letter .personal-details h2 {
+    text-transform: uppercase;
+    font-size: 20px!important;
+}
+
     .head-form form .personal-Details {
         color: #246DF7;
         font-size: 22px;
@@ -1614,11 +1619,11 @@
     }
 
     .sidebar-fixed {
-        border: 1px solid #ddd;
+        /* border: 1px solid #ddd; */
         width: 50%;
         background-color: #E2E8EE;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         min-height: 600px;
         position: fixed;
         right: 0px;
@@ -1645,6 +1650,46 @@
         padding-bottom: 4px!important;
     } 
 
+    .personal-details p {
+        font-size: 10px;
+        font-family: Nunito, sans-serif;
+        color: #7b8088;
+        margin-bottom: 3px!important;
+    }
+
+    .personal-details-template-1 h2 {
+        color: #000;
+        font-weight: 600;
+        font-size: 16px!important;
+        font-family: Nunito, sans-serif;
+        margin-bottom: 0px!important;
+        padding-bottom: 4px!important;
+    }
+
+    .personal-details-template-1 p {
+        margin-bottom: 3px!important;
+    }
+
+    .personal-details-template-1 {
+        padding-bottom: 30px;
+    }
+
+    .personal-details-template-3 h2 {
+        color: #000;
+        font-weight: 600;
+        font-size: 22px!important;
+        font-family: Nunito, sans-serif;
+        margin-bottom: 0px!important;
+        padding-bottom: 8px!important;
+    }
+
+    .personal-details-template-3 p {
+        font-size: 16px;
+        font-family: Nunito, sans-serif;
+        color: #000!important;
+        margin-bottom: 3px!important;
+    }
+
     .btn-download {
         font-family: Nunito, sans-serif;
         font-weight: 600;
@@ -1660,12 +1705,7 @@
         margin-left: 5px;
     }
 
-    .personal-details p {
-        font-size: 10px;
-        font-family: Nunito, sans-serif;
-        color: #7b8088;
-        margin-bottom: 3px!important;
-    }
+    
 
     .output-proffesional-summary p {
         font-size: 12px;
@@ -2694,6 +2734,7 @@
     color: #246DF7;
     font-family: nunito, sans-serif;
     font-size: 14px;
+    font-weight: 600;
     padding: 12px 25px;
     border-radius: 4px;
 }
@@ -2774,7 +2815,7 @@
 
 .cv-more img {
     max-width: 100%;
-    box-shadow: 0px 3px 12px -2px rgb(209, 209, 209);
+    /* box-shadow: 0px 3px 12px -2px rgb(209, 209, 209); */
     border-radius: 4px;
 }
 
@@ -3408,11 +3449,6 @@
     display: none!important;
 }
 
-.cover-letter .personal-details h2 {
-    text-transform: uppercase;
-    font-size: 20px!important;
-}
-
 .cover-letter {
     padding-left: 25px;
     padding-right: 25px;
@@ -3421,7 +3457,17 @@
 .cover-letter .phone-Email-section span{
     font-family: Nunito, sans-serif!important;
     font-size: 14px!important;
-    border-bottom: 1px solid #c5c5c5;
+    /* border-bottom: 1px solid #c5c5c5; */
+}
+
+.template-3 .phone-Email-section p {
+    font-size: 12px!important;
+}
+
+.cover-letter .company-name h2 {
+    margin-bottom: 0px!important;
+    padding-bottom: 5px!important;
+    font-weight: 600;
 }
 
 .cover-letter .phone-Email-section h2 {
@@ -3438,3 +3484,10 @@
     font-size: 16px!important;
     font-family: Nunito, sans-serif;
 }
+
+/* letter template starts */
+.letter-template img {
+    max-width: 100%;
+}
+
+/* letter template ends */

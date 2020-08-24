@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../pages/footer'
+import Navbar from '../pages/Navbar'
 
 const Template = () => {
     return (
         <div className="">
+            <Navbar />
             {/* <!-- body part here --> */}
-            <section className="bk-icon">
-                <div className="container ">
+            <section className="bk-grey">
+                <div className="container">
                     <div className="row year-x1">
-                        <div className="white-bk col-md-12">
+                        <div className=" col-md-12">
                             <div className="three-text">
                                 <h2>Here are the best templates for you</h2>
                                 {/* <p>They’re great for people with 0-3 years of experience.</p> */}
