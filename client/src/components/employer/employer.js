@@ -67,6 +67,62 @@ const EmployerPage = () => {
                     </div>
                 </div>
             </section>
+
+            {/* <section class="sec3">
+                <div class="container text-center">
+                    <div class="txt3 ">
+                        <h4>Lorem.</h4>
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    </div>
+                    <div class="cont-grid">
+                        <div class="job">
+                            <img src="/img/pencil.png" alt="" />
+                            <h5>Job Posting</h5>
+                            <p>Post you job in 3 simple steps and recieve hundreds of applicants</p>
+                            <div class="button1">
+                                <button class="btn btn-job">
+                                    Post  a Job
+                        </button>
+                            </div>
+                        </div>
+                        <div class="job">
+                            <img src="/img/purple.png" alt="" />
+                            <h5>Job Posting</h5>
+                            <p>Post you job in 3 simple steps and recieve hundreds of applicants</p>
+                            <div class="button1">
+                                <button class="btn btn-job">
+                                    Post  a Job
+                        </button>
+                            </div>
+                        </div>
+                        <div class="job">
+                            <img src="/img/mouse.png" alt="" />
+                            <h5>Job Posting</h5>
+                            <p>Post you job in 3 simple steps and recieve hundreds of applicants</p>
+                            <div class="button1">
+                                <button class="btn btn-job">
+                                    Post  a Job
+                        </button>
+                            </div>
+                        </div>
+                        <div class="job">
+                            <img src="/img/spanner.png" alt="" />
+                            <h5>Job Posting</h5>
+                            <p>Post you job in 3 simple steps and recieve hundreds of applicants</p>
+                            <div class="button1">
+                                <button class="btn btn-job">
+                                    Post  a Job
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bts pb-5">
+                        <button class="btn btn-more">
+                            More Information
+                    </button>
+                    </div>
+                </div>
+            </section> */}
         </div>
     )
 }
