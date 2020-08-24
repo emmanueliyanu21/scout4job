@@ -45,6 +45,7 @@ import SkillDetails from './components/cover letter/skill-details';
 import LetterTemplate from './components/cover letter/letterTemplate';
 import TemplateNO1 from './components/cover letter/template01';
 import TemplateNO3 from './components/cover letter/template03';
+import EmployerPage from './components/employer/employer'
 // import About from './components/pages/about'
 // import Footer from './components/pages/footer'
 
@@ -132,6 +133,8 @@ class App extends Component {
             <Route path="/template-1" component={TemplateNO1} />
             <Route path="/template-3" component={TemplateNO3} />
             {/* <Route path="/about" component={About} /> */}
+
+            <Route path="/employer" component={EmployerPage} />
 
             {/* <Footer /> */}
           </BrowserRouter>
