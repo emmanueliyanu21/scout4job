@@ -56,6 +56,8 @@ import { setCurrentUser, logoutUser } from "./store/actions/authActions";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import { Provider } from "react-redux";
 import store from "./store";
+import CVSearch from "./components/employer/cv-search"
+import PostJob from "./components/employer/post-job"
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -135,6 +137,8 @@ class App extends Component {
             {/* <Route path="/about" component={About} /> */}
 
             <Route path="/employer" component={EmployerPage} />
+            <Route path="/cv-search" component={CVSearch} />
+            <Route path="/post-job" component={PostJob} />
 
             {/* <Footer /> */}
           </BrowserRouter>
