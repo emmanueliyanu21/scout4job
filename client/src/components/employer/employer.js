@@ -83,7 +83,7 @@ const EmployerPage = () => {
                             </div> */}
                             <div className="inner-job">
                                 <h5>Job Posting</h5>
-                                <p>A job posting is an advertisement created by an employer, his administrative or human resources staff, or a recruiter that alerts current employees or the public</p>
+                                <p>A job posting is an advertisement created by an employer, his administrative or human resources staff, or a recruiter that alerts current employees.</p>
                             </div>
                             <Link to="" className="">
                                 <i class="pull-right fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -95,7 +95,7 @@ const EmployerPage = () => {
                             </div>
                             <div className="inner-job">
                                 <h5>CV Search</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus doloribus dolores, quod porro voluptatum labore ipsam eum amet voluptas eveniet architecto </p>
+                                <p>Searching for CV to match the right job has been made easier with our cv collected from different verticals of employee with wide range of experience and exposure.</p>
                             </div>
                             <Link to="" className="">
                                 <i class="pull-right fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -109,7 +109,7 @@ const EmployerPage = () => {
                             </div>
                             <div className="inner-job">
                                 <h5>Maximum Exposure</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus doloribus dolores, quod porro voluptatum labore ipsam eum amet voluptas eveniet architecto.</p>
+                                <p>Post Your Job in Scout4Job and Get a Maximum Exposure to our database of cv. This will fast track your recruitment process and getting the right candidate.</p>
                             </div>
                             <Link to="" className="">
                                 <i class="pull-right fa fa-long-arrow-right" aria-hidden="true"></i>
