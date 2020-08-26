@@ -132,7 +132,7 @@ const EmployerPage = () => {
                         <div className="col-md-12 employer-caption">
                             <h2>Experience an efficient way to find the
                                 best candidate for your role </h2>
-                            <p>We guarantee a pocket-friendly rates on all our services to any destination in the world.</p>
+                            <p>We guarantee a pocket-friendly rates on all our services to recruit your best candidate.</p>
                             <div className="text-center pt-5">
                                 <button className="btn btn-contact-us" >Contact us</button>
                             </div>
