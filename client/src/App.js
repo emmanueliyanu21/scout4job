@@ -35,6 +35,7 @@ import JobScreen from './components/job-pathway/jobscreen';
 import Apply from './components/job-pathway/apply';
 // import NavHeader from './components/pages/nav-header';
 import FAQ from './components/pages/faq';
+import EmployerFAQ from './components/employer/faqEmployer';
 import SignIn from './components/pages/sign-in';
 import SignUp from './components/pages/sign-up';
 import About from './components/pages/about';
@@ -45,7 +46,15 @@ import SkillDetails from './components/cover letter/skill-details';
 import LetterTemplate from './components/cover letter/letterTemplate';
 import TemplateNO1 from './components/cover letter/template01';
 import TemplateNO3 from './components/cover letter/template03';
-import EmployerPage from './components/employer/employer'
+
+// Employer
+import EmployerPage from './components/employer/employer';
+import ContactEmployer from './components/employer/contact-us';
+import CVSearch from "./components/employer/cv-search"
+import PostJob from "./components/employer/post-job"
+import EmployerLogin from "./components/employer/employersignin"
+import EmployerSignup from "./components/employer/Employersignup"
+import EmployerDashboard from "./components/employer/employerDashboard"
 // import About from './components/pages/about'
 // import Footer from './components/pages/footer'
 
@@ -56,8 +65,7 @@ import { setCurrentUser, logoutUser } from "./store/actions/authActions";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import { Provider } from "react-redux";
 import store from "./store";
-import CVSearch from "./components/employer/cv-search"
-import PostJob from "./components/employer/post-job"
+
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -126,6 +134,7 @@ class App extends Component {
             <Route path="/login" component={SignIn} />
             <Route path="/register" component={SignUp} />
             <Route path="/contact-us" component={Contact} />
+            <Route path="/contact" component={ContactEmployer} />
             <Route path="/about-us" component={About} />
             <Route path="/faq" component={FAQ} />
             <Route path="/header-copy" component={HeaderCopy} />
@@ -135,10 +144,13 @@ class App extends Component {
             <Route path="/template-1" component={TemplateNO1} />
             <Route path="/template-3" component={TemplateNO3} />
             {/* <Route path="/about" component={About} /> */}
-
+            <Route path="/Employer-FAQ" component={EmployerFAQ} />
             <Route path="/employer" component={EmployerPage} />
             <Route path="/cv-search" component={CVSearch} />
             <Route path="/post-job" component={PostJob} />
+            <Route path="/employer-signup" component={EmployerSignup} />
+            <Route path="/employer-login" component={EmployerLogin} />
+            <Route path="/employer-dashboard" component={EmployerDashboard} />
 
             {/* <Footer /> */}
           </BrowserRouter>

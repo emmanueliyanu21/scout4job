@@ -30,12 +30,17 @@ const NavbarEmployer = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/post-job">Post a Job</Link>
                             </li>
-                            {/* <li className="nav-item">
-                                <Link className="nav-link" to="/contact">Contact</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contact">Contact Us</Link>
                             </li>
                             <li className="nav-item ">
-                                <Link className="nav-link active" to="/login">FAQ</Link>
-                            </li> */}
+                                <Link className="nav-link active" to="/Employer-FAQ">FAQ</Link>
+                            </li>
+                            <li className="nav-item account-employer">
+                                <Link className="nav-link active" to="/employer-login">
+                                    <span>Login</span>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

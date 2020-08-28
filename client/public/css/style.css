@@ -145,6 +145,13 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    .bk-employer {
+        background: url("../images/employer/landing-page.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     
     .lp-block h2 {
         color: #fff;
@@ -2461,11 +2468,12 @@
 
 .icon-down .fa{
     color: #fff;
-    background-color: #246DF7;
-    border-radius: 4px;
-    padding: 30px 40px;
+    /* background-color: #246DF7; */
+    /* border-radius: 4px; */
+    /* padding: 30px 40px; */
     font-size: 28px;
-    box-shadow: 0px 3px 12px -2px rgb(209, 209, 209)!important;
+    display: block;
+    /* box-shadow: 0px 3px 12px -2px rgb(209, 209, 209)!important; */
 }
 
 .icon-down {
@@ -3545,7 +3553,8 @@
 .cont-txt p {
     font-family: Nunito, sans-serif;
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
+    color: #fff;
 }
 
 i{
@@ -3564,12 +3573,11 @@ i{
 }
 
 .bodypage{
-    background-color:#fff;
+    background-color:rgba(255, 255, 255, 1);
     padding: 3rem;
     border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .posts h3{
@@ -3956,3 +3964,448 @@ i{
 .legal-text h2 a:hover {
     text-decoration: none;
 }
+
+
+/*  */
+.employer-faq {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.employer-faq h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 42px!important;
+    font-weight: 900;
+    max-width: 40%;
+    margin: auto;
+    line-height: 1.4
+}
+
+.employer-faq-details {
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.employer-faq-details .card-header {
+    background-color: transparent!important;
+    padding: 1.2rem 1.25rem;
+}
+
+.employer-faq-details .card {
+    background-color: transparent!important;
+    border: none!important;
+    color: #000!important;
+}
+
+.employer-faq-details .btn-link{
+    color: #000!important;
+    font-family: Nunito, sans-serif;
+    font-size: 18px!important;
+}
+
+.employer-faq-details .btn-link .fa-chevron-down{
+    float: right!important;
+    font-size: 14px!important;
+}
+
+.employer-faq-details .btn-link:hover {
+    text-decoration: none!important;
+}
+
+.employer-faq-details .btn-link:active {
+    text-decoration: none!important;
+}
+
+/*  */
+
+/* Employer contact us page */
+.employer-contact-page h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 42px!important;
+    font-weight: 900;
+    color: #325b7c;
+}
+
+.employer-contact-page p {
+    font-family: Nunito, sans-serif;
+    font-size: 18px!important;
+    max-width: 80%;
+}
+
+.employer-contact-page {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.employer-contact-page-white {
+    background-color: #fff;
+    padding: 40px 40px;
+    margin-bottom: 100px;
+}
+
+.employer-contact-page-white h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 28px;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.pad-employer-contact {
+    max-width: 80%;
+    margin: auto;
+}
+
+.employer-contact-recaptcha p {
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    padding-top: 4px;
+}
+/* Employer contact us page */
+
+/* Employer Sign-up Page */
+.employer-leftside {
+    background: url(../images/employer/signup.jpg);
+    position: absolute;
+    width: 630px;
+    height: 650px;
+    left: 0px;
+    top: 0px; 
+} 
+
+.employer-rightside {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+ .employer-header h4{
+    width: 277px;
+    height: 36px;
+    left: 726px;
+    margin-top: 90px!important;
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #084482;
+}
+
+.employer-rightside .form-box {
+    padding-left: 15px;
+}
+
+.employer-rightside label {
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+    color: #1F2430;
+}
+
+.employer-rightside input::placeholder {
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(178, 178, 178, 0.58);
+}
+
+.employer-rightside .default1 {
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #D5D5D5;
+}
+
+.employer-rightside .form-check-label {
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #495057;
+    padding-left: 20px;
+}
+
+.employer-rightside .btn-block {
+    color: white;
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+}
+.employer-rightside span {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #084482;
+
+}
+
+.employer-rightside span:before,
+span:after {
+    content: '';
+    border-top:1px solid #084482;
+    /* margin: 0 20px 0 0; */
+    /* flex: 1 0 20px; */
+}
+
+.employer-rightside span:after {
+    /* margin: 0 0 0 20px; */
+}
+
+.employer-rightside .btn-facebook {
+    background: #3B5998;
+    box-shadow: 0px 4px 10px rgba(98, 102, 110, 0.1);
+    border-radius: 5px;
+    width: 264px;
+    height: 63px;
+    left: 726px;
+    /* top: 795px; */
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    /* line-height: 24px; */
+    color: white;
+    text-align: center!important;
+    border-radius: 5px;
+}
+
+.employer-rightside .btn-google {
+    width: 264px;
+    height: 63px;
+    left: 1027px;
+    top: 795px;
+    background: #DB4A39;
+    box-shadow: 0px 4px 10px rgba(98, 102, 110, 0.1);
+    border-radius: 5px;
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.employer-rightside .acct {
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #495057;
+}
+
+@media only screen and (max-width: 600px) {
+    .employer-header h4 {
+        color: black!important;
+        font-weight: 600;
+    }
+    .employer-header p {
+        color: black!important;
+        font-weight: 500;
+    }
+
+    .employer-rightside .form-group label {
+        color: black!important;
+    }
+
+    .employer-leftside {
+        background-size: cover;
+       height: 964px;    
+    }
+    .employer-rightside {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+        top: -4rem!important; 
+    }
+    .employer-rightside .form-row label {
+        font-weight: 500;
+        color: black!important;
+    }
+    
+    .employer-rightside .terms {
+        text-align: left!important;
+        font-size: 18px!important;
+        color: white;
+    }
+    .overlay {
+        background: rgba(black, black, black, 0.9)!important;
+    }
+    .employer-rightside .acct {
+        color: white!important;
+    }
+}
+
+/* Employer Sign-up page */
+
+/* Employer Sign-in page */
+.cta-section-leftside {
+    background: url(../images/employer/signin.jpg);
+    position: absolute;
+    min-width: 630px;
+    min-height: 600px;
+    left: 0px;
+    top: 0px;
+} 
+    
+.cta-section-rightside {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.cta-section-rightside .form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 80%;
+}
+     
+.cta-section-rightside .header h4{
+    font-family: Nunito, sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #325b7c;
+    font-weight: 700;
+}
+
+.cta-section-rightside .header p {
+    font-family: Nunito, sans-serif;
+    font-size: 18px;
+}
+    
+.cta-section-rightside label {
+    font-family: Nunito, sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+    
+.cta-section-rightside input::placeholder {
+    font-family: Nunito, sans-serif;
+    font-size: 14px;
+    /* color: rgba(178, 178, 178, 0.58); */
+}
+
+.cta-section-rightside span {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #084482;   
+}
+    
+.cta-section-rightside span:before,
+    span:after {
+    content: '';
+    border-top:1px solid #084482;
+    /* margin: 0 20px 0 0; */
+    /* flex: 1 0 20px; */
+}
+    
+.cta-section-rightside span:after {
+    /* margin: 0 0 0 20px; */
+}
+    
+.cta-section-rightside .acct {
+    font-family: Nunito, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #000;
+}
+
+.cta-section-rightside .acct a {
+    color: #325b7c;
+    font-weight: 600;
+}
+    
+@media only screen and (max-width: 600px) {
+    .cta-section-rightside .header h4 {
+        color: #fff!important;
+    }
+        
+    .cta-section-rightside .header p {
+        color: #fff!important;
+    }
+        
+    .cta-section-rightside .form-group label {
+        color: #fff!important;
+    }
+        
+    .cta-section-leftside {
+        height: auto;
+        position: fixed;
+    }
+        
+    .cta-section-rightside {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+        background: url(../images/employer/signin.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cta-section-rightside .form-row label {
+        color: #fff!important;
+    }
+        
+    .cta-section-rightside .f-password {
+        text-align: left!important;
+        font-size: 18px!important;
+    }
+
+    .overlay {
+        background: rgba(black, black, black, 0.9)!important;
+    }
+        
+    .cta-section-rightside .acct {
+        color: white!important;
+    }
+}
+
+/* Employer Sign-in page */
+
+/* Dashboard Page */
+.employer-dashboard .nav  {
+    display: block!important;
+    background-color: #fff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.employer-dashboard .nav .nav-item a {
+    color: #000!important;
+    font-family: Nunito, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding: 20px 30px!important; 
+}
+/* Dashboard Page */

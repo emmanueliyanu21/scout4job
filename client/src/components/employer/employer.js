@@ -7,7 +7,7 @@ const EmployerPage = () => {
     return (
         <div className="">
             <Navbar />
-            <section class="bk-blue">
+            <section class="bk-employer">
                 <div class="container">
                     <div class="row employer-form-pad">
                         <div class="col-md-12 col-lg-6 col-sm-12 animate__animated animate__fadeInLeft">
@@ -55,7 +55,7 @@ const EmployerPage = () => {
                                             </div>
                                         </div>
                                         <div class="button text-center pt-3">
-                                            <button class="btn btn-contact-us mb-1">Register</button>
+                                            <Link to="/employer-signup" class="btn btn-contact-us mb-1">Register</Link>
                                         </div>
                                     </form>
                                 </div>

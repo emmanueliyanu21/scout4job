@@ -24,7 +24,7 @@ const PostJob = () => {
                                     <li>Direct applications to your email or an external link if you choose</li>
                                     <li>No contracts, no obligations; Only pay for what you need</li>
                                 </ul>
-                                <button className="btn btn-contact-us btn-get-started">Get Started</button>
+                                <Link to="/employer-signup" className="btn btn-contact-us btn-get-started">Get Started</Link>
                             </div>
                         </div>
                     </div>

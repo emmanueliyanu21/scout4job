@@ -148,7 +148,7 @@ class Job extends Component {
                         <div className="icon-d">
                             <div className="row">
                                 <div className="col-md-12 icon-down mb-5 mt-2">
-                                    <i className="fa fa-angle-down"></i>
+                                    <i className="fa fa-angle-double-down"></i>
                                 </div>
                             </div>
 

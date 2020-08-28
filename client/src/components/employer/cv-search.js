@@ -109,7 +109,7 @@ class CVSearch extends Component {
                                         We've Made it Easier
                                 </h3>
                                     <p>Get the right candidates you want; you only need to search</p>
-                                    <button className="btn btn-contact-us btn-get-started">Get Started</button>
+                                    <Link to="/employer-signup" className="btn btn-contact-us btn-get-started">Get Started</Link>
                                 </div>
                             </div>
                         </div>
