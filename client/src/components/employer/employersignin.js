@@ -2,9 +2,53 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../pages/Navbar-Employer'
 import Footer from '../pages/footer-employer'
+import { connect } from 'react-redux'
+import PropTypes from "prop-types";
+import { loginUser } from "../../store/actions/employerauthActions";
 
 export class Employersignin extends Component {
+
+    state = {
+        email: '',
+        password: '',
+        errors: {}
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.isAuthenticated) {
+            this.props.history.push("/employer-dashboard"); // push user to dashboard when they login
+        }
+        if (nextProps.errors) {
+            this.setState({
+                errors: nextProps.errors
+            });
+        }
+    }
+    componentDidMount() {
+        // If logged in and user navigates to Login page, should redirect them to dashboard
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push("/employer-dashboard");
+        }
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const userData = {
+            email: this.state.email,
+            password: this.state.password
+        };
+        console.log(userData)
+        this.props.loginUser(userData);
+    }
+
     render() {
+        const { errors } = this.state;
         return (
             <div className="">
                 <Navbar />
@@ -23,25 +67,25 @@ export class Employersignin extends Component {
                                                 <h4>Welcome Back</h4>
                                                 <p className="text-muted">Get the right talent for that job now.</p>
                                             </div>
-                                            <form>
+                                            <form noValidate onSubmit={this.handleSubmit}>
                                                 <div className="form-group pt-2">
                                                     <label htmlFor="exampleInputEmail1">Email address</label>
-                                                    <input type="email" className="form-control form-control-lg" id="exampleInputEmail1"
-                                                        aria-describedby="emailHelp" placeholder="Enter email" />
+                                                    <input type="email" className="form-control form-control-lg"
+                                                        aria-describedby="emailHelp" id="email" required onChange={this.handleChange} placeholder="Enter email" />
+                                                    <span className="red-text">
+                                                        {errors.email}
+                                                    </span>
                                                 </div>
                                                 <div className="form-group pt-2">
                                                     <label>Password</label>
                                                     <input type="text" placeholder="at least 8 characters"
-                                                        className="form-control form-control-lg" />
+                                                        id="password" onChange={this.handleChange} error={errors.password} required className="form-control form-control-lg" />
+                                                    <span className="red-text"> {errors.password} {errors.passwordincorrect}</span>
                                                 </div>
-
                                                 <div className="form-group text-center">
-                                                    <Link to="/employer-dashboard" className="btn btn-contact-us mt-4 text-center" type="submit"
-                                                        style={{ backgroundColor: "#00AEFF" }}>Log in</Link>
+                                                    <button className="btn btn-contact-us mt-4 text-center" type="submit"
+                                                        style={{ backgroundColor: "#00AEFF" }}>Log in</button>
                                                 </div>
-                                                {/* <div className="form-group mt-3 text-center">
-                                                    <span className="text-muted wor">OR</span>
-                                                </div> */}
                                             </form>
                                         </div>
                                         <div className="text-center mt-4 acct">Don't have an account with us?&nbsp;&nbsp;
@@ -59,4 +103,18 @@ export class Employersignin extends Component {
     }
 }
 
-export default Employersignin
+Employersignin.propTypes = {
+    loginUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+
+export default connect(
+    mapStateToProps,
+    { loginUser })
+    (Employersignin);
+

@@ -2,7 +2,7 @@ const initState = {
     vitaes:
     {
         'firstName': 'Emmanuel',
-        'lastName': 'Oladejo',
+        'lastName': 'Oladejo'
     }
 
 }

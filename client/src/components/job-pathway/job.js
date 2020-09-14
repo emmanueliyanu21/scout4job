@@ -57,12 +57,6 @@ class Job extends Component {
         this.getData();
     }
 
-    // handleChange = (e) => {
-    //     this.setState({
-    //         [e.target.id]: e.target.value
-    //     });
-    // }
-
     handleValidation() {
         let jobTitleError = "";
         let jobLocationError = "";
@@ -161,7 +155,7 @@ class Job extends Component {
                 {/* <!-- section four starts here --> */}
                 <section>
                     <div className="container">
-                        <div className="row">
+                        <div className="row pt-3">
                             <div className="col-md-12">
                                 <div className="sec-header">
                                     <h2><span><i className="fa fa-briefcase"></i>Recent Available Jobs</span> </h2>
@@ -169,7 +163,7 @@ class Job extends Component {
                             </div>
                         </div>
 
-                        <div className="row">
+                        <div className="row pb-5 pt-3">
 
                             {
                                 data.jobs.map(job =>
@@ -198,14 +192,15 @@ class Job extends Component {
 
                         </div>
 
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-md-12">
                                 <ul className="inner-arrow">
                                     <li><i className="fa fa-long-arrow-left"></i></li>
                                     <li><i className="fa fa-long-arrow-right"></i></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
+
                     </div>
                 </section>
                 {/* // <!-- section four ends here --> */}

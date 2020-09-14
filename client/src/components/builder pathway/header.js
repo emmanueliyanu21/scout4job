@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 // import Footer from '../pages/footer'
 import { connect } from 'react-redux'
 import { createVitae } from '../../store/actions/vitaeActions'
-import JobList from './jobList'
-import EduList from './educationList'
-import SocialLink from './socialLink'
+// import JobList from './jobList'
+// import EduList from './educationList'
+// import SocialLink from './socialLink'
 import axios from 'axios';
 
 // const initialState = 
@@ -298,9 +298,9 @@ class Header extends Component {
 
     }
     render() {
-        let { jobList } = this.state//let { notes, date, description, taskList } = this.state
-        let { eduList } = this.state
-        let { socialLink } = this.state
+        // let { jobList } = this.state//let { notes, date, description, taskList } = this.state
+        // let { eduList } = this.state
+        // let { socialLink } = this.state
         return (
             <div className="">
 

@@ -9,6 +9,7 @@ const cors = require('cors')
 
 //Load Routes
 const users = require("./routes/api/users");
+const employerusers = require("./routes/api/employerUsers");
 const jobs = require("./routes/api/jobs");
 const resumes = require("./routes/api/resumes");
 const covers = require("./routes/api/covers");
@@ -54,6 +55,7 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
+app.use("/api/employerusers", employerusers)
 app.use("/api", jobs);
 app.use("/api", covers);
 app.use("/api", resumes)

@@ -1,102 +1,161 @@
 import React, { Component } from 'react'
 import Navbar from '../pages/Navbar-Employer'
 import { Link } from 'react-router-dom'
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import axios from 'axios';
+import { logoutUser } from "../../store/actions/employerauthActions";
 
-export class EmployerDashboard extends Component {
+class EmployerDashboard extends Component {
+
+    state = {
+        jobTitle: '',
+        jobCompany: '',
+        jobLocation: "",
+        jobSpecialization: "",
+        jobDate: "",
+        jobDeadline: "",
+        jobSalary: "",
+        jobNumber: "",
+        jobRequirement: "",
+        jobResponsibility: "",
+        jobDescription: "",
+        errors: {}
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        });
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        axios({
+            method: 'post',
+            url: 'http://localhost:8000/api/jobs',
+            data: {
+                jobTitle: this.state.jobTitle,
+                jobCompany: this.state.jobCompany,
+                jobLocation: this.state.jobLocation,
+                jobSpecialization: this.state.jobSpecialization,
+                jobDate: this.state.jobDate,
+                jobDeadline: this.state.jobDeadline,
+                jobSalary: this.state.jobSalary,
+                jobNumber: this.state.jobNumber,
+                jobRequirement: this.state.jobRequirement,
+                jobResponsibility: this.state.jobResponsibility,
+                jobDescription: this.state.jobDescription
+            }
+        });
+
+        
+        this.setState({ jobTitle: '' })
+
+    }
+
+    onLogoutClick = e => {
+        e.preventDefault();
+        this.props.logoutUser();
+    };
+
     render() {
+        const { errors } = this.state;
+        const { user } = this.props.auth;
         return (
             <div className="">
                 <Navbar />
-                <section class="bk-grey">
-                    <div class="container">
-                        <div class="row pad-dashboard">
-                            <div class="col-md-3 col-sm-12">
-                                <div class="card">
-                                    <img src="../images/bk1.png" class="card-img-top" alt="..." />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Benjamin Frankline</h5>
-                                        <p class="card-text small">info@scout4job <br /> +234 905 040 7881</p>
+                <section className="bk-grey">
+                    <div className="container">
+                        <div className="row pad-dashboard">
+                            <div className="col-md-3 col-sm-12">
+                                <div className="card">
+                                    <img src="../images/bk1.png" className="card-img-top" alt="..." />
+                                    <div className="card-body">
+                                        <h5 className="card-title"><b>Hello</b>&nbsp;{user.companyname.split(" ")[0]}</h5>
+                                        <p className="card-text small">info@scout4job <br /> +234 905 040 7881</p>
                                     </div>
-                                    <div class="list-group list-group-flush nav nav-tabs">
+                                    <div className="list-group list-group-flush nav nav-tabs">
                                         <a role="tab" data-toggle="tab" href="#dashboard"
-                                            class="nav-link list-group-item list-group-item-action active"><i
-                                                class="fa fa-home"></i>&nbsp;&nbsp;Dashboard</a>
+                                            className="nav-link list-group-item list-group-item-action active"><i
+                                                className="fa fa-home"></i>&nbsp;&nbsp;Dashboard</a>
                                         <a role="tab" data-toggle="tab" href="#post-job"
-                                            class="nav-link list-group-item list-group-item-action"><i
-                                                class="fa fa-briefcase"></i> Post Job</a>
+                                            className="nav-link list-group-item list-group-item-action"><i
+                                                className="fa fa-briefcase"></i> Post Job</a>
                                         <a role="tab" data-toggle="tab" href="#cv-search"
-                                            class="nav-link list-group-item list-group-item-action"><i class="fa fa-bars"></i>
+                                            className="nav-link list-group-item list-group-item-action"><i className="fa fa-bars"></i>
                                             &nbsp;&nbsp;CV Search</a>
                                         <a role="tab" data-toggle="tab" href="#interview-procedure"
-                                            class="nav-link list-group-item list-group-item-action"><i class="fa fa-bookmark"></i>
+                                            className="nav-link list-group-item list-group-item-action"><i className="fa fa-bookmark"></i>
                                             &nbsp;&nbsp;Interview Procedure</a>
                                         <a role="tab" data-toggle="tab" href="#resource-download"
-                                            class="nav-link list-group-item list-group-item-action"><i class="fa fa-download"></i>
+                                            className="nav-link list-group-item list-group-item-action"><i className="fa fa-download"></i>
                                             &nbsp;Resource Download</a>
                                     </div>
-                                    <div class="card-body">
-                                        <a href="#" class="card-link"><i class="fa fa-sign-out"></i> Logout</a>
+                                    <div className="card-body">
+                                        <a onClick={this.onLogoutClick} href="#" className="card-link"><i className="fa fa-sign-out"></i> Logout</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-9 col-sm-12 tab-content">
-                                <div role="tabpanel" id="dashboard" class="tab-pane active">
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12">
-                                            <div class="main-header">
-                                                <div class="header-lined">
+                            <div className="col-md-9 col-sm-12 tab-content">
+                                <div role="tabpanel" id="dashboard" className="tab-pane active">
+                                    <div className="row">
+                                        <div className="col-md-12 col-sm-12">
+                                            <div className="main-header">
+                                                <div className="header-lined">
                                                     <h2>My Dashboard</h2>
-                                                    <div class="d-flex space-between align-center">
-                                                        <ol class="breadcrumb">
-                                                            <li class="breadcrumb-item"><a href=""><i class="fa fa-home"></i>
-                                                                Home</a>
+                                                    <div className="d-flex space-between align-center">
+                                                        <ol className="breadcrumb">
+                                                            <li className="breadcrumb-item"><Link to=""><i className="fa fa-home"></i>
+                                                                Home</Link>
                                                             </li>
-                                                            <li class="breadcrumb-item active">Applicant Area</li>
+                                                            <li className="breadcrumb-item active">Applicant Area</li>
                                                         </ol>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="jumbotron text-center">
-                                        <h1 class="display-6">No Application Found!</h1>
-                                        <p class="lead">You currently do not have any application available on your account.</p>
-                                        <hr class="my-4" />
+                                    <div className="jumbotron text-center">
+                                        <h1 className="display-6">No Application Found!</h1>
+                                        <p className="lead">You currently do not have any application available on your account.</p>
+                                        <hr className="my-4" />
                                         <p>Good thing is that you can easily create new application.</p>
-                                        <a class="btn btn-primary btn-sm" href="#">Apply Now</a>
+                                        <Link className="btn btn-primary btn-sm" to="#">Apply Now</Link>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="card">
-                                                <div class="card-header">
+                                    <div className="row">
+                                        <div className="col-sm-6">
+                                            <div className="card">
+                                                <div className="card-header">
                                                     <strong>Job Application Posted</strong>
                                                 </div>
-                                                <div class="list-group list-group-flush">
-                                                    <a href="#" class="list-group-item list-group-item-action small">
+                                                <div className="list-group list-group-flush">
+                                                    <Link to="" className="list-group-item list-group-item-action small">
                                                         Full Stack Developer, Andela, Lagos Nigeria
-                                        </a>
-                                                    <a href="#" class="list-group-item list-group-item-action small">
+                                                    </Link>
+                                                    <Link to="" className="list-group-item list-group-item-action small">
                                                         Front-End Developer, Crowywise, Lagos Nigeria
-                                        </a>
-                                                    <a href="#" class="list-group-item list-group-item-action small">
+                                                    </Link>
+                                                    <Link to="" className="list-group-item list-group-item-action small">
                                                         Digital Marketer, Alopay, Lagos Nigeria
-                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="card">
-                                                <div class="card-header">
+                                        <div className="col-sm-6">
+                                            <div className="card">
+                                                <div className="card-header">
                                                     <strong>Recommended CV</strong>
                                                 </div>
-                                                <div class="list-group list-group-flush">
-                                                    <Link to="#" class="list-group-item list-group-item-action small">
+                                                <div className="list-group list-group-flush">
+                                                    <Link to="#" className="list-group-item list-group-item-action small">
                                                         Chibuzo Edwin [3 Years Experience]
                                                     </Link>
-                                                    <Link to="#" class="list-group-item list-group-item-action small">
+                                                    <Link to="#" className="list-group-item list-group-item-action small">
                                                         Prof. John Struthers [25 Years Experience]
                                                     </Link>
-                                                    <Link to="#" class="list-group-item list-group-item-action small">
+                                                    <Link to="#" className="list-group-item list-group-item-action small">
                                                         Funmi Oyatogun [10 Years Experience]
                                                     </Link>
                                                 </div>
@@ -104,101 +163,143 @@ export class EmployerDashboard extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div role="tabpanel" id="post-job" class="tab-pane fade">
-                                    <div class="row pb-5">
-                                        <div class="visa-form col-md-12">
+                                <div role="tabpanel" id="post-job" className="tab-pane fade">
+                                    <div className="row pb-5">
+                                        <div className="visa-form col-md-12">
                                             <h2>Job Posting Application</h2>
-                                            <form id="msform">
-                                                <fieldset>
-                                                    <div class="form-card p-5">
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Job Title</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
-                                                                    aria-describedby="emailHelp" placeholder="Full Stack Developer" />
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Company</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
-                                                                    placeholder="Andela" />
-                                                            </div>
+                                            <form id="msform" noValidate onSubmit={this.handleSubmit}>
+                                                <div className="form-card p-5 bk-white">
+                                                    <div className="row">
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleInputEmail1">Job Title</label>
+                                                            <input type="text" className="form-control" id="jobTitle" required
+                                                                onChange={this.handleChange} placeholder="Full Stack Developer" />
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleFormControlSelect1">Location</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
-                                                                    placeholder="Lagos, Nigeria" />
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleFormControlSelect1">Specialization</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
-                                                                    placeholder="Technology" />
-                                                            </div>
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleInputPassword1">Company</label>
+                                                            <input type="text" className="form-control" id="jobCompany"
+                                                                required
+                                                                onChange={this.handleChange} placeholder="Andela" />
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Date Posted</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
-                                                                    placeholder="08 July" />
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Application Deadline</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
-                                                                    placeholder="Nigeria" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Salary</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
-                                                                    aria-describedby="emailHelp" placeholder="N300,000" />
-                                                            </div>
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Telephone Number</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
-                                                                    placeholder="070-6857-6214" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Job Requirements</label>
-                                                                <textarea type="text" class="form-control" id="exampleInputEmail1"
-                                                                    aria-describedby="emailHelp" rows="2" placeholder="" ></textarea>
-                                                            </div>
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Job Responsibility</label>
-                                                                <textarea type="text" class="form-control" id="exampleInputEmail1"
-                                                                    aria-describedby="emailHelp" rows="2" placeholder="" ></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-12">
-                                                                <label for="exampleInputEmail1">Job Description</label>
-                                                                <textarea type="text" class="form-control" id="exampleInputEmail1"
-                                                                    aria-describedby="emailHelp" rows="3" placeholder="" ></textarea>
-                                                            </div>
-                                                        </div>
-
-                                                        <input type="button" name="submit" class="next action-button" value="Submit" />
                                                     </div>
-                                                </fieldset>
+                                                    <div className="row">
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleFormControlSelect1">Location</label>
+                                                            <input type="text" className="form-control" id="jobLocation"
+                                                                required
+                                                                onChange={this.handleChange} placeholder="Lagos, Nigeria" />
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleFormControlSelect1">Specialization</label>
+                                                            <input type="text" className="form-control" id="jobSpecialization"
+                                                                required
+                                                                onChange={this.handleChange} placeholder="Technology" />
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className="row">
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleInputEmail1">Date Posted</label>
+                                                            <input type="text" className="form-control" id="jobDate"
+                                                                required
+                                                                onChange={this.handleChange} placeholder="08 July" />
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleInputPassword1">Application Deadline</label>
+                                                            <input type="text" className="form-control" id="jobDeadline"
+                                                                required
+                                                                onChange={this.handleChange} placeholder="Nigeria" />
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className="row">
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleInputEmail1">Salary</label>
+                                                            <input type="text" className="form-control" id="jobSalary"
+                                                                required
+                                                                onChange={this.handleChange} placeholder="N300,000" />
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleInputPassword1">Telephone Number</label>
+                                                            <input type="text" className="form-control" id="jobNumber"
+                                                                required
+                                                                onChange={this.handleChange} placeholder="070-6857-6214" />
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className="row">
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleInputEmail1">Job Requirements</label>
+                                                            <textarea type="text" className="form-control" id="jobRequirement"
+                                                                required
+                                                                onChange={this.handleChange} rows="2" placeholder="" ></textarea>
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+
+                                                        <div className="form-group col-md-6">
+                                                            <label htmlFor="exampleInputPassword1">Job Responsibility</label>
+                                                            <textarea type="text" className="form-control" id="jobResponsibility"
+                                                                required
+                                                                onChange={this.handleChange} rows="2" placeholder="" ></textarea>
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+                                                    </div>
+                                                    <div className="row">
+                                                        <div className="form-group col-md-12">
+                                                            <label htmlFor="exampleInputEmail1">Job Description</label>
+                                                            <textarea type="text" className="form-control" id="jobDescription"
+                                                                required
+                                                                onChange={this.handleChange} rows="3" placeholder="" ></textarea>
+                                                            {/* <div style={{ fontSize: 12, color: "red" }}>
+                                                                {this.state.fullNameError}
+                                                            </div> */}
+                                                        </div>
+                                                    </div>
+
+                                                    <button type="submit" className="next action-button">Submit</button>
+
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
-                                <div role="tabpanel" id="cv-search" class="tab-pane fade">
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12">
-                                            <div class="main-header">
-                                                <div class="header-lined">
+                                <div role="tabpanel" id="cv-search" className="tab-pane fade">
+                                    <div className="row">
+                                        <div className="col-md-12 col-sm-12">
+                                            <div className="main-header">
+                                                <div className="header-lined">
                                                     <h2>CV Search</h2>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="jumbotron text-center">
+                                    <div className="jumbotron text-center">
                                         <form className="space-icon-d">
                                             <div className="row job-form">
                                                 <div className="col-md-6 job-x1">
@@ -224,40 +325,40 @@ export class EmployerDashboard extends Component {
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="btn btn-contact-us mt-5" href="#">Search Now</a>
+                                        <Link className="btn btn-contact-us mt-5" to="#">Search Now</Link>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="card">
-                                                <div class="card-header">
+                                    <div className="row">
+                                        <div className="col-sm-6">
+                                            <div className="card">
+                                                <div className="card-header">
                                                     <strong>Recommended CV</strong>
                                                 </div>
-                                                <div class="list-group list-group-flush">
-                                                    <a href="#" class="list-group-item list-group-item-action small">
+                                                <div className="list-group list-group-flush">
+                                                    <Link to="" className="list-group-item list-group-item-action small">
                                                         Chibuzo Edwin [3 Years Experience]
-                                        </a>
-                                                    <a href="#" class="list-group-item list-group-item-action small">
+                                                    </Link>
+                                                    <Link to="" className="list-group-item list-group-item-action small">
                                                         Prof. John Struthers [25 Years Experience]
-                                        </a>
-                                                    <a href="#" class="list-group-item list-group-item-action small">
+                                                    </Link>
+                                                    <Link to="" className="list-group-item list-group-item-action small">
                                                         Funmi Oyatogun [10 Years Experience]
-                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="card">
-                                                <div class="card-header">
+                                        <div className="col-sm-6">
+                                            <div className="card">
+                                                <div className="card-header">
                                                     <strong>Recommended CV</strong>
                                                 </div>
-                                                <div class="list-group list-group-flush">
-                                                    <Link to="#" class="list-group-item list-group-item-action small">
+                                                <div className="list-group list-group-flush">
+                                                    <Link to="#" className="list-group-item list-group-item-action small">
                                                         Chibuzo Edwin [3 Years Experience]
                                                     </Link>
-                                                    <Link to="#" class="list-group-item list-group-item-action small">
+                                                    <Link to="#" className="list-group-item list-group-item-action small">
                                                         Prof. John Struthers [25 Years Experience]
                                                     </Link>
-                                                    <Link to="#" class="list-group-item list-group-item-action small">
+                                                    <Link to="#" className="list-group-item list-group-item-action small">
                                                         Funmi Oyatogun [10 Years Experience]
                                                     </Link>
                                                 </div>
@@ -265,194 +366,193 @@ export class EmployerDashboard extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div role="tabpanel" id="interview-procedure" class="tab-pane fade">
-                                    <div class="row pb-5">
-                                        <div class="visa-form col-md-12">
+                                <div role="tabpanel" id="interview-procedure" className="tab-pane fade">
+                                    <div className="row pb-5">
+                                        <div className="visa-form col-md-12">
                                             <h2>Interview Procedure</h2>
                                             <form id="msform">
                                                 <ul id="progressbar">
-                                                    <li class="active" id="account"><strong>Selection</strong></li>
+                                                    <li className="active" id="account"><strong>Selection</strong></li>
                                                     <li id="personal"><strong>Interview</strong></li>
                                                     <li id="personal"><strong>Offer Letter</strong></li>
                                                     <li id="confirm"><strong>Finish</strong></li>
                                                 </ul>
-                                                <div class="progress">
-                                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                <div className="progress">
+                                                    <div className="progress-bar progress-bar-striped progress-bar-animated"
                                                         role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div> <br />
                                                 {/* <!-- fieldsets --> */}
                                                 <fieldset>
-                                                    <div class="form-card p-5">
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Surname</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    <div className="form-card p-5">
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Surname</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="Chibuzo" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Other Names</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Other Names</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="Edwin" />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Residential Address</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Residential Address</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="Lagos, Nigeria" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Telephone Number</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Telephone Number</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="070-6857-6214" />
                                                             </div>
                                                         </div>
-                                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                                        <input type="button" name="next" className="next action-button" value="Next" />
                                                     </div>
 
                                                 </fieldset>
                                                 <fieldset>
-                                                    <div class="form-card">
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Office Address</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                    <div className="form-card">
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Office Address</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="Yaba, Lagos" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Telephone Number</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Telephone Number</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="0706-857-6214" />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Height</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Height</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="5.5" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Profession</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Profession</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="Student" />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Paasport Number</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Paasport Number</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="1234567" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Date of Issue</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Date of Issue</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="09/06/2020" />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Date of expiry</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Date of expiry</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="09/06/2017" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Place of Issue</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Place of Issue</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="Lagos" />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Issuing Government</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Issuing Government</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="Nigeria" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Duration of stay</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Duration of stay</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="2 months" />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <input type="button" name="next" class="next action-button" value="Next" />
-                                                    <input type="button" name="previous" class="previous action-button-previous"
+                                                    <input type="button" name="next" className="next action-button" value="Next" />
+                                                    <input type="button" name="previous" className="previous action-button-previous"
                                                         value="Previous" />
                                                 </fieldset>
                                                 <fieldset>
-                                                    <div class="form-card">
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Proposed Travel Date</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                    <div className="form-card">
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Proposed Travel Date</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="06 July 2020" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Mode of Travel to Nigeria</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Mode of Travel to Nigeria</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="Air" />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Money Available for your
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Money Available for your
                                                         Trip</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="50,000,000" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Duration of stay</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Duration of stay</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="" />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Color of the Eye</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Color of the Eye</label>
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="Black" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Color of the Hair</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Color of the Hair</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="Black" />
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputPassword1">Money Available for your
+                                                        <div className="row">
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputPassword1">Money Available for your
                                                         Trip</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1"
+                                                                <input type="text" className="form-control" id="exampleInputPassword1"
                                                                     placeholder="50,000,000" />
                                                             </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="exampleInputEmail1">Duration of stay</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                                            <div className="form-group col-md-6">
+                                                                <label htmlFor="exampleInputEmail1">Duration of stay</label>
+                                                                <input type="text" className="form-control" id="exampleInputEmail1"
                                                                     aria-describedby="emailHelp" placeholder="" />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <input type="button" name="next" class="next action-button" value="Submit" />
+                                                    <input type="button" name="next" className="next action-button" value="Submit" />
                                                 </fieldset>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
-                                <div role="tabpanel" id="resource-download" class="tab-pane fade">
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12">
-                                            <div class="main-header">
-                                                <div class="header-lined">
+                                <div role="tabpanel" id="resource-download" className="tab-pane fade">
+                                    <div className="row">
+                                        <div className="col-md-12 col-sm-12">
+                                            <div className="main-header">
+                                                <div className="header-lined">
                                                     <h2>Resource Download</h2>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="jumbotron text-center">
-                                        <h1 class="display-6">No Resource Found!</h1>
-                                        <p class="lead">You currently do not have any resources to download on your account.</p>
+                                    <div className="jumbotron text-center">
+                                        <h1 className="display-6">No Resource Found!</h1>
+                                        <p className="lead">You currently do not have any resources to download on your account.</p>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -462,4 +562,16 @@ export class EmployerDashboard extends Component {
     }
 }
 
-export default EmployerDashboard
+EmployerDashboard.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    auth: state.auth,
+});
+
+export default connect(
+    mapStateToProps,
+    { logoutUser }
+)(EmployerDashboard);

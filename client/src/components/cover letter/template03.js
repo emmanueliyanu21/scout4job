@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { createCover } from '../../store/actions/coverActions'
 import axios from 'axios';
@@ -65,18 +64,6 @@ class TemplateNO3 extends Component {
         return true;
 
     }
-
-    // handleSubmit = (e) => {
-    //     e.preventDefault()
-
-    //     const isValid = this.handleValidation();
-    //     if (isValid) {
-    //         // console.log(this.state);
-    //         this.props.createCover(this.state)
-    //         // clear form
-    //         this.setState(initialState);
-    //     }
-    // }
 
     handleSubmit = (e) => {
         e.preventDefault()
