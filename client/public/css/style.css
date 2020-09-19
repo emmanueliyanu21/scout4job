@@ -5,7 +5,13 @@
 /* @import url('font-awesome.min.css'); */
 @import url('fonts/LeagueSpartan-Bold.otf');
 
- #particles-js {
+body {
+    font-family: Nunito, sans-serif;
+    color: #343434;
+    font-size: 14px;
+}
+
+#particles-js {
     color: #fff;
     position: absolute;
     top: 10;
@@ -29,120 +35,118 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 22px!important;
 }
-    .navbar-nav li {
-        font-family: nunito, sans-serif;
-        font-size: 16px;
-        padding-left: 15px;
-    }
 
-    .navbar-nav li .dropdown-item {
-        color: #343434!important;
-        font-weight: 400!important;
-    }
-    
-    .navbar-light {
-        background-color: #fff!important;
-        color: #246DF7!important;
-    }
-    
-    .nav-line {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
-    
-    .cap-bt li a {
-        padding: 9px 12px!important;
-        border-radius: 4px;
-        font-weight: 700;
-    }
-    
-    .cap-bt li a:hover {
-        background-color: rgba(255, 255, 255, 0.15)!important;
-        color: #246DF7!important;
-        -webkit-transition: background 0.5s linear;
-        -moz-transition: background 0.5s linear;
-        -ms-transition: background 0.5s linear;
-        -o-transition: background 0.5s linear;
-        transition: background 0.5s linear;
-    }
-    
-    .nav .navbar-nav {
-        float: right!important;
-    }
-    
-    .navbar-light li a {
-        color: #343434!important;
-        border-bottom: 2px solid #fff;
-    }
+.navbar-nav li {
+    font-family: nunito, sans-serif;
+    font-size: 16px;
+    padding-left: 15px;
+}
 
-    .navbar-nav .account-create span{
-        background-color: #246DF7;
-        color: #fff!important;
-        border: 1px solid #246DF7;
-        padding: 10px 20px;
-        border-radius: 4px;
-    }
-
-    .navbar-nav .account-employer span {
-        background-color: #FBA51A;
-        color: #fff!important;
-        border: 1px solid #FBA51A;
-        padding: 10px 20px;
-        border-radius: 4px;
-    }
-
-    .navbar-nav .account-employer span:hover{
-        background-color: #246DF7;
-        border: 1px solid #246DF7;
-         -webkit-transition: background 0.5s linear;
-        -moz-transition: background 0.5s linear;
-        -ms-transition: background 0.5s linear;
-        -o-transition: background 0.5s linear;
-        transition: background 0.5s linear;
-    }
-
-    .navbar-nav .account-create span:hover{
-        background-color: #FBA51A;
-        border: 1px solid #FBA51A;
-         -webkit-transition: background 0.5s linear;
-        -moz-transition: background 0.5s linear;
-        -ms-transition: background 0.5s linear;
-        -o-transition: background 0.5s linear;
-        transition: background 0.5s linear;
-    }
-
-    .navbar-light li .dropdown-menu a {
-        color: #343434!important;
-        border-radius: 0px!important;
-    }
-
-    .navbar-light li .dropdown-menu a:hover {
-        background-color: #246DF7!important;
-        color: #fff!important;
-
-    }
+.navbar-nav li .dropdown-item {
+    color: #343434!important;
+    font-weight: 400!important;
+}
     
-    .navbar-nav .active {
-        background-color: rgba(255, 255, 255, 0.15)!important;
-    }
+.navbar-light {
+    background-color: #fff!important;
+    color: #246DF7!important;
+}
     
-    .navbar-nav .active:hover {
-        background-color: #fff!important;
-        color: #246DF7!important;
-        -webkit-transition: background 0.5s linear;
-        -moz-transition: background 0.5s linear;
-        -ms-transition: background 0.5s linear;
-        -o-transition: background 0.5s linear;
-        transition: background 0.5s linear;
-    }
+.nav-line {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+    
+.cap-bt li a {
+    padding: 9px 12px!important;
+    border-radius: 4px;
+    font-weight: 700;
+}
+    
+.cap-bt li a:hover {
+    background-color: rgba(255, 255, 255, 0.15)!important;
+    color: #246DF7!important;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
+    
+.nav .navbar-nav {
+    float: right!important;
+}
+    
+.navbar-light li a {
+    color: #343434!important;
+    border-bottom: 2px solid #fff;
+}
 
+.navbar-nav .account-create span{
+    background-color: #246DF7;
+    color: #fff!important;
+    border: 1px solid #246DF7;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.navbar-nav .account-employer span {
+    background-color: #FBA51A;
+    color: #fff!important;
+    border: 1px solid #FBA51A;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.navbar-nav .account-employer span:hover{
+    background-color: #246DF7;
+    border: 1px solid #246DF7;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
+
+.navbar-nav .account-create span:hover{
+    background-color: #FBA51A;
+    border: 1px solid #FBA51A;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
+
+.navbar-light li .dropdown-menu a {
+    color: #343434!important;
+    border-radius: 0px!important;
+}
+
+.navbar-light li .dropdown-menu a:hover {
+    background-color: #246DF7!important;
+    color: #fff!important;
+}
     
+.navbar-nav .active {
+    background-color: rgba(255, 255, 255, 0.15)!important;
+}
     
-    .bk-blue {
-        background: url("../images/bk1.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+.navbar-nav .active:hover {
+    background-color: #fff!important;
+    color: #246DF7!important;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}  
+    
+.bk-blue {
+    background: url("../images/bk1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
     .bk-employer {
         background: url("../images/employer/landing-page.jpg");
