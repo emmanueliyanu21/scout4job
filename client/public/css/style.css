@@ -912,101 +912,101 @@ body {
     text-align: center;
 }
     
-    @media (max-width: 768px) {
-        .bk1-inner-text p {
-            max-width: 90%!important;
-        }
-        .bk1-txt {
-            padding: 30px 0px;
-        }
+@media (max-width: 768px) {
+    .bk1-inner-text p {
+        max-width: 90%!important;
     }
-    /* CURICULUM VITAE ENDS HERE */
-    /* block 2 starts here */
+    .bk1-txt {
+        padding: 30px 0px;
+    }
+}
     
-    .bk2-img img {
-        max-width: 70%;
-        border-radius: 4px;
-    }
+/* CURICULUM VITAE ENDS HERE */
+/* block 2 starts here */
     
-    .bk2-img {
-        text-align: center;
-        padding-top: 20px;
-    }
+.bk2-img img {
+    max-width: 70%;
+    border-radius: 4px;
+}
     
-    .bk2-text h2 {
-        font-size: 25px;
-        font-family: nunito, sans-serif;
-        padding-top: 60px;
-        font-style: normal;
-        font-weight: 600;
-        color: #246DF7!important;
-        margin-bottom: 30px;
-    }
+.bk2-img {
+    text-align: center;
+    padding-top: 20px;
+}
     
-    .bk2-text {
-        padding-bottom: 30px;
-    }
+.bk2-text h2 {
+    font-size: 25px;
+    font-family: nunito, sans-serif;
+    padding-top: 60px;
+    font-style: normal;
+    font-weight: 600;
+    color: #246DF7!important;
+    margin-bottom: 30px;
+}
     
-    .bk2-inner-txt p {
-        font-family: nunito, sans-serif;
-        font-size: 16px;
-        /* max-width: 60%; */
-    }
+.bk2-text {
+    padding-bottom: 30px;
+}
+    
+.bk2-inner-txt p {
+    font-family: nunito, sans-serif;
+    font-size: 16px;
+}
 
-    .bk2-inner-txt .fa-circle{
-        color: #246DF7;
-        padding-right: 5px;
-    }
+.bk2-inner-txt .fa-circle{
+    color: #246DF7;
+    padding-right: 5px;
+}
     
-    .bk2-inner-txt img {
-        max-width: 5%;
-        padding-right: 10px;
-        margin-top: -3px;
-    }
+.bk2-inner-txt img {
+    max-width: 5%;
+    padding-right: 10px;
+    margin-top: -3px;
+}
     
-    .btn-now {
-        font-family: nunito, sans-serif;
-        color: #fff;
-        background-color: #246DF7!important;
-        border-radius: 4px;
-        padding: 10px 20px;
-        border: 1px solid #00ACEE;
-        margin-right: 30px;
-    }
+.btn-now {
+    font-family: nunito, sans-serif;
+    color: #fff;
+    background-color: #246DF7!important;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: 1px solid #00ACEE;
+    margin-right: 30px;
+}
     
-    .btn-now:hover {
-        color: #246DF7;
-        background-color: transparent!important;
-        -webkit-transition: background 0.5s linear;
-        -moz-transition: background 0.5s linear;
-        -ms-transition: background 0.5s linear;
-        -o-transition: background 0.5s linear;
-        transition: background 0.5s linear;
-    }
+.btn-now:hover {
+    color: #246DF7;
+    background-color: transparent!important;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
     
-    .bk2-btn-more {
-        font-family: nunito, sans-serif;
-        color: #246DF7;
-        background-color: transparent;
-        border: 1px solid #246DF7;
-        border-radius: 4px;
-        padding: 10px 20px;
-        text-transform: capitalize;
-    }
+.bk2-btn-more {
+    font-family: nunito, sans-serif;
+    color: #246DF7;
+    background-color: transparent;
+    border: 1px solid #246DF7;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+}
     
-    .bk2-btn-more:hover {
-        color: #fff!important;
-        background-color: #246DF7!important;
-        -webkit-transition: background 0.5s linear;
-        -moz-transition: background 0.5s linear;
-        -ms-transition: background 0.5s linear;
-        -o-transition: background 0.5s linear;
-        transition: background 0.5s linear;
-    }
+.bk2-btn-more:hover {
+    color: #fff!important;
+    background-color: #246DF7!important;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
     
-    .bk-grey {
-        background-color: #f2f5fa;
-    }
+.bk-grey {
+    background-color: #f2f5fa;
+}
     
     .bk2-btn {
         margin-top: 40px;
