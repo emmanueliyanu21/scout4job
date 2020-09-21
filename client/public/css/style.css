@@ -801,118 +801,116 @@ body {
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
-        color: #fff;
-        padding-top: 20px;
-        letter-spacing: 1.2;
-        padding-bottom: 5px;
-        margin-top: 7%;
-    }
+    color: #fff;
+    padding-top: 20px;
+    letter-spacing: 1.2;
+    padding-bottom: 5px;
+    margin-top: 7%;
+}
     
-    .bk0-image {
-        background-image: url("../images/bk2.jpg");
-        background-repeat: no-repeat;
-        background-size: auto;
-        /* background-position: center; */
-    }
+.bk0-image {
+    background-image: url("../images/bk2.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
     
-    .bk0-button {
-        padding-bottom: 80px;
-        padding-top: 30px;
-    }
+.bk0-button {
+    padding-bottom: 80px;
+    padding-top: 30px;
+}
     
-    .bk0-inner-text span {
-        font-family: nunito, sans-serif;
-        color: #fff!important;
-        /* text-shadow: rgba(255, 255, 255, 0.15); */
-    }
+.bk0-inner-text span {
+    font-family: nunito, sans-serif;
+    color: #fff!important;
+}
     
+.bk0-inner-text p {
+    font-family: nunito, sans-serif;
+    font-size: 28px;
+    max-width: 35%;
+    color: #fff;
+    padding-bottom: 10px;
+    line-height: 1.4;
+}
+    
+@media (max-width: 768px) {
     .bk0-inner-text p {
-        font-family: nunito, sans-serif;
-        font-size: 28px;
-        max-width: 35%;
-        color: #fff;
-        padding-bottom: 10px;
-        line-height: 1.4;
-    }
-    
-    @media (max-width: 768px) {
-        .bk0-inner-text p {
-            max-width: 80%;
+        max-width: 80%;
         }
-        .bk0-button {
-            margin: auto!important;
-        }
+    .bk0-button {
+        margin: auto!important;
     }
+}
     /* block0 styling ends */
     
-    .bk-twitter {
-        background-color: #246DF7;
-    }
+.bk-twitter {
+    background-color: #246DF7;
+}
     
-    .bk1-inner-text h2 {
-        font-family: nunito, sans-serif;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        color: #fff;
-        padding-top: 20px;
-        padding-bottom: 10px;
-        letter-spacing: 1.2;
-    }
+.bk1-inner-text h2 {
+    font-family: nunito, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    letter-spacing: 1.2;
+}
     
-    .bk1-inner-text p {
-        font-family: nunito, sans-serif;
-        font-size: 16px;
-        max-width: 80%;
-        color: #fff;
-        padding-bottom: 10px;
-    }
+.bk1-inner-text p {
+    font-family: nunito, sans-serif;
+    font-size: 16px;
+    max-width: 80%;
+    color: #fff;
+    padding-bottom: 10px;
+}
     
-    .btn-start {
-        font-family: nunito, sans-serif;
-        color: #246DF7;
-        background-color: #fff!important;
-        border-radius: 4px;
-        padding: 10px 20px;
-        border: 1px solid #fff;
-        margin-right: 30px;
-    }
+.btn-start {
+    font-family: nunito, sans-serif;
+    color: #246DF7;
+    background-color: #fff!important;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    margin-right: 30px;
+}
     
-    .bk1-txt .btn-start:hover {
-        color: #fff;
-        background-color: transparent!important;
-        -webkit-transition: background 0.5s linear;
-        -moz-transition: background 0.5s linear;
-        -ms-transition: background 0.5s linear;
-        -o-transition: background 0.5s linear;
-        transition: background 0.5s linear;
-    }
+.bk1-txt .btn-start:hover {
+    color: #fff;
+    background-color: transparent!important;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
     
-    .btn-more {
-        font-family: nunito, sans-serif;
-        color: #fff;
-        background-color: transparent;
-        border: 1px solid #fff;
-        border-radius: 4px;
-        padding: 10px 20px;
-        border: 1px solid #fff;
-        text-transform: capitalize;
-    }
+.btn-more {
+    font-family: nunito, sans-serif;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    text-transform: capitalize;
+}
     
-    .bk1-txt .btn-more:hover {
-        color: #00ACEE!important;
-        background-color: #fff!important;
-        -webkit-transition: background 0.5s linear;
-        -moz-transition: background 0.5s linear;
-        -ms-transition: background 0.5s linear;
-        -o-transition: background 0.5s linear;
-        transition: background 0.5s linear;
-    }
+.bk1-txt .btn-more:hover {
+    color: #00ACEE!important;
+    background-color: #fff!important;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
     
-    .bk1-txt {
-        margin: auto;
-        text-align: center;
-    }
+.bk1-txt {
+    margin: auto;
+    text-align: center;
+}
     
     @media (max-width: 768px) {
         .bk1-inner-text p {
