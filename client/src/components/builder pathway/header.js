@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 // import Footer from '../pages/footer'
 import { connect } from 'react-redux'
 import { createVitae } from '../../store/actions/vitaeActions'
-// import JobList from './jobList'
-// import EduList from './educationList'
-// import SocialLink from './socialLink'
+import JobList from './jobList'
+import EduList from './educationList'
+import SocialLink from './socialLink'
 import axios from 'axios';
 
 // const initialState = 
@@ -297,10 +297,11 @@ class Header extends Component {
     handleClick = (e) => {
 
     }
+    
     render() {
-        // let { jobList } = this.state//let { notes, date, description, taskList } = this.state
-        // let { eduList } = this.state
-        // let { socialLink } = this.state
+        let { jobList } = this.state//let { notes, date, description, taskList } = this.state
+        let { eduList } = this.state
+        let { socialLink } = this.state
         return (
             <div className="">
 
@@ -395,7 +396,7 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-briefcase"></i>
                                             Employment History</h2>
                                     </div>
-                                    <div id="">
+                                    {/* <div id="">
                                         <div className="row">
                                             <div className="form-group col-md-6">
                                                 <label htmlFor="jobTitle">Job Title</label>
@@ -454,8 +455,8 @@ record of...." rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    </div>
-                                    {/* <JobList jobList={jobList} add={this.addNewRow} delete={this.clickOnDelete.bind(this)}/> */}
+                                    </div> */}
+                                    <JobList jobList={jobList} add={this.addNewRow} delete={this.clickOnDelete.bind(this)}/>
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
                                             <button className="" type="button" onClick={this.addNewRow} ><i className="fa fa-plus"></i> Add Employment History </button>
@@ -468,7 +469,7 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-book"></i>
                                             Education History</h2>
                                     </div>
-                                    <div className="row">
+                                    {/* <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="schoolName">School Name</label>
                                             <input type="text" className="form-control" id="schoolName"
@@ -525,8 +526,8 @@ record of...." rows="3"></textarea>
                                                 {this.state.educationDescriptionError}
                                             </div>
                                         </div>
-                                    </div>
-                                    {/* <EduList eduList={eduList} add={this.addeduRow} delete={this.clickOnEduDelete.bind(this)} /> */}
+                                    </div> */}
+                                    <EduList eduList={eduList} add={this.addeduRow} delete={this.clickOnEduDelete.bind(this)} />
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
                                             <button className="" type="button" onClick={this.addeduRow} ><i className="fa fa-plus"></i> Add Educational History </button>
@@ -542,7 +543,7 @@ record of...." rows="3"></textarea>
                                     </div>
 
                                     {/* website links ends */}
-                                    <div className="row">
+                                    {/* <div className="row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="websiteName">Name</label>
                                             <input type="text" className="form-control" id="websiteName"
@@ -559,8 +560,8 @@ record of...." rows="3"></textarea>
                                                 {this.state.linkNameError}
                                             </div>
                                         </div>
-                                    </div>
-                                    {/* <SocialLink socialLink={socialLink} add={this.addsocialRow} delete={this.deleteOnSocialRow.bind(this)} /> */}
+                                    </div> */}
+                                    <SocialLink socialLink={socialLink} add={this.addsocialRow} delete={this.deleteOnSocialRow.bind(this)} />
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
                                             <button className="" type="button" onClick={this.addsocialRow} ><i className="fa fa-plus"></i> Add Social Link </button>
@@ -595,7 +596,7 @@ record of...." rows="3"></textarea>
                                     {/* Employment summary starts here */}
                                     <div className="employment-history pt-3">
                                         <p>
-                                            <span className="text-left"> {this.state.jobTitle} {this.state.employer} {this.state.city} </span>
+                                            <span className="text-left"> {this.state.jobList.jobTitle} {this.state.jobList.employer} {this.state.jobList.city} </span>
                                             <span className="pull-right"> {this.state.startDate1} {this.state.endDate1} </span>
                                         </p>
                                         <ul>
