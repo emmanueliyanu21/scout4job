@@ -1006,50 +1006,52 @@ body {
     background-color: #f2f5fa;
 }
     
-    .bk2-btn {
-        margin-top: 40px;
-    }
+.bk2-btn {
+    margin-top: 40px;
+}
     
-    @media (max-width: 768px) {
-        .bk2-img img {
-            max-width: 90%!important;
-        }
+@media (max-width: 768px) {
+    .bk2-img img {
+        max-width: 90%!important;
     }
-    /* block 2 ends here */
-    /* block 3 starts here */
+}
+
+/* block 2 ends here */
+/* block 3 starts here */
     
-    .bk3-img img {
-        max-width: 100%;
-        box-shadow: 0px 3px 12px -2px rgb(209, 209, 209);
-    }
+.bk3-img img {
+    max-width: 100%;
+    box-shadow: 0px 3px 12px -2px rgb(209, 209, 209);
+}
     
-    .bk3-img {
-        padding-bottom: 60px;
-    }
+.bk3-img {
+    padding-bottom: 60px;
+}
     
-    .bk3-txt {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
+.bk3-txt {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
     
+.bk3-txt h2 {
+    text-align: center;
+    font-family: nunito, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: 0.4;
+    max-width: 50%;
+    margin: auto;
+    line-height: 1.4;
+}
+    
+@media (max-width: 768px) {
     .bk3-txt h2 {
-        text-align: center;
-        font-family: nunito, sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        letter-spacing: 0.4;
-        max-width: 50%;
-        margin: auto;
-        line-height: 1.4;
+        max-width: 90%!important;
     }
+}
     
-    @media (max-width: 768px) {
-        .bk3-txt h2 {
-            max-width: 90%!important;
-        }
-    }
-    /* block 3 ends here */
-    /* block 4 starts here */
+/* block 3 ends here */
+/* block 4 starts here */
     
     .bk4-header h2 {
         text-align: center;
@@ -1069,7 +1071,6 @@ body {
         font-family: nunito, sans-serif!important;
         max-width: 60%;
         margin: auto!important;
-        /* text-align: center!important; */
         font-size: 14px!important;
     }
     
@@ -1204,7 +1205,6 @@ body {
 
     .ul-foot .active {
         font-size: 16px;
-        /* color: linear-gradient(to right, #33ccff 0%, #ff99cc 100%)!important; */
         color: #FBA51A;
         text-shadow: 0px 3px 12px -2px rgb(209, 209, 209)!important;
     }
@@ -1279,7 +1279,7 @@ body {
         border-radius: 4px;
         font-size: 26px!important;
         position: absolute;
-        top: 10%;
+        margin-top: -1%;
         right: 16px;
     }
 
@@ -1352,7 +1352,6 @@ body {
     /* cv samples styling starts here */
     
     .cv-sam-txt h2 {
-        /* color: #343434; */
         font-family: nunito, sans-serif;
         font-size: 16px;
         text-align: center;
@@ -1577,10 +1576,9 @@ body {
         max-width: 100%;
         background-color: #fff;
         margin: auto;
-        /* padding-top: 20px; */
         padding-bottom: 20px;
         border-radius: 4px;
-        min-height: 700px;
+        min-height: 780px;
     }
 
     .resume-options {
@@ -1610,7 +1608,6 @@ body {
     }
 
     .sidebar-fixed {
-        /* border: 1px solid #ddd; */
         width: 50%;
         background-color: #E2E8EE;
         padding-top: 20px;
@@ -1628,18 +1625,14 @@ body {
         padding-top: 20px;
     }
 
-    .border-img {
-        /* position: relative; */
-    }
-
-    .form-img .personal-details h2 {
-        color: #000;
-        font-weight: 600;
-        font-size: 12px;
-        font-family: Nunito, sans-serif;
-        margin-bottom: 0px!important;
-        padding-bottom: 4px!important;
-    } 
+ .form-img .personal-details h2 {
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: Nunito, sans-serif;
+    margin-bottom: 0px!important;
+    padding-bottom: 4px!important;
+} 
 
     .personal-details p {
         font-size: 10px;
@@ -1849,7 +1842,6 @@ body {
     .form-card h2 {
         font-family: nunito, sans-serif;
         font-size: 16px;
-        /* font-weight: normal; */
         color: #343434;
         font-weight: 600;
     }
@@ -1949,7 +1941,6 @@ body {
     
     .ul-footer .fa {
         color: #246DF7!important;
-        /* font-size: 18px; */
         padding-right: 8px;
     }
     
@@ -1965,7 +1956,6 @@ body {
     }
     
     .login-txt a:hover {
-        /* opacity: 0.6; */
         color: #246DF7!important;
         -webkit-transition: background 0.5s linear;
         -moz-transition: background 0.5s linear;
@@ -2070,9 +2060,8 @@ body {
         transition: background 0.5s linear;
     }
    
-    /* body part start here */
+/* body part start here */
 .bk-dotted {
-    /* background: url("../images/dotted-bk.png"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2134,9 +2123,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-    /* body part ends here */
+/* body part ends here */
 
-    /* year.html starts here */
+/* year.html starts here */
 .three-text p{
     padding-top: 10px;
     color: #788088;
@@ -2146,8 +2135,6 @@ body {
 .white-bk {
     background-color: #fff;
     border-radius: 4px;
-    /* margin-top: 30px;
-    margin-bottom: 30px; */
 }
 
 .year-x1 {
@@ -2160,9 +2147,6 @@ body {
     padding-right: 60px;
     font-size: 20px!important;
     font-family: Nunito, sans-serif;
-    /* border-radius: 100%;
-    padding: 8px;
-    color: #788088; */
 }
 
 .ul-number li:hover {
@@ -2184,10 +2168,6 @@ body {
 .ul-number {
     text-align: center;
     margin-top: 60px;
-    /* 
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    text-align: center; */
 }
 
 .ul-number .yr-x1 {
@@ -2214,9 +2194,9 @@ body {
     font-size: 13px;
 }
 
-    /* year.html ends here */
+/* year.html ends here */
 
-    /* styling for template starts here */
+/* styling for template starts here */
 .temp-x1 img{
     max-width: 100%;
     box-shadow: 0px 3px 12px -2px rgb(209, 209, 209)!important;
@@ -2228,14 +2208,12 @@ body {
     padding-right: 20px;
 }
 
+/* styling for templates ends here */
 
-    /* styling for templates ends here */
-
-    /* styling for start here */
+/* styling for start here */
 .start-x1 {
     text-align: center;
     border: 1px solid #246DF7;
-    /* margin-right: 30px; */
     padding: 20px 30px;
     border-radius: 4px;
 }
@@ -2305,9 +2283,9 @@ body {
 .start-res a:hover {
     text-decoration: none;
 }
-    /* styling for starts ends here */
+/* styling for starts ends here */
 
-    /* styling for jobs starts here */
+/* styling for jobs starts here */
 .bk-image {
     background: url("../images/job-image.png");
     background-position: center;
@@ -2354,7 +2332,6 @@ body {
 
 .job-x2 .space-select {
     height: 63px;
-    /* padding-bottom: 30px!important; */
     font-size: 14px!important;
     padding-left: 30px!important;
 }
@@ -2373,7 +2350,6 @@ body {
 
 .job-x3 a {
     background-color: #246DF7;
-    /* vertical-align: center; */
     padding:20px 20px;
     display: block;
     border-radius: 4px 50px 50px 4px;
@@ -2451,28 +2427,21 @@ body {
 
 .icon-down .fa{
     color: #fff;
-    /* background-color: #246DF7; */
-    /* border-radius: 4px; */
-    /* padding: 30px 40px; */
     font-size: 28px;
     display: block;
-    /* box-shadow: 0px 3px 12px -2px rgb(209, 209, 209)!important; */
 }
 
 .icon-down {
     text-align: center;
 }
 
-
 .j-x a:hover {
     text-decoration: none;
 }
 
+/* styling for jobs ends here */
 
-
-    /* styling for jobs ends here */
-
-    /* job details styaling starts here */
+/* job details styaling starts here */
 .db-page {
     background-color: #fff;
     border-radius: 4px;
@@ -2574,7 +2543,6 @@ body {
 }
 
 .btn-share .fa {
-    /* font-size: 12px; */
     padding-right: 8px;
 }
 
@@ -2594,7 +2562,6 @@ body {
     text-transform: uppercase;
     font-size: 20px;
     padding-top: 10px;
-    /* padding-bottom: 20px; */
 }
 
 .db-more p {
@@ -2656,9 +2623,9 @@ body {
     font-family: nunito, sans-serif;
     font-size: 14px!important;
 }
-    /* job details styling ends here */
+/* job details styling ends here */
 
-    /* cover letter styling starts here */
+/* cover letter styling starts here */
 .bk-cover-img {
     background: url("../images/cover-letter.png");
         background-position: center;
@@ -2680,7 +2647,6 @@ body {
 
 .inner-cl h2 {
     font-size: 20px;
-    /* color: #343434; */
     padding-top: 20px;
     padding-bottom: 30px;
     font-family: nunito, sans-serif;
@@ -2700,10 +2666,6 @@ body {
 .inner-blue .fa{
     color: #246DF7;
 }
-
-/* .inner-pink .fa {
-    color: #D1499B;
-} */
 
 .btn-learn-x1 {
     border: 1px solid #fff;
@@ -2787,33 +2749,26 @@ body {
     border: 12px solid #FBA51A;
     border-radius: 100%;
     padding: 40px 33px;
-    
 }
 
 .more-th {
     padding-top: 60px;
-    
 }
 
 .bk-colored-img {
-    /* background: url("../images/colored-img.png"); */
     background-color: #246DF7;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
 }
 
 .cv-more img {
     max-width: 100%;
-    /* box-shadow: 0px 3px 12px -2px rgb(209, 209, 209); */
     border-radius: 4px;
 }
 
 .cv-more {
     text-align: center;
-    
-    /* box-shadow: 0px 3px 12px -2px rgb(209, 209, 209)!important; */
 }
 
 .more-cv h2 {
@@ -2855,9 +2810,9 @@ body {
     margin: auto;
     text-align: left;
 }
-    /* cover letter styling ends here */
+/* cover letter styling ends here */
 
-    /* about us starts here */
+/* about us starts here */
 .abt h2 {
     text-align: center;
     color: #343434!important;
@@ -2909,14 +2864,11 @@ body {
 
     .panel-title a {
         text-decoration: none!important;
-        /* color: #343434!important; */
     }
 
-    /* end of styling accordion */
+/* end of styling accordion */
 
-
-
-    /* about page styling  starts here */
+/* about page styling  starts here */
 .part h2 {
     font-size: 18px;
     font-family: Nunito,sans-serif;
@@ -2944,11 +2896,9 @@ body {
     text-align: center;
     font-size: 32px!important;
     opacity: 0.9!important;
-    /* padding-bottom: 20px; */
 }
 
 .test-content {
-     /* background: url("../images/background-icon.jpg"); */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -2960,7 +2910,6 @@ body {
     background-color: #fff!important;
     border-radius: 4px;
     padding: 12px;
-    /* margin-bottom: 30px; */
     box-shadow: 0px 3px 12px -2px rgb(209, 209, 209);
 }
 
@@ -3017,10 +2966,9 @@ body {
     -o-transition: opacity 0.5s linear;
     transition: opacity 0.5s linear;
 }
-    /* about page styling ends here */
+/* about page styling ends here */
 
-
-    /* building media query */
+/* building media query */
 @media only screen and (max-width: 600px) {
   .sc3-x1 h3{
     max-width: 100%!important;
@@ -3038,12 +2986,9 @@ body {
     }
 }
 
+/* end of media query */
 
-    /* end of media query */
-
-
-
-    /* for progress bar */
+/* for progress bar */
 .progress{
     width: 150px;
     height: 150px;
@@ -3208,7 +3153,6 @@ body {
 /* landing page styling */
 .bk-dark-purple {
     background-color: #2B3C61;
-    /* box-shadow: 0px 3px 12px -2px rgb(209, 209, 209); */
 }
 
 .bk-dark-purple-dashboard {
@@ -3449,7 +3393,6 @@ body {
 .cover-letter .phone-Email-section span{
     font-family: Nunito, sans-serif!important;
     font-size: 14px!important;
-    /* border-bottom: 1px solid #c5c5c5; */
 }
 
 .template-3 .phone-Email-section p {
@@ -3595,7 +3538,6 @@ i{
 .txt3 h3 {
     color: #fff;
     font-size: 32px;
-    /* max-width: 50%; */
     line-height: 1.4;
     font-family: Nunito, sans-serif;
     padding-top: 10px;
@@ -3922,7 +3864,6 @@ i{
     color: #325b7c;
     font-size: 18px;
     font-weight: 700;
-    /* font-family: Leaguespartan, sans-serif; */
     font-family: Nunito, sans-serif;
 }
 
@@ -4086,7 +4027,6 @@ i{
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    /* identical to box height */
     color: #1F2430;
 }
 
@@ -4145,12 +4085,6 @@ i{
 span:after {
     content: '';
     border-top:1px solid #084482;
-    /* margin: 0 20px 0 0; */
-    /* flex: 1 0 20px; */
-}
-
-.employer-rightside span:after {
-    /* margin: 0 0 0 20px; */
 }
 
 .employer-rightside .btn-facebook {
@@ -4160,12 +4094,10 @@ span:after {
     width: 264px;
     height: 63px;
     left: 726px;
-    /* top: 795px; */
     font-family: Nunito, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    /* line-height: 24px; */
     color: white;
     text-align: center!important;
     border-radius: 5px;
@@ -4285,7 +4217,6 @@ span:after {
 .cta-section-rightside input::placeholder {
     font-family: Nunito, sans-serif;
     font-size: 14px;
-    /* color: rgba(178, 178, 178, 0.58); */
 }
 
 .cta-section-rightside span {
@@ -4306,12 +4237,6 @@ span:after {
     span:after {
     content: '';
     border-top:1px solid #084482;
-    /* margin: 0 20px 0 0; */
-    /* flex: 1 0 20px; */
-}
-    
-.cta-section-rightside span:after {
-    /* margin: 0 0 0 20px; */
 }
     
 .cta-section-rightside .acct {

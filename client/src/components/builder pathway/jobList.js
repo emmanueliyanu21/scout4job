@@ -21,16 +21,16 @@ const jobList = (props) => {
                     <div className="row text-left pt-2">
                         <div className="form-group col-md-6">
                             <div className="row">
-                            <div className="col-md-6 form-group">
-                                <label>Start Date</label>
-                                        <input text="text" name="startDate" id={startDate} data-id={idx} className="form-control" placeholder="Start Date" />
-                            </div>
-                            <div className="col-md-6 form-group">
-                                <label>End Date</label>
-                                        <input text="text" name="endDate" id={endDate} data-id={idx} className="form-control" placeholder="End Date" />
+                                <div className="col-md-6 form-group">
+                                    <label>Start Date</label>
+                                            <input text="text" name="startDate" id={startDate} data-id={idx} className="form-control" placeholder="Start Date" />
+                                </div>
+                                <div className="col-md-6 form-group">
+                                    <label>End Date</label>
+                                            <input text="text" name="endDate" id={endDate} data-id={idx} className="form-control" placeholder="End Date" />
+                                </div>
                             </div>
                         </div>
-                            </div>
                         <div className="form-group col-md-6">
                             <label>City</label>
                                 <input text="text" name="city" id={city} data-id={idx}
@@ -47,7 +47,7 @@ record of...." rows="3"></textarea>
                     <div className="row">
                         <div className="col-md-12 additional-button">
                             {
-                                idx === 0 ? <button onClick={() => props.add()} type="button" className="hide-button" ></button>
+                                idx === 0 ? <button onClick={() => props.add()} type="button"  className="hide-button" ></button>
                                     : <button className="btn btn-danger mt-1" onClick={(() => props.delete(val))} ><i className="fa fa-minus" aria-hidden="true"></i></button>
                             }
                         </div>

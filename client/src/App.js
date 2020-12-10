@@ -150,7 +150,9 @@ class App extends Component {
             <Route path="/post-job" component={PostJob} />
             <Route path="/employer-signup" component={EmployerSignup} />
             <Route path="/employer-login" component={EmployerLogin} />
-            <Route path="/employer-dashboard" component={EmployerDashboard} />
+            <Switch>
+              <PrivateRoute exact path="/employer-dashboard" component={EmployerDashboard} />
+            </Switch>
 
             {/* <Footer /> */}
           </BrowserRouter>

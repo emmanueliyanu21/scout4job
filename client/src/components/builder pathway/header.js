@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
-// import Footer from '../pages/footer'
 import { connect } from 'react-redux'
 import { createVitae } from '../../store/actions/vitaeActions'
 import JobList from './jobList'
@@ -14,7 +12,6 @@ class Header extends Component {
 
     // state = initialState;
     state = {
-
         jobList: [{ index: Math.random(), jobTitle: "", employer: "", startDate: "", endDate: "", city: "", description: "" }],
         eduList: [{ index: Math.random(), schoolName: "", degreeName: "", startDate2: "", endDate2: "", cityEdu: "", eduDescription: "" }],
         socialLink: [{ index: Math.random(), websiteName: "", linkName: "" }],
@@ -49,7 +46,6 @@ class Header extends Component {
         cityError: '',
         startDate1Error: '',
         endDate1Error: '',
-        // employmentSummary: '',
         schoolNameError: '',
         degreeNameError: '',
         startDate2Error: '',
@@ -389,73 +385,12 @@ record of...." rows="3"></textarea>
                                         </div>
                                     </div>
                                     {/* professional summary */}
-                                    {/* professional summary ends */}
                                     {/* employment history start */}
                                     <div className="section-caption pt-4">
                                         <h2 className="personal-Details green-header">
                                             <i className="fa fa-briefcase"></i>
                                             Employment History</h2>
                                     </div>
-                                    {/* <div id="">
-                                        <div className="row">
-                                            <div className="form-group col-md-6">
-                                                <label htmlFor="jobTitle">Job Title</label>
-                                                <input type="text" className="form-control" id="jobTitle"
-                                                    placeholder="Job Title" onChange={this.handleChange} />
-                                                <div style={{ fontSize: 12, color: "red" }}>
-                                                    {this.state.jobTitleError}
-                                                </div>
-                                            </div>
-                                            <div className="form-group col-md-6">
-                                                <label htmlFor="employer">Employer</label>
-                                                <input type="text" className="form-control" id="employer"
-                                                    placeholder="Company Name" onChange={this.handleChange} />
-                                                <div style={{ fontSize: 12, color: "red" }}>
-                                                    {this.state.employerError}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row">
-                                            <div className="form-group col-md-6 ">
-                                                <div className="row">
-                                                    <div className="form-group col-md-6">
-                                                        <label htmlFor="startDate1">Start Date</label>
-                                                    <input type="text" className="form-control" id="startDate1"
-                                                        placeholder="02 July" onChange={this.handleChange} />
-                                                    <div style={{ fontSize: 12, color: "red" }}>
-                                                        {this.state.startDate1Error}
-                                                    </div>
-                                                </div>
-                                                    <div className="form-group col-md-6">
-                                                        <label htmlFor="endDate1">End Date</label>
-                                                    <input type="text" className="form-control" id="endDate1"
-                                                        placeholder="02 July" onChange={this.handleChange} />
-                                                    <div style={{ fontSize: 12, color: "red" }}>
-                                                            {this.state.endDate1Error}
-                                                    </div>
-                                                </div>
-                                                </div>
-                                                </div>
-                                            <div className="form-group col-md-6">
-                                                <label htmlFor="exampleInputEmail1">City</label>
-                                                <input type="text" className="form-control" id="city"
-                                                    placeholder="City, Country" onChange={this.handleChange} />
-                                                <div style={{ fontSize: 12, color: "red" }}>
-                                                    {this.state.cityError}
-                                                </div>
-                                            </div>
-                                        </div>                                 
-                                        <div className="row">
-                                        <div className="form-group col-md-12">
-                                            <label htmlFor="exampleInputEmail1">Description</label>
-                                            <textarea className="form-control" onChange={this.handleChange}  id="employmentSummary" placeholder="e.g. Passionate about software development for 8+ years and a track 
-record of...." rows="3"></textarea>
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.employmentSummaryError}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div> */}
                                     <JobList jobList={jobList} add={this.addNewRow} delete={this.clickOnDelete.bind(this)}/>
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
@@ -469,71 +404,12 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-book"></i>
                                             Education History</h2>
                                     </div>
-                                    {/* <div className="row">
-                                        <div className="form-group col-md-6">
-                                            <label htmlFor="schoolName">School Name</label>
-                                            <input type="text" className="form-control" id="schoolName"
-                                                placeholder="Name" onChange={this.handleChange} />
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.schoolNameError}
-                                            </div>
-                                        </div>
-                                        <div className="form-group col-md-6">
-                                            <label htmlFor="degreeName">Degree</label>
-                                            <input type="text" className="form-control" id="degreeName"
-                                                placeholder="Msc" onChange={this.handleChange} />
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.degreeNameError}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="form-group col-md-6 ">
-                                                <div className="row">
-                                                    <div className="form-group col-md-6">
-                                                    <label htmlFor="startDate2">Start Date</label>
-                                                        <input type="text" className="form-control" id="startDate2"
-                                                            placeholder="02 July" onChange={this.handleChange} />
-                                                        <div style={{ fontSize: 12, color: "red" }}>
-                                                            {this.state.startDate2Error}
-                                                        </div>
-                                                    </div>
-                                                    <div className="form-group col-md-6">
-                                                    <label htmlFor="endDate2">End Date</label>
-                                                        <input type="text" className="form-control" id="endDate2"
-                                                            placeholder="02 July" onChange={this.handleChange} />
-                                                        <div style={{ fontSize: 12, color: "red" }}>
-                                                                {this.state.endDate2Error}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <div className="form-group col-md-6">
-                                            <label htmlFor="exampleInputEmail1">City</label>
-                                            <input type="text" className="form-control" id="cityEdu"
-                                                placeholder="City, Country" onChange={this.handleChange} />
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.cityEduError}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="form-group col-md-12">
-                                            <label htmlFor="educationDescription">Description</label>
-                                            <textarea className="form-control" id="educationDescription" placeholder="e.g. Passionate about software development for 8+ years and a track 
-record of...." rows="3"></textarea>
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.educationDescriptionError}
-                                            </div>
-                                        </div>
-                                    </div> */}
                                     <EduList eduList={eduList} add={this.addeduRow} delete={this.clickOnEduDelete.bind(this)} />
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
                                             <button className="" type="button" onClick={this.addeduRow} ><i className="fa fa-plus"></i> Add Educational History </button>
                                         </div>
                                     </div>
-
                                     {/* education history ends */}
                                     {/* website links starts */}
                                     <div className="section-caption pt-4">
@@ -541,26 +417,6 @@ record of...." rows="3"></textarea>
                                             <i className="fa fa-globe"></i>
                                             Website &amp; Social Links</h2>
                                     </div>
-
-                                    {/* website links ends */}
-                                    {/* <div className="row">
-                                        <div className="form-group col-md-6">
-                                            <label htmlFor="websiteName">Name</label>
-                                            <input type="text" className="form-control" id="websiteName"
-                                                placeholder="" onChange={this.handleChange} />
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.websiteNameError}
-                                            </div>
-                                        </div>
-                                        <div className="form-group col-md-6">
-                                            <label htmlFor="linkName">Link</label>
-                                            <input type="text" className="form-control" id="linkName"
-                                                placeholder="" onChange={this.handleChange} />
-                                            <div style={{ fontSize: 12, color: "red" }}>
-                                                {this.state.linkNameError}
-                                            </div>
-                                        </div>
-                                    </div> */}
                                     <SocialLink socialLink={socialLink} add={this.addsocialRow} delete={this.deleteOnSocialRow.bind(this)} />
                                     <div className="row">
                                         <div className="col-md-12 add-employment pb-2">
@@ -575,11 +431,6 @@ record of...." rows="3"></textarea>
 
                             </div>
                             <div className="col-md-6 col-sm-12 sidebar-fixed">
-                                {/* <div className="resume-options">
-                                    <button className="btn btn-primary btn-download">Download PDF</button>
-                                    <button className="btn btn-primary btn-dot">...</button>
-                                    <Link to="/template" className="select-template pull-right">Select a template</Link>
-                                </div> */}
                                 <div className="form-img">
                                     {/* header starts here */}
                                     <div className="personal-details text-center">
@@ -604,8 +455,6 @@ record of...." rows="3"></textarea>
                                         </ul>
                                     </div>
                                     {/* Employment summary ends here */}
-                                    {/* Education summary starts here */}
-
                                     {/* Education summary ends here */}
                                     <div className="preview">
                                     </div>
